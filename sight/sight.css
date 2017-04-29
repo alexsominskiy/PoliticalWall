@@ -1,6 +1,7 @@
 .graph{
     height: 37vh;
     width: 18vw;
+    overflow: hidden;
 }
 .det{
     height: 38vh;
