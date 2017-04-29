@@ -20,8 +20,7 @@ var connection = mysql.createConnection({
 });
 
 setInterval(function () {
-    connection.query('SELECT 1', function(err){console.log(err);}
-    );
+    connection.query('SELECT 1');
 }, 5000);
 
 module.exports = connection;
