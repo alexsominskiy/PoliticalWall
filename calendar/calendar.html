@@ -7,20 +7,17 @@
     <div class="back" style="top : -7vh"><span class="glyphicon glyphicon-arrow-left" ng-Click="model.back()"></span></div>
 </div>
 
-            <div class="yearmonth">
-                <span class="chevron glyphicon glyphicon-menu-left" ng-Click="yearMinus()"></span>
-                <span class="air">{{year}}</span>
-                <span class="chevron glyphicon glyphicon-menu-right" ng-Click="yearPlus()"></span>
+    <div class="yearmonth">
+        <span class="chevron glyphicon glyphicon-menu-left" ng-Click="yearMinus()"></span>
+        <span class="air">{{year}}</span>
+        <span class="chevron glyphicon glyphicon-menu-right" ng-Click="yearPlus()"></span>
 
-                <!--<span>&nbsp&nbsp&nbsp&nbsp</span>-->
+        <!--<span>&nbsp&nbsp&nbsp&nbsp</span>-->
 
-                <span class="chevron glyphicon glyphicon-menu-left"ng-Click="monthMinus()"></span>
-                <span class="air">{{month}}</span>
-                <span class="chevron glyphicon glyphicon-menu-right" ng-Click="monthPlus()"></span>
-            </div>
-
-
-
+        <span class="chevron glyphicon glyphicon-menu-left"ng-Click="monthMinus()"></span>
+        <span class="air">{{month}}</span>
+        <span class="chevron glyphicon glyphicon-menu-right" ng-Click="monthPlus()"></span>
+    </div>
 
     <div class="week" ng-repeat="w in weeks">
         <div class="day" ng-repeat="d in w" ng-class="{today : isToday(d.day), shabbat : isShabat(d.day)}" ng-Click="currDate(d)"><div class="date">{{dayFormat(d.day)}}</div>
