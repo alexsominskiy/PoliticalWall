@@ -49,6 +49,7 @@
 }
 
 .day{
+    direction: rtl;
     width:12.9vw;
     display: inline-block;
     border: 1px solid #333333;
