@@ -1,0 +1,32 @@
+.auth{
+    padding: 2vh 2vw;
+    border: 0.15vh solid darkgray;
+    border-radius: 2vh;
+    box-shadow: 0 0 1vh 0 rgba(0,0,0,0.3);
+    background-color: #666666;
+    color: #eeeeff;
+
+}
+.auth input{
+    margin: 1vh 0;
+    padding: 0.5vh 0.5vh;
+    border: hidden;
+    outline: none;
+    color: black;
+}
+.auth input:focus{
+    background-color: #ffffcc;
+}
+
+.authbut{
+    padding: 1vh 1vw;
+    border: hidden;
+    border-radius: 1vh;
+    outline: none;
+    color: darkblue;
+    cursor: pointer;
+}
+.auth .result{
+    color: yellow;
+    padding-top: 1vh;
+}

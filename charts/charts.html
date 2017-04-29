@@ -1,0 +1,53 @@
+
+<div class="header">{{model.header}}
+    <div class="back" style="top : 2vh"><span class="glyphicon glyphicon-arrow-left" ng-Click="model.back()" style="top : -0.5vh" ></span></div>
+</div>
+<div class="cont" ng-controller="chartsCntr">
+
+    <div class="menu">
+
+        <label class="menuHeader" for="fileInput" style="margin : 0">תרשים להעמיס<br><span class="menuValue">{{model.currentChartFile}}</span></label>
+        <input id="fileInput" type="file" custom-on-change="readChart" style="display: none">
+
+        <div ng-show="model.currentChartFile != 'empty.txt'">
+            <div class="chartsMenuItem1">מנהיגים</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeaders('total'))">מדד המנהיגים</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeadersDetails('aspects'))">הסכמה עם התנהלות בנושאים</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeadersDetails('characteristics'))">תכונות</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeaders('primeMinister'))">התאמה לראשות ממשלה</div>
+            <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawGovernment())">סיכויי הממשלה לשרוד מלוא הקדנציה</div>
+            <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawImportantThings())">הנושאים החשובים לטיפול</div>
+            <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawKnesset())">מנדטים להיום</div>
+        </div>
+    </div>
+
+    <div id="chart"></div>
+    <div id="upperTime"></div>
+    <div class="smallCharts" id="smalls">
+        <div class="genderChart"><div class="ch" id="gender"></div><div class="smallT">t</div></div>
+        <div class="ageChart"><div class="ch" id="age"></div><div class="smallT">t</div></div>
+        <div class="regionChart"><div class="ch" id="region"></div><div class="smallT">t</div></div>
+        <div class="religionChart"><div class="ch" id="religion"></div><div class="smallT">t</div></div>
+        <div class="incomeChart"><div class="ch" id="income"></div><div class="smallT">t</div></div>
+        <div class="educationChart"><div class="ch" id="education"></div><div class="smallT">t</div></div>
+    </div>
+    <div class="lowerTime" id="time"></div>
+
+    <div class="bigT" id="bT" onmouseover="google.charts.setOnLoadCallback(drawLowTime())"
+                              onmouseout = "closeLowTime()"
+                              onclick="bigTToggleMouseout()">t</div>
+
+    <button class="upload atRight" ng-show="model.currentChartFile != 'empty.txt'" ng-click="showShield()">{{model.uploadButton}}</button>
+
+    <div class="shield" ng-show="model.shield">
+        <div class="centered shieldPlate">
+
+            <p ng-bind="shieldMessage1"></p>
+            <p class="shieldMsg2" ng-bind="shieldMessage2"></p>
+            <p ng-bind="shieldMessage3"></p>
+
+            <button class="shieldButton" ng-Click="uploadChart()">{{model.shieldOK}}</button>
+            <button class="shieldButton" ng-Click="model.removeShield()">{{model.shieldCancel}}</button>
+        </div>
+    </div>
+</div>

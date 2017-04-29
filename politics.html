@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="moment/moment.js"></script>
+    <script src="moment/locale/he.js"></script>
+    <script src="angular/angular.min.js"></script>
+
+    <script src="sight/sightVocab.js"></script>
+
+    <script src="sight/sightMain.js"></script>
+    <script src="calendar/calendarCntr.js"></script>
+    <script src="news/uploadedNewsCntr.js"></script>
+
+    <script src="charts/dao.js"></script>
+    <script src="charts/record.js"></script>
+    <script src="charts/chartsDrawing.js"></script>
+    <script src="charts/chartsCntr.js"></script>
+
+    <link rel="stylesheet" href="sight/common.css">
+    <link rel="stylesheet" href="sight/SightTop/top.css">
+    <link rel="stylesheet" href="sight/SightCalendar/cal.css">
+    <link rel="stylesheet" href="calendar/calendar.css">
+    <link rel="stylesheet" href="sight/SightNews/news.css">
+    <link rel="stylesheet" href="sight/label.css">
+    <link rel="stylesheet" href="charts/charts.css">
+    <link rel="stylesheet" href="sight/sight.css">
+</head>
+<body ng-app="politicsMain" ng-controller="politicsMainCntr" class="disable-select">
+<customer></customer>
+<div class="container-fluid disable-select">
+    <ng-include src="'sight/SightTop/topSight.html'"></ng-include>
+    <ng-include src="page" ng-hide="main"></ng-include>
+    <div class="row" ng-show="main">
+
+                <!-- left column -->
+                <div class="col-sm-5">
+
+                    <!--one article window-->
+                    <skewlabelright header="hebVocab.first" ng-click="openNews()"></skewlabelright>
+                    <iframe scrolling="no" class="det" ng-src="{{model.newspage}}"></iframe>
+                    <div class="sDets">
+                        <iframe scrolling="no" class="smalldet" ng-src="{{model.newspage1}}"></iframe>
+                        <iframe scrolling="no" class="smalldet" ng-src="{{model.newspage2}}"></iframe>
+                    </div>
+
+                </div>
+
+                <!--last news column-->
+                <div class="col-sm-3">
+                    <skewlabelright header="hebVocab.lastNews" ng-click="openNews()"></skewlabelright>
+                    <div class="news">
+                        <p class="pointer" ng-repeat="n in news" ng-Click="details(n.page)"><bdo dir="rtl">
+
+                            <span class="time"><bdo dir="ltr">{{n.date}}</bdo></span>
+                            <span>&nbsp</span>
+                            <span class="newsHeader">{{n.header}}</span>
+                        </bdo></p>
+                    </div>
+                    <!-- calendary -->
+                    <skewlabelright header="hebVocab.calendary" ng-click="openCalendar()"></skewlabelright>
+                    <div class="cal">
+                        <ng-include src="'sight/SightCalendar/calendarTop.html'"></ng-include>
+                        <div id="cont" class="calcont">
+                            <div class="smallDay" ng-repeat="d in days"
+                                 ng-class="{today : isToday(d.day), shabbat : isShabat(d.day)}"
+                                 ng-init="$last && scrollCalendar()">
+                                <u>{{dayFormat(d.day)}}</u>
+                                <span class="event">{{d.event}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!--graphs-->
+       <div class="col-sm-4">
+            <skewlabelright header="hebVocab.lastCharts" ng-Click="openCharts()"></skewlabelright>
+            <div>
+                <div id="upper" ng-click="openCharts()" class="graph"></div>
+                <div id="lower" ng-click="openCharts()" class="graph" style="margin-top: 3vh"></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</body>
+</html>
+

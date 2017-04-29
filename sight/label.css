@@ -1,0 +1,29 @@
+.diag{
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 3vh solid lightgray;
+    border-right: 3vh solid white;
+    margin-top: 1vh;
+    float: right;
+
+}
+.diag1{
+    position: absolute;
+    top: -2.85vh;
+    left: -0.15vh;
+    width: 0;
+    border-top: 3vh solid white;
+    border-right: 3vh solid transparent;
+}
+.lab{
+    position: relative;
+    top: 1vh;
+    float: right;
+    border-top: 0.2vh solid lightgray;
+    background-color: white;
+    font-weight: bold;
+}
+.wrap{
+    height: 5.2vh;
+}

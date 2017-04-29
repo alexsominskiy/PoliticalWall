@@ -1,0 +1,67 @@
+.graph{
+    height: 37vh;
+}
+
+.det{
+    height: 40vh;
+    width: 100%;
+    border: hidden;
+    border: 1px solid #888888;
+    border-radius: 1vh;
+    box-shadow: 0 0 0.5vh 0.5vh rgba(0,0,0,0.3);
+}
+.sDets{
+    width: 100%;
+    text-align: center;
+}
+.smalldet{
+    display: inline-block;
+    margin-top: 1vh;
+    height: 38vh;
+    width: 49%;
+    border: hidden;
+    border: 1px solid #888888;
+    border-radius: 1vh;
+    box-shadow: 0 0 0.5vh 0.5vh rgba(0,0,0,0.3);
+}
+.cal{
+    margin-top: -1vh;
+    overflow: hidden;
+}
+.news{
+    padding-right: 0.3vw;
+    overflow-y: auto;
+    height: 38vh;
+}
+.news td {
+    box-sizing: border-box;
+    padding: 0;
+    height: 30px;
+}
+.newsHeader{
+    width: 70%;
+    padding-right: 1vw;
+}
+
+.calcont{
+    overflow-y: scroll;
+    white-space: nowrap;
+    padding-bottom: 1.5vh;
+    height: 31.8vh;
+}
+.smallDay{
+    border: 1px solid #333333;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
+    margin: 3px;
+    padding-right: 1vw;
+    text-align: right;
+    height: 27px;
+    border-radius: 1vh;
+    box-sizing: border-box;
+    color: darkblue;
+    font-family: Arial;
+    cursor: pointer;
+}
+.wrap{
+    height: 5.2vh;
+}

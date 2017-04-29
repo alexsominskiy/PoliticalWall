@@ -1,0 +1,48 @@
+<div class="header">{{model.header}}</div>
+<div ng-controller="uploadedNewsCntr">
+    <div class="back" style="top : -7vh"><span class="glyphicon glyphicon-arrow-left" ng-Click="back()" ></span></div>
+    <!--<div class="unMenu">
+    <table class="un">
+        <tr ng-repeat="n in newsList" ng-click="setShowIndex($index)">
+            <td ng-bind="date(n.date_time)"></td>
+            <td ng-bind="time(n.date_time)"></td>
+            <td ng-bind="n.header"></td>
+            &lt;!&ndash;<td><div class="tool" ng-class="{'cold' : n.hot == '0', hot : n.hot=='1'}" ng-click="setHot($index)" ng-show="model.newsTools">h</div></td>&ndash;&gt;
+            &lt;!&ndash;<td><div class="tool delete" ng-click="setShield($index)" ng-show="model.newsTools">&times;</div></td>&ndash;&gt;
+        </tr>
+    </table>
+    </div>
+
+    <div class="newsContainer" style="left:40vw">
+        <iframe class="newsHtml" src="{{previewFile}}" ng-show="previewFile != '../UploadedNews/empty.html'"></iframe>
+    </div>
+
+        <div class="shield" ng-show="model.shield">
+            <div class="centered shieldPlate">
+
+                <p class="shieldMsg0" ng-bind="shieldMessage0"></p>
+                <p ng-bind="shieldMessage1"></p>
+                <p class="shieldMsg2" ng-bind="shieldMessage2" style="font-size : 3vh"></p>
+                <p ng-bind="shieldMessage3"></p>
+
+                <button class="shieldButton" ng-Click="removeFile()">{{model.shieldOK}}</button>
+                <button class="shieldButton" ng-Click="model.removeShield()">{{model.shieldCancel}}</button>
+            </div>
+        </div>
+
+    </div>
+-->
+    <div class="unMenu">
+        <table class="un">
+            <tr ng-repeat="n in newsList | filter : newsSearchObject()" ng-click="setShowIndex($index)">
+                <td ><u><span class="author">{{n.author}}</span></u><br>{{n.header}}</td>
+                <td class="time">{{shortDate(n.date_time)}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="newsContainer">
+        <iframe class="newsHtml" src="{{previewFile}}"></iframe>
+    </div>
+</div>
+</div>

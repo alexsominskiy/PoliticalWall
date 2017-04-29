@@ -1,0 +1,13 @@
+.time{
+    color : #990099;
+}
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.pointer{
+    cursor : pointer;
+    text-align: right;
+}

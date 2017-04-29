@@ -1,0 +1,42 @@
+<div class="row" ng-show="main">
+
+                <div class="col-sm-5">
+                    <div class="lab"> פרטים<!--<span class="glyphicon glyphicon-resize-full" ng-Click="fullPage(newspage)">--></span></div>
+                    <div class="diag"><div class="diag1"></div></div>
+                    <iframe scrolling="no" class="det" ng-src="{{model.newspage}}"></iframe>
+
+                    <div class="lab">לוח שנה</div>
+                    <div class="diag"><div class="diag1"></div></div>
+                    <div class="cal">
+                        <ng-include src="'SightCalendar/calendarTop.html'"></ng-include>
+                        <div id="cont" class="cont">
+                            <div class="smallDay" ng-repeat="d in days" ng-class="{today : isToday(d.day), shabbat : isShabat(d.day)}" ng-init="$last && scrollCalendar()"><u>{{dayFormat(d.day)}}</u>
+                                <span class="event">{{d.event}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="lab">חדשות אחרונות <!--&lt;!&ndash;<span class="glyphicon glyphicon-refresh"></span>&ndash;&gt;--></div>
+                    <div class="diag"><div class="diag1"></div></div>
+
+                    <div class="news">
+                        <p class="pointer" ng-repeat="n in news" ng-Click="details(n.page)">
+                            <bdo dir="rtl"><bdo dir="ltr"><span class="time">{{n.date}}</span></bdo><br>{{n.header}}</bdo>
+                        </p>
+                    </div>
+                </div>
+
+        <!--graphs
+       <div class="col-sm-5">
+            <div class="lab">פרטים אחרונים </div>
+            <div class="diag"><div class="diag1"></div></div>
+            <div class="graphs">
+                <div class="graph"><img src="2017-02-09_140852.png" width="100%" height="100%"/></div>
+                <div class="graph"><img src="2017-02-09_141451.png" width="100%" height="100%"/></div>
+
+            </div>
+        </div>-->
+    </div>

@@ -1,0 +1,26 @@
+
+<div ng-controller="uploadedNewsCntr">
+
+    <div class="search"><bdo dir="rtl">
+        <span>מחבר</span>
+        <input ng-model="newsAuthor">
+        <span>נושה</span>
+        <input ng-model="newsSubject">
+        <!--<button class="hapes">חפש</button>-->
+    </bdo></div>
+
+    <div class="unMenu">
+    <table class="un">
+        <tr ng-repeat="n in newsList | filter : newsSearchObject()" ng-click="setShowIndex($index)">
+            <td ><u><span class="author">{{n.author}}</span></u><br>{{n.header}}</td>
+            <td class="time">{{shortDate(n.date_time)}}</td>
+        </tr>
+    </table>
+    </div>
+
+    <div class="newsContainer">
+        <iframe class="newsHtml" src="{{sightPreviewFile()}}"></iframe>
+    </div>
+    </div>
+
+</div>

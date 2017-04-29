@@ -1,0 +1,22 @@
+.today{
+    background-color: #cccccc;
+}
+.shabbat{
+    background-color: #eeeeff;
+}
+.yearmonth{
+    font-size: 2vh;
+    text-align: right;
+}
+.chevron{
+    color: gray;
+    font-size: 2vh;
+}
+.air{
+    margin-left: 0.1vw;
+    margin-right: 0.1vw;
+}
+.event{
+    font-size: small;
+    font-weight: bold;
+}

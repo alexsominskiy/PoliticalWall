@@ -1,0 +1,32 @@
+.un {
+    border-collapse: collapse;
+}
+.un tr{
+    cursor: pointer;
+}
+.un tr:hover{
+    background-color: lightyellow;
+}
+.un td{
+    padding: 2vh 0.5vw;
+    vertical-align: top;
+}
+.un td:nth-child(1){
+    color : darkblue;
+}
+.un td:nth-child(2){
+    color : darkmagenta;
+}
+.un td:nth-child(3){
+    text-align: right;
+    padding-top: 1.3vh;
+    width: 15vw;
+    font-size: 3vh;
+}
+.unMenu{
+    display: inline-block;
+    padding: 2vh;
+    width: 35vw;
+    height: 87vh;
+    overflow-y: auto;
+}

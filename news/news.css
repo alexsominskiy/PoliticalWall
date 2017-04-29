@@ -1,0 +1,17 @@
+.newsContainer{
+    position: absolute;
+    left: 25vw;
+    display: inline-block;
+    width: 75vw;
+
+    padding: 2vh 2vw;
+}
+.newsHtml{
+    width: 50vw;
+    height: 85vh;
+    overflow: auto;
+    border: 1px solid darkblue;
+    border-radius: 5vh;
+    box-shadow: 0 0 1vh 0 rgba(0,0,0,0.3);
+    padding: 2vh 2vw;
+}

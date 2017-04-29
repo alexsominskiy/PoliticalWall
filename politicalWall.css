@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    font-family: Arial;
+    user-select: none;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.header{
+    line-height: 1.8;
+    font-size: 5vh;
+    text-align: center;
+    border-bottom: 0.15vh solid darkblue;
+    color: darkblue;
+}
+.upload{
+    display: inline-block;
+    float:right;
+    margin-right: 0.5vw;
+    margin-top: 1vh;
+    outline: none;
+    height: 4.5vh;
+    font-size: 3vh;
+    border: 0.15vh solid black;
+    border-radius: 0.5vh;
+    padding: 0vh 1vw 0 1vw;
+    background-color: #660000;
+    cursor: pointer;
+    color: white;
+}
+.cont{
+    position: relative;
+    height: 87.6vh;
+    overflow: hidden;
+}
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 20vw;
+    height: 100%;
+    font-size: 2.5vh;
+    padding: 0.6vh 2vw 0vh 1vw;
+
+}
+.picContainer{
+    position: absolute;
+    left: 20vw;
+    display: inline-block;
+    width: 75vw;
+
+    padding: 2vh 2vw;
+
+
+}
+.menuHeader{
+    display: block;
+    padding: 1vh 1vw 1vh 1vw;
+    background-color: #666666;
+    color: white;
+    border-top: 0.15vh solid black;
+    border-bottom: 0.15vh solid black;
+    cursor: pointer;
+    text-align: right;
+}
+.menuValue{
+    color: #ccccff;
+}
+.atRight{
+    display: block;
+    float:right;
+}
+.shield{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
+}
+.shieldButton{
+    padding: 1vh 1vw;
+    background-color: darkblue;
+    color: white;
+    border-radius: 1vh;
+    border: 1px solid darkblue;
+    outline: none;
+    margin: 0.5vw;
+}
+.shieldPlate{
+    padding: 3vh 3vw;
+    background-color: white;
+    border: 0.15vh solid darkblue;
+    border-radius: 1vh;
+    box-shadow: 0 0 1vh 0 rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 3vh;
+}
+.shieldMsg0{
+    font-size: 5vh;
+    color: red;
+}
+.shieldMsg2{
+    font-size: 5vh;
+    color: darkblue;
+}
+.back{
+    float: left;
+    font-size: 4vh;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 3vh;
+    background-color: gray;
+    padding-left: 0.5vh;
+    position: relative;
+    left: 2vh;
+    color: white;
+
+}
+.hot{
+    background-color: red;
+    color : yellow;
+}
+.cold{
+    background-color: rgba(190,190,190,0.3);
+    color: grey;
+}
+.first{
+    background-color: blue;
+    color : white;
+}
+
+.delete{
+    background-color: black;
+    color: white;
+    font-size: 4vh;
+}
+.tool{
+    width:3vh;
+    height: 3vh;
+    border-radius: 2vh;
+    line-height: 3vh;
+    font-size: 2.5vh;
+    cursor: pointer;
+    text-align: center;
+}

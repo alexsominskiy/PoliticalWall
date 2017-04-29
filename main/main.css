@@ -1,0 +1,20 @@
+.main .bigButton{
+    width: 80vw;
+    height: 25vh;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 3vh;
+    background-color: #333333;
+    box-shadow: 0 0 3vh 0 rgba(0,0,0, 0.7);
+    font-size: 15vh;
+    color: #cccccc;
+    border-radius: 1vh;
+    border: 0.15vh solid darkblue;
+    cursor: pointer;
+}
+.main .bigButton:hover{
+    background-color: #000000;
+    color: #ffffcc;
+
+}

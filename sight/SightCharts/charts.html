@@ -1,0 +1,40 @@
+
+<div class="chartsCont" ng-controller="chartsCntr">
+
+    <div class="chartsMenu">
+        <div>
+            <div class="chartsMenuItem1">מנהיגים</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeaders('total'))">מדד המנהיגים</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeadersDetails('aspects'))">הסכמה עם התנהלות בנושאים</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeadersDetails('characteristics'))">תכונות</div>
+            <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeaders('primeMinister'))">התאמה לראשות ממשלה</div>
+            <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawGovernment())">סיכויי הממשלה לשרוד מלוא הקדנציה</div>
+            <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawImportantThings())">הנושאים החשובים לטיפול</div>
+            <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawKnesset())">מנדטים להיום</div>
+        </div>
+    </div>
+    <div class="recordList" ng-show = "model.sight != undefined">
+        <div class="oneRecord" ng-repeat="rec in model.recordsSight.records"
+                               ng-click = changeRecord($index);
+                               ng-bind="recordHeader(rec)"
+                               ng-class="{redDate :  model.recordsSight.pos == $index}"></div>
+    </div>
+
+    <div id="chart"></div>
+    <div id="upperTime"></div>
+
+    <div class="smallCharts" id="smalls">
+        <div class="genderChart"><div class="ch" id="gender"></div><div class="smallT">t</div></div>
+        <div class="ageChart"><div class="ch" id="age"></div><div class="smallT">t</div></div>
+        <div class="regionChart"><div class="ch" id="region"></div><div class="smallT">t</div></div>
+        <div class="religionChart"><div class="ch" id="religion"></div><div class="smallT">t</div></div>
+        <div class="incomeChart"><div class="ch" id="income"></div><div class="smallT">t</div></div>
+        <div class="educationChart"><div class="ch" id="education"></div><div class="smallT">t</div></div>
+    </div>
+    <div class="lowerTime" id="time"></div>
+
+    <div class="bigT" id="bT" onmouseover="google.charts.setOnLoadCallback(drawLowTime())"
+                              onmouseout = "closeLowTime()"
+                              onclick="bigTToggleMouseout()">t</div>
+
+</div>

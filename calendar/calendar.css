@@ -1,0 +1,85 @@
+.inputEvent{
+    height: 7.5vh;
+    width: 100vw;
+    border-bottom: 0.15vh solid darkblue;
+    background-color: #eeeeee;
+}
+.eventDate{
+    float: right;
+    margin-right: 3vw;
+    margin-top: 1vh;
+
+    width:13.1vw;
+    display: inline-block;
+    border: 1px solid #333333;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
+    padding: 0 0.7vh;
+    text-align: right;
+    height: 5vh;
+    border-radius: 1vh;
+    box-sizing: border-box;
+    color: darkblue;
+    overflow: hidden;
+    background-color: white;
+    font-size: 3.5vh;
+}
+.eventSubj{
+    float: right;
+    margin-right: 1vw;
+    margin-top: 1vh;
+    outline: none;
+    border: 0.15vh solid #999999;
+    text-align: right;
+    padding-right: 0.5vw;
+
+    height: 4.9vh;
+    font-size: 3vh;
+    color: black;
+    width: 50vw;
+}
+.eventSubj:focus{
+    background-color: #ffffcc;
+}
+
+.yearmonth{
+    font-size: 2.5vh;
+    text-align: right;
+    padding-top: 1vh;
+    padding-right:3vw;
+}
+
+.day{
+    width:12.9vw;
+    display: inline-block;
+    border: 1px solid #333333;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
+    margin: 3px;
+    padding: 0.7vh;
+    text-align: right;
+    height: 10vh;
+    border-radius: 1vh;
+    box-sizing: border-box;
+    color: darkblue;
+    font-family: Arial;
+    overflow: hidden;
+    cursor: pointer;
+}
+.fill{
+    font-size: 3vh;
+    color: black;
+}
+.date{
+    text-decoration: underline;
+}
+.today{
+    background-color: #cccccc;
+}
+.shabbat{
+    background-color: #eeeeff;
+}
+.chevron{
+    background-color: lightgray;
+    color: gray;
+    font-size: 2vh;
+}
+

@@ -1,0 +1,21 @@
+.size1{
+    font-size: 4vh;
+    font-style: italic;
+    text-align : center;
+}
+.head{
+    color:darkblue;
+    text-align: right;
+}
+.logo{
+    padding-top: 2vh;
+    text-align: center;
+}
+.bck{
+    background-color: lightyellow;
+    height: 7vh;
+}
+.greynavbar a{
+    background-color: #333333;
+    color: white;
+}

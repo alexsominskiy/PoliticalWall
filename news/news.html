@@ -1,0 +1,28 @@
+<div class="header">{{model.header}}
+    <div class="back" style="top : 2vh"><span class="glyphicon glyphicon-arrow-left" ng-Click="model.back()" style="top : -0.5vh" ></span></div>
+</div>
+<div class="cont" ng-controller="newsCntr">
+
+    <div class="menu">
+
+        <label class="menuHeader" for="fileInput" style="margin : 0">Article to upload:<br><span class="menuValue">{{model.currentNewsFile}}</span></label>
+        <input id="fileInput" type="file" custom-on-change="readNews" style="display: none">
+        <div class="menuHeader" ng-Click="uploaded()">Uploaded news</div>
+
+    </div>
+    <div class="newsContainer">
+        <iframe class="newsHtml" ng-src="{{model.currentPreviewFile}}" ng-show="model.currentNewsFile != 'empty.docx'"></iframe>
+        <button class="upload atRight" ng-show="model.currentNewsFile != 'empty.docx'" ng-click="showShield()">{{model.uploadButton}}</button>
+    </div>
+    <div class="shield" ng-show="model.shield">
+        <div class="centered shieldPlate">
+
+            <p ng-bind="shieldMessage1"></p>
+            <p class="shieldMsg2" ng-bind="shieldMessage2"></p>
+            <p ng-bind="shieldMessage3"></p>
+
+            <button class="shieldButton" ng-Click="uploadNews()">{{model.shieldOK}}</button>
+            <button class="shieldButton" ng-Click="model.removeShield()">{{model.shieldCancel}}</button>
+        </div>
+    </div>
+</div>

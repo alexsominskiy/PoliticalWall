@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="jquery/jquery-3.1.1.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="moment/moment.js"></script>
+    <script src="moment/locale/he.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="politicalWallCntr.js"></script>
+    <script src="authentication/authCntr.js"></script>
+    <script src="main/mainCntr.js"></script>
+    <script src="calendar/calendarCntr.js"></script>
+
+    <script src="charts/record.js"></script>
+    <script src="charts/dao.js"></script>
+    <script src="charts/chartsDrawing.js"></script>
+    <script src="charts/chartsCntr.js"></script>
+    <script src="news/newsCntr.js"></script>
+    <script src="news/uploadedNewsCntr.js"></script>
+
+    <link rel="stylesheet" href="politicalWall.css"/>
+    <link rel="stylesheet" href="authentication/auth.css"/>
+    <link rel="stylesheet" href="main/main.css"/>
+    <link rel="stylesheet" href="calendar/calendar.css"/>
+    <link rel="stylesheet" href="charts/charts.css"/>
+    <link rel="stylesheet" href="sight/SightNews/news.css"/>
+
+</head>
+<body ng-app = "politicalWall" ng-controller="politicalWallCntr">
+    <div ng-include="model.page"></div>
+</body>
+</html>
