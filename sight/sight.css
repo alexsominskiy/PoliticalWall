@@ -16,9 +16,10 @@
 }
 .smalldet{
     display: inline-block;
+    white-space: nowrap;
     margin-top: 1vh;
     height: 38vh;
-    width: 30%;
+    width: 49%;
     border: hidden;
     border: 1px solid #888888;
     border-radius: 1vh;
