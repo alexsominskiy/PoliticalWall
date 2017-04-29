@@ -24,6 +24,9 @@
     width: 28vw;
     margin-left: 1vw;
 }
+.full_page{
+    width: 100vw;
+}
 .sDets{
     width: 100%;
     text-align: center;
