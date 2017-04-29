@@ -86,6 +86,6 @@
     font-size: 2vh;
 }
 .week{
-    vertical-align: top;
+    display: flex;
 }
 
