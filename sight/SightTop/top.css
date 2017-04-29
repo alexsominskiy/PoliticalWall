@@ -5,13 +5,13 @@
 }
 .head{
     display: inline-block;
-    width: 58vw;
+    width: 59vw;
     color:darkblue;
     text-align: right;
 }
 .logo{
     display: inline-block;
-    width:19vw;
+    width:20vw;
     padding-top: 2vh;
     text-align: center;
 }
