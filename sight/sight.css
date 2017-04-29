@@ -1,6 +1,6 @@
 .graph{
     height: 37vh;
-    width: 18vw;
+    width: 28vw;
     overflow: hidden;
 }
 .det{
@@ -22,7 +22,7 @@
 }
 .right_column{
     display: inline-block;
-    width: 28vw;
+    width: 29vw;
     margin-left: 1vw;
 }
 .full_page{
