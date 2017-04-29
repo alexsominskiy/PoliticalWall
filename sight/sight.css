@@ -11,7 +11,10 @@
     box-shadow: 0 0 0.5vh 0.5vh rgba(0,0,0,0.3);
 }
 .left_column{
-    width: 22vw;
+    width: 42vw;
+}
+.center_column{
+    width: 25vw;
 }
 .sDets{
     width: 100%;
