@@ -34,7 +34,7 @@ app.post("/auth",function(req,res){
             else res.end(randomToken());
         })
     })
-})
+});
 
 function randomToken(){return Math.random().toString(36).substr(2)};
 
