@@ -1,13 +1,15 @@
-.size1{
+.header_size{
     font-size: 4vh;
     font-style: italic;
     text-align : center;
 }
 .head{
+    width: 60vw;
     color:darkblue;
     text-align: right;
 }
 .logo{
+    width:20vw;
     padding-top: 2vh;
     text-align: center;
 }
