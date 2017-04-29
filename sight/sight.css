@@ -17,10 +17,12 @@
 .center_column{
     display: inline-block;
     width: 25vw;
+    margin-left: 1vw;
 }
 .right_column{
     display: inline-block;
-    width: 26vw;
+    width: 28vw;
+    margin-left: 1vw;
 }
 .sDets{
     width: 100%;
