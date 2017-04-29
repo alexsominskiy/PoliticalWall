@@ -13,6 +13,19 @@ var df = require('dateformat');
 var parseHTML = require('./parseHtml');
 
 
+var connection = mysql.createConnection({
+    host: 'us-cdbr-iron-east-03.cleardb.net',
+    user: 'b1deaaa3aa770b',
+    password: '29c63657',
+    database: 'heroku_0bb447de5526496'
+});
+
+setInterval(function () {
+    connection.query('SELECT 1');
+}, 5000);
+
+module.exports = connection;
+
 app.use(function(req,res,next){
     headers.setHeaders(res);
     next();
@@ -20,8 +33,12 @@ app.use(function(req,res,next){
 
 app.use("/",express.static(__dirname));
 
-http.createServer(app).listen(8081);
-console.log("Server at 8081 is ON");
+var server_port = process.env.PORT||8080;
+
+app.set('port',server_port);
+
+http.createServer(app).listen(app.get('port'));
+console.log("Server at "+app.get('port')+" is ON");
 
 app.post("/auth",function(req,res){
     var post=[];
