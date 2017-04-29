@@ -28,7 +28,6 @@
     width: 100vw;
 }
 .sDets{
-    width: 100%;
     text-align: center;
 }
 .smalldet{
@@ -36,7 +35,7 @@
     white-space: nowrap;
     margin-top: 1vh;
     height: 38vh;
-    width: 49%;
+    width: 20vw;
     border: hidden;
     border: 1px solid #888888;
     border-radius: 1vh;
