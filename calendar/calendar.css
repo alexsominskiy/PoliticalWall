@@ -65,10 +65,12 @@
     cursor: pointer;
 }
 .fill{
+    display: inline-block;
     font-size: 3vh;
     color: black;
 }
 .date{
+    display: inline-block;
     text-decoration: underline;
 }
 .today{
