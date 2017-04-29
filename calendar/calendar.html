@@ -24,7 +24,7 @@
 
 
 
-    <div class="col-sm-12" ng-repeat="w in weeks">
+    <div ng-repeat="w in weeks">
         <div class="day" ng-repeat="d in w" ng-class="{today : isToday(d.day), shabbat : isShabat(d.day)}" ng-Click="currDate(d)"><p class="date">{{dayFormat(d.day)}}</p>
             <p class="event" ng-class="{fill : d.fill}">{{d.event}}</p>
         </div>
