@@ -1,7 +1,7 @@
 /**
  * Created by User on 20.03.2017.
  */
-/*var url="http://127.0.0.1:8081";*/
+/*var url="http://127.0.0.1:8080";*/
 var url ="https://politicalwallproject.herokuapp.com";
 
 var headers = {

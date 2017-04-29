@@ -174,7 +174,7 @@ app.get("/getRecords", function(req,res){
     connection.query(dbRec, function(err, fields){
         var records = [];
         for(var i in fields){
-           records.push(fs.readFileSync("../UploadedCharts/"+fields[i].filename+".txt").toString())
+           records.push(fs.readFileSync("UploadedCharts/"+fields[i].filename+".txt").toString())
         }
         res.write(JSON.stringify(records));
         res.end();
