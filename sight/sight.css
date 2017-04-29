@@ -3,7 +3,7 @@
     width: 18vw;
 }
 .det{
-    height: 40vh;
+    height: 38vh;
     width: 100%;
     border: hidden;
     border: 1px solid #888888;
@@ -21,7 +21,7 @@
 }
 .right_column{
     display: inline-block;
-    width: 20vw;
+    width: 28vw;
     margin-left: 1vw;
 }
 .full_page{
@@ -64,7 +64,7 @@
     overflow-y: scroll;
     white-space: nowrap;
     padding-bottom: 1.5vh;
-    height: 31.8vh;
+    height: 30vh;
 }
 .smallDay{
     border: 1px solid #333333;
