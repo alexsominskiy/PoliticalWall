@@ -5,7 +5,7 @@
 }
 .head{
     display: inline-block;
-    width: 59vw;
+    width: 58vw;
     color:darkblue;
     text-align: right;
 }
@@ -27,7 +27,7 @@
     box-sizing: border-box;
     padding: 0.8vh 1vw;
     font-size: 2vh;
-    width:19vw;
+    width:19.4vw;
     display: inline-block;
     text-align: center;
 
