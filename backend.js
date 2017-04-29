@@ -12,7 +12,6 @@ var mam = require('mammoth');
 var df = require('dateformat');
 var parseHTML = require('./parseHtml');
 
-
 var connection = mysql.createConnection({
     host: 'us-cdbr-iron-east-03.cleardb.net',
     user: 'b1deaaa3aa770b',
@@ -21,7 +20,8 @@ var connection = mysql.createConnection({
 });
 
 setInterval(function () {
-    connection.query('SELECT 1');
+    connection.query('SELECT 1', function(err){console.log(err);}
+    );
 }, 5000);
 
 module.exports = connection;
