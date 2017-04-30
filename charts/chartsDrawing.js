@@ -122,13 +122,13 @@ function makeOptions(size,title, legend, numFormat, reverse){
             },
         },
         titleTextStyle:{
-            fontSize : rubberH(20),
-            color : "white",
+            fontSize : rubberH(15),
+            color : "white"
         }
     }
 
     if(size == 'big'){draft.width = rubberW(800); draft.height = rubberH(245);}
-    else if(size == 'small'){draft.width = rubberW(370); draft.height = rubberH(150); draft.titleTextStyle.fontSize = 15}
+    else if(size == 'small'){draft.width = rubberW(370); draft.height = rubberH(150); draft.titleTextStyle.fontSize = rubberH(15);}
     else if(size == 'front'){draft.width = rubberW(410); draft.height = rubberH(245);}
     
 
