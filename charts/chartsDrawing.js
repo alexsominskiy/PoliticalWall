@@ -122,7 +122,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
             },
         },
         titleTextStyle:{
-            fontSize : rubberH(15),
+            fontSize : rubberH(10),
             color : "white"
         }
     }
