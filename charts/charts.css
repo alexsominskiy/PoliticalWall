@@ -3,7 +3,7 @@
 #chart{
     position: absolute;
     top: 1vh;
-    left: 23vw;
+    left: 20vw;
 }
 #upperTime{
     position: absolute;
@@ -72,7 +72,7 @@
 .bigT{
     position: absolute;
     top: 2vh;
-    left: 79vw;
+    left: 76vw;
     width: 5vh;
     height: 5vh;
     color: yellow;
