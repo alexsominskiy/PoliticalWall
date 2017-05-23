@@ -48,6 +48,7 @@ var optionsKnessetTime = {
     backgroundColor: "#666666",
     hAxis : {
         textStyle : {
+            fontName: "Alef",
             color : "white"
         }
 
@@ -55,6 +56,7 @@ var optionsKnessetTime = {
     vAxis : {
         minValue:0,
         textStyle : {
+            fontName: "Alef",
             color : "white"
         },
         format : "##"
@@ -62,6 +64,7 @@ var optionsKnessetTime = {
     legend : "none",
     title: "מנדטים",
     titleTextStyle:{
+        fontName: "Alef",
         color : "white",
         fontSize : rubberH(20)
     }
@@ -74,18 +77,21 @@ var optionsUpperTime = {
     backgroundColor: "#666666",
     hAxis : {
         textStyle : {
+            fontName: "Alef",
             color : "white"
         }
     },
     vAxis : {
         minValue:0,
         textStyle: {
+            fontName: "Alef",
             color: "white"
         },
         format: 'percent'
     },
     legend : {
         textStyle : {
+            fontName: "Alef",
             color: "white"
         }
     },
@@ -100,6 +106,7 @@ var optionsUpperTime = {
     },
     titleTextStyle:{
         color : "white",
+        fontName: "Alef",
         fontSize : rubberH(20)
     }
 }
@@ -115,17 +122,20 @@ function makeOptions(size,title, legend, numFormat, reverse){
         backgroundColor: "#666666",
         hAxis : {
             textStyle : {
+                fontName: "Alef",
                 color : "white"
             }
         },
         vAxis : {
             minValue:0,
             textStyle : {
+                fontName: "Alef",
                 color : "white"
             },
         },
         titleTextStyle:{
             fontSize : rubberH(20),
+            fontName: "Alef",
             color : "white"
         }
     }
@@ -158,6 +168,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
         backgroundColor: "#666666",
         hAxis: {
             textStyle: {
+                fontName: "Alef",
                 color: "white"
             }
 
@@ -165,17 +176,20 @@ function makeOptionsLowerTime(title, colors, numFormat) {
         vAxis: {
             minValue:0,
             textStyle: {
+                fontName: "Alef",
                 color: "white"
             },
             format: 'percent'
         },
         legend: {
             textStyle: {
+                fontName: "Alef",
                 color: "white"
             }
         },
         titleTextStyle: {
             color: "white",
+            fontName: "Alef",
             fontSize: rubberH(20)
         }
     }
