@@ -1,6 +1,10 @@
+@font-face {
+    font-family: Alef;
+    src : url("/font/Alef-Regular.ttf")
+}
 body{
     margin: 0;
-    font-family: Arial;
+    font-family: Alef;
 }
 .time{
     color : #990099;
