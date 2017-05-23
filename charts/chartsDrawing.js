@@ -13,6 +13,7 @@ var optionsKnesset = {
     backgroundColor: "#666666",
     hAxis : {
         textStyle : {
+            fontName: Alef,
             color : "white"
         }
 
@@ -22,6 +23,7 @@ var optionsKnesset = {
             color: 'transparent'
         },
         textStyle : {
+            fontName: Alef,
             color : "#666666"
         }
     },
@@ -30,6 +32,7 @@ var optionsKnesset = {
     title : 'מנדטים',
     titleTextStyle:{
         color : "white",
+        fontName: Alef,
         fontSize : rubberH(20)
     }
 
