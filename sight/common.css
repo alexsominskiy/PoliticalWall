@@ -1,6 +1,6 @@
 @font-face {
     font-family: Alef;
-    src : url("/font/Alef-Regular.ttf")
+    src : url("/font/Alef-Regular.ttf");
 }
 body{
     margin: 0;
