@@ -18,12 +18,12 @@
 .center_column{
     display: inline-block;
     width: 17%;
-    margin-left: 1vw;
+    margin-left: 0.5%;
 }
 .right_column{
     display: inline-block;
     width: 33%;
-    margin-left: 0.5vw
+    margin-left: 0.5%
 }
 .full_page{
     width: 100%;
