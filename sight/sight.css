@@ -79,6 +79,7 @@
     color: darkblue;
     font-family: Alef;
     cursor: pointer;
+    overflow: hidden;
 }
 .wrap{
     height: 5.2vh;
