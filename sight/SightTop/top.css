@@ -1,6 +1,5 @@
 .header_size{
-    font-size: 4vh;
-    font-style: italic;
+    display: inline-block;
     text-align : center;
 }
 .head{
