@@ -3,7 +3,7 @@
     src : url("/font/Alef-Regular.ttf");
 }
 body{
-    margin: 0;
+    margin: auto;
     font-family: Alef;
     width: 100vw;
     max-width: 1024px;
