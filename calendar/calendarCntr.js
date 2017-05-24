@@ -23,7 +23,7 @@ app.controller("calendarCntr",function($scope, $http){
 
     function setCalendar(mom) {
 
-        $scope.month = mom.format("MMMM");
+        $scope.month = mom.format("MMM");
         $scope.year = mom.format("YYYY");
 
         var begin = mom.clone().startOf('month');
