@@ -24,6 +24,7 @@
     display: inline-block;
     width: 33%;
     margin-left: 0.5vw;
+    max-width:340px;
 }
 .full_page{
     width: 100%;
@@ -36,7 +37,7 @@
     white-space: nowrap;
     margin-top: 1vh;
     height: 38vh;
-    width: 49%;
+    width: 48%;
     border: hidden;
     border: 1px solid #888888;
     border-radius: 1vh;
