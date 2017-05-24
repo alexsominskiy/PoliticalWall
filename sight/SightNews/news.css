@@ -45,8 +45,7 @@
     border-bottom: 0.15vh solid darkblue;
     font-size: 3vh;
     text-align: right;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 1vh 1vw;
 }
 .search input {
     outline : none;
