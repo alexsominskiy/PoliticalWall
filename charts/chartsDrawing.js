@@ -196,13 +196,13 @@ function makeOptionsLowerTime(title, colors, numFormat) {
 
     if (colors){
         draft.series = {
-            0: { color: '#ff8888' },
-            1: { color: '#88ff88' },
-            2: { color: '#8888ff' },
-            3: { color: '#ffff88' },
-            4: { color: '#ff88ff' },
-            5: { color: '#88ffff' },
-            6: { color: '#ff0000' }
+            0: { color: 'red' },
+            1: { color: 'green' },
+            2: { color: 'yellow' },
+            3: { color: 'blue' },
+            4: { color: 'pink' },
+            5: { color: 'orange' },
+            6: { color: 'brown' }
         }
     }
 
