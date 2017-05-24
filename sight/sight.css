@@ -1,6 +1,6 @@
 .graph{
     height: 37vh;
-    width: 29vw;
+    width: 29%;
     overflow: hidden;
 }
 .det{
@@ -13,20 +13,20 @@
 }
 .left_column{
     display: inline-block;
-    width: 42vw;
+    width: 50%;
 }
 .center_column{
     display: inline-block;
-    width: 25vw;
+    width: 17%vw;
     margin-left: 1vw;
 }
 .right_column{
     display: inline-block;
-    width: 29vw;
+    width: 33%vw;
     margin-left: 1vw;
 }
 .full_page{
-    width: 100vw;
+    width: 100%;
 }
 .sDets{
     text-align: center;
@@ -36,7 +36,7 @@
     white-space: nowrap;
     margin-top: 1vh;
     height: 38vh;
-    width: 20vw;
+    width: 20%;
     border: hidden;
     border: 1px solid #888888;
     border-radius: 1vh;
