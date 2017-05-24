@@ -4,6 +4,7 @@
 }
 .logo{
     height : 8vh;
+    cursor : pointer;
 }
 .greynavbar div{
     background-color: #666666;
@@ -13,7 +14,7 @@
     box-sizing: border-box;
     padding: 0.8vh 1vw;
     font-size: 2vh;
-    width:19.6vw;
+    width:24vw;
     display: inline-block;
     text-align: center;
     cursor : pointer;
