@@ -10,10 +10,7 @@
     text-align: right;
 }
 .logo{
-    display: inline-block;
-    width:20vw;
-    padding-top: 2vh;
-    text-align: center;
+    height : 5vh;
 }
 .bck{
     background-color: lightyellow;
