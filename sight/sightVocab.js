@@ -6,7 +6,7 @@ var vocab = {
     first : 'הערה חמה',
     calendary : 'לוח שנה',
     lastNews : 'דעות והערות',
-    lastCharts : 'תרשימים אחרונים',
+    lastCharts : 'המדדים',
     homePage : 'עמוד בית',
     ourServices : 'השירותים שלנו'
 }

@@ -6,7 +6,7 @@ var categories = {}
 categories.gender=["גברים","נשים"];
 categories.age=["עד 29","30-44","45-60","60+"];
 categories.region=["חיפה וצפון","מרכז","תל אביב","ים ויוש","דרום"];
-categories.religion = ["חילוני","מסורתי","דתי","חרדי"];
+categories.religion = ["חילוני","מסורתי","דתיות","חרדי"];
 categories.income=["מתחת לממוצע","ממוצע","מעל לממוצע"];
 categories.education=["תיכונית ומטה","על תיכונית","אקדמאית"];
 
@@ -21,9 +21,9 @@ var importantThings = 'הנושאים החשובים לטיפול';
 var groups = {
     gender : "מִין",
     age : "גיל",
-    region : "אזור",
+    region : "אזור מגורים",
     religion : "דת",
-    income : "תבואה",
+    income : "הכנסה",
     education : "השכלה"
 }
 
