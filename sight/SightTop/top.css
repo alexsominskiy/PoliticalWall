@@ -1,13 +1,9 @@
 .head{
-    display: inline-block;
+    padding: 1vh 0;
     text-align : center;
 }
 .logo{
-    height : 5vh;
-}
-.bck{
-    background-color: lightyellow;
-    height: 5vh;
+    height : 7vh;
 }
 .greynavbar div{
     background-color: #666666;
