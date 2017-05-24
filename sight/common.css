@@ -5,6 +5,8 @@
 body{
     margin: 0;
     font-family: Alef;
+    width: 100vw;
+    max-width: 1024px;
 }
 .time{
     color : #990099;
