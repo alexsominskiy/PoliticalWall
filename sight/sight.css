@@ -23,7 +23,7 @@
 .right_column{
     display: inline-block;
     width: 33%;
-    margin-left: 1vw;
+    margin-left: 0.5vw;
 }
 .full_page{
     width: 100%;
