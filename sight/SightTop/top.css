@@ -1,12 +1,6 @@
-.header_size{
-    display: inline-block;
-    text-align : center;
-}
 .head{
     display: inline-block;
-    width: 58.5vw;
-    color:darkblue;
-    text-align: right;
+    text-align : center;
 }
 .logo{
     height : 5vh;
