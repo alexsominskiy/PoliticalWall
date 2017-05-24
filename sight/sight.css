@@ -13,7 +13,7 @@
 }
 .left_column{
     display: inline-block;
-    width: 45%;
+    width: 48%;
 }
 .center_column{
     display: inline-block;
@@ -36,7 +36,7 @@
     white-space: nowrap;
     margin-top: 1vh;
     height: 38vh;
-    width: 49%;
+    width: 49.5%;
     border: hidden;
     border: 1px solid #888888;
     border-radius: 1vh;
