@@ -4,7 +4,7 @@
 var style = 
     "<style>" +
     "*{"+
-    "font-family: Arial;"+
+    "font-family: Alef;"+
     "text-align: right;"+
     "}" +
 
