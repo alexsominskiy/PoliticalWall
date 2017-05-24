@@ -17,12 +17,12 @@
 }
 .center_column{
     display: inline-block;
-    width: 17%vw;
+    width: 17%;
     margin-left: 1vw;
 }
 .right_column{
     display: inline-block;
-    width: 33%vw;
+    width: 33%;
     margin-left: 1vw;
 }
 .full_page{
