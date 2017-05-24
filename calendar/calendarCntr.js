@@ -18,7 +18,7 @@ app.controller("calendarCntr",function($scope, $http){
     var currMoment = moment();
     setCalendar(currMoment);
 
-    $scope.month = moment().format("MMMM");
+    $scope.month = moment().format("MMM");
     $scope.year = moment().format("YYYY");
 
     function setCalendar(mom) {
