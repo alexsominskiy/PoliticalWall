@@ -18,12 +18,12 @@ app.controller("calendarCntr",function($scope, $http){
     var currMoment = moment();
     setCalendar(currMoment);
 
-    $scope.month = moment().format("M");
+    $scope.month = moment().format("MMM");
     $scope.year = moment().format("YYYY");
 
     function setCalendar(mom) {
 
-        $scope.month = mom.format("M");
+        $scope.month = mom.format("MMM");
         $scope.year = mom.format("YYYY");
 
         var begin = mom.clone().startOf('month');

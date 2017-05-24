@@ -89,7 +89,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
 
     moment.locale();
 
-    $scope.month = moment().format("MMMM");
+    $scope.month = moment().format("MMM");
     $scope.year = moment().format("YYYY");
     $scope.days = [];
 
@@ -105,7 +105,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
 
     function setCalendar(mom) {
 
-        $scope.month = mom.format("MMMM");
+        $scope.month = mom.format("MMM");
         $scope.year = mom.format("YYYY");
 
         var begin = mom.clone().startOf('month').subtract(3, 'day');
