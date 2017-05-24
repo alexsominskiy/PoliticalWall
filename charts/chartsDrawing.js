@@ -142,7 +142,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
 
     if(size == 'big'){draft.width = rubberW(800); draft.height = rubberH(245);}
     else if(size == 'small'){draft.width = rubberW(370); draft.height = rubberH(150); draft.titleTextStyle.fontSize = rubberH(15);}
-    else if(size == 'front'){draft.width = rubberW(340); draft.height = rubberH(245);}
+    else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(245);}
     
 
     if (legend){draft.legend = {textStyle : {color: "white"}}}
