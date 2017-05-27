@@ -50,6 +50,7 @@
     padding-right: 0.3vw;
     overflow-y: auto;
     height: 37vh;
+    margin-bottom: 1vh;
 }
 .news td {
     box-sizing: border-box;
@@ -65,7 +66,7 @@
     overflow-y: scroll;
     white-space: nowrap;
     padding-bottom: 2vh;
-    height: 31.2vh;
+    height: 31.5vh;
 }
 .smallDay{
     border: 0.15vh solid #333333;
