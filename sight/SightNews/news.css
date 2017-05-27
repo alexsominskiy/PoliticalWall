@@ -21,7 +21,7 @@
 }
 
 .unMenu{
-    position: absolute;
+
     display: inline-block;
     left: 74%;
     padding: 2vh;
@@ -41,7 +41,7 @@
     padding: 2vh 2vw;
 }
 .newsContainer{
-    position: absolute;
+
     display: inline-block;
     width: 70%;
     padding: 2vh 2vw;
