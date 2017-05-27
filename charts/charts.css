@@ -107,6 +107,7 @@
 .smallCharts{
     position: absolute;
     top: 41vh;
+    width: 100%;
 }
 .lowerTime{
     position: absolute;
