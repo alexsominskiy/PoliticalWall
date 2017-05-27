@@ -9,6 +9,7 @@
 .greynavbar div{
     background-color: #666666;
     color: white;
+    height : 4vh;
 }
 .div_but{
     box-sizing: border-box;
