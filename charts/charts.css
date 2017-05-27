@@ -125,7 +125,7 @@
     top: 0vh;
     left: 75%;
     display: inline-block;
-    width: 24vw;
+    width: 24%;
     height: 40vh;
     font-size: 2.5vh;
     padding: 1vh 2vw 4vh 1vw;
@@ -136,6 +136,7 @@
     position: relative;
     height: 86vh;
     overflow: hidden;
+    width: 100%;
 }
 .recordList{
     position: absolute;
