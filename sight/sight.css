@@ -12,16 +12,16 @@
     box-shadow: 0 0 0.5vh 0.5vh rgba(0,0,0,0.3);
 }
 .left_column{
-    display: inline-block;
+    float  : left;
     width: 48%;
 }
 .center_column{
-    display: inline-block;
+    float: left;
     width: 17%;
     margin-left: 0.5%;
 }
 .right_column{
-    display: inline-block;
+    float : left;
     width: 33%;
     margin-left: 0.5%
 }
