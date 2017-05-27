@@ -50,7 +50,7 @@
 
 .day{
     direction: rtl;
-    width:12.9vw;
+    width:12.9%;
     display: inline-block;
     border: 1px solid #333333;
     box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
