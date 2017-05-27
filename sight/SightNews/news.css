@@ -42,8 +42,8 @@
 .newsContainer{
 
     display: inline-block;
-    width: 73%;
-    padding: 2vh 2vw;
+    width: 70%;
+    padding: 2vh 0 2vh 2vw;
 }
 .search{
     border-bottom: 0.15vh solid darkblue;
