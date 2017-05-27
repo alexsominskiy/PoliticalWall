@@ -14,6 +14,10 @@
 .un td:nth-child(1){
     color : darkblue;
     font-size: 2.5vh;
+    width: 30%;
+}
+.un td:nth-child(2){
+    width: 70%;
 }
 
 .unMenu{
