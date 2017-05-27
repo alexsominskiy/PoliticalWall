@@ -14,12 +14,12 @@
 .genderChart{
     position: absolute;
     top: 0;
-    left: 3%;
+    left: 1%;
 }
 .ageChart{
     position: absolute;
     top: 0;
-    left: 35%;
+    left: 34%;
 
 }
 .regionChart{
@@ -31,13 +31,13 @@
 .religionChart{
     position: absolute;
     top: 23vh;
-    left: 3%;
+    left: 1%;
 
 }
 .incomeChart{
     position: absolute;
     top: 23vh;
-    left: 35%;
+    left: 34%;
 
 }
 .educationChart{
