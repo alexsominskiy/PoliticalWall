@@ -14,14 +14,15 @@
 .un td:nth-child(1){
     color : darkblue;
     font-size: 2.5vh;
-    width: 30%;
+    width: 70%;
 }
 .un td:nth-child(2){
-    width: 70%;
+    width: 30%;
 }
 
 .unMenu{
     position: absolute;
+    display: inline-block;
     left: 74%;
     padding: 2vh;
     font-size: 2vh;
