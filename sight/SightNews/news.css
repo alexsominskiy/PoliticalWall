@@ -44,6 +44,7 @@
     display: inline-block;
     width: 70%;
     padding: 2vh 0 2vh 2vw;
+    margin-top : -2vh;
 }
 .search{
     border-bottom: 0.15vh solid darkblue;
