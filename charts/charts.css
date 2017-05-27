@@ -3,47 +3,47 @@
 #chart{
     position: absolute;
     top: 1vh;
-    left: 16vw;
+    left: 16%;
 }
 #upperTime{
     position: absolute;
     top: 1vh;
-    left: 17vw;
+    left: 17%;
 }
 
 .genderChart{
     position: absolute;
     top: 0;
-    left: 7vw;
+    left: 7%;
 }
 .ageChart{
     position: absolute;
     top: 0;
-    left: 37vw;
+    left: 37%;
 
 }
 .regionChart{
     position: absolute;
     top: 0;
-    left: 67vw;
+    left: 67%;
 
 }
 .religionChart{
     position: absolute;
     top: 23vh;
-    left: 7vw;
+    left: 7%;
 
 }
 .incomeChart{
     position: absolute;
     top: 23vh;
-    left: 37vw;
+    left: 37%;
 
 }
 .educationChart{
     position: absolute;
     top: 23vh;
-    left: 67vw;
+    left: 67%;
 
 }
 
@@ -72,7 +72,7 @@
 .bigT{
     position: absolute;
     top: 2vh;
-    left: 72vw;
+    left: 72%;
     width: 5vh;
     height: 5vh;
     color: yellow;
@@ -110,7 +110,7 @@
 }
 .lowerTime{
     position: absolute;
-    left: 7vw;
+    left: 7%;
     top: 39vh;
     box-shadow: 0 0 10px 0 white;
 }
@@ -123,7 +123,7 @@
 .chartsMenu{
     position: absolute;
     top: 0vh;
-    left: 75vw;
+    left: 75%;
     display: inline-block;
     width: 24vw;
     height: 40vh;
@@ -141,7 +141,7 @@
     position: absolute;
     top: 1vh;
     left: 0vw;
-    width: 14vw;
+    width: 14%;
     height: 30vh;
     overflow-y: auto;
 }
