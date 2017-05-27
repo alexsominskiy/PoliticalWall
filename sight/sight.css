@@ -13,7 +13,7 @@
 }
 .left_column{
     float  : left;
-    width: 48%;
+    width: 49%;
 }
 .center_column{
     float: left;
@@ -73,7 +73,7 @@
     margin: 3px;
     padding-right: 1vw;
     text-align: right;
-    height: 27px;
+    height: 5vh;
     border-radius: 1vh;
     box-sizing: border-box;
     color: darkblue;
