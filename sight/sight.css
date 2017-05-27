@@ -32,7 +32,7 @@
     text-align: center;
 }
 .smalldet{
-    display: inline-block;
+    float: left;
     white-space: nowrap;
     margin-top: 1vh;
     height: 38vh;
