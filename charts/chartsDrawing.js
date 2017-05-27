@@ -1,7 +1,7 @@
 
 var optionsKnesset = {
 
-    'width': rubberW(800),
+    'width': Math.min(rubberW(800),600),
     'height': rubberH(270),
     reverseCategories: true,
     /*annotations: {
@@ -39,7 +39,7 @@ var optionsKnesset = {
 }
 var optionsKnessetTime = {
 
-    'width': rubberW(1200),
+    'width': Math.min(rubberW(1200),900),
     'height': rubberH(300),
     chartArea :{
         bottom : rubberH(75)
@@ -71,7 +71,7 @@ var optionsKnessetTime = {
 }
 var optionsUpperTime = {
 
-    'width': rubberW(800),
+    'width': Math.min(rubberW(800),600),
     'height': rubberH(245),
     reverseCategories: true,
     backgroundColor: "#666666",
@@ -159,7 +159,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
 
         title : title,
 
-        'width': rubberW(1200),
+        'width': Math.min(rubberW(1200),900),
         'height': rubberH(300),
         chartArea: {
             bottom: rubberH(75)
