@@ -18,16 +18,16 @@
 
 .unMenu{
     position: absolute;
-    left: 74vw;
+    left: 74%;
     padding: 2vh;
     font-size: 2vh;
-    width: 25vw;
+    width: 25%;
     height: 77vh;
     overflow-y: scroll;
     margin-top: 1vh;
 }
 .newsHtml{
-    width: 68vw;
+    width: 90%;
     height: 73vh;
     overflow: auto;
     border: 1px solid darkblue;
@@ -38,7 +38,7 @@
 .newsContainer{
     position: absolute;
     display: inline-block;
-    width: 70vw;
+    width: 70%;
     padding: 2vh 2vw;
 }
 .search{
