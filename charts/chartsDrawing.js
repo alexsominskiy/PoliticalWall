@@ -141,7 +141,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     }
 
     if(size == 'big'){draft.width = Math.min(rubberW(800),600); draft.height = rubberH(245);}
-    else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(150); draft.titleTextStyle.fontSize = rubberH(12);}
+    else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(157); draft.titleTextStyle.fontSize = rubberH(12);}
     else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(245);}
     
 
@@ -159,7 +159,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
 
         title : title,
 
-        'width': Math.min(rubberW(1200),900),
+        'width': Math.min(rubberW(1330),1000),
         'height': rubberH(300),
         chartArea: {
             bottom: rubberH(75)

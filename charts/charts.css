@@ -30,19 +30,19 @@
 }
 .religionChart{
     position: absolute;
-    top: 23vh;
+    top: 24vh;
     left: 1%;
 
 }
 .incomeChart{
     position: absolute;
-    top: 23vh;
+    top: 24vh;
     left: 34%;
 
 }
 .educationChart{
     position: absolute;
-    top: 23vh;
+    top: 24vh;
     left: 67%;
 
 }
@@ -106,12 +106,12 @@
 
 .smallCharts{
     position: absolute;
-    top: 41vh;
+    top: 39vh;
     width: 100%;
 }
 .lowerTime{
     position: absolute;
-    left: 7%;
+    left: 1%;
     top: 39vh;
     box-shadow: 0 0 10px 0 white;
 }
