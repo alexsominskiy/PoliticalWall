@@ -98,7 +98,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
     
     $scope.scrollCalendar = function(){
         var cont = document.getElementById("cont");
-        cont.scrollTop = (cont.firstElementChild.offsetHeight + 3) * (moment().date() - 1) + 1;
+        cont.scrollTop = (cont.firstElementChild.offsetHeight + 3) * (moment().date() - 1) + 3;
     }
 
     $scope.currMoment = moment();
