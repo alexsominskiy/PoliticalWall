@@ -116,7 +116,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     var draft = {
 
         title : title,
-        chartArea: {'width': '75%', 'height': '80%'},
+        chartArea: {'width': '75%', 'height': '65%'},
 
         reverseCategories: true,
         backgroundColor: "#666666",
@@ -159,8 +159,8 @@ function makeOptionsLowerTime(title, colors, numFormat) {
 
         title : title,
 
-        'width': Math.min(rubberW(1330),1000),
-        'height': rubberH(310),
+        'width': Math.min(rubberW(1336),1024),
+        'height': rubberH(315),
         chartArea: {
             bottom: rubberH(75)
         },
