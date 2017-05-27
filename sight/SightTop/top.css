@@ -9,10 +9,10 @@
 .greynavbar div{
     background-color: #666666;
     color: white;
-    font-size: 0.6vh;
 }
 .div_but{
     box-sizing: border-box;
+    float: left;
     padding: 0.8vh 1vw;
     font-size: 2vh;
     width:24.5%;
