@@ -6,7 +6,7 @@
     height : 7vh;
     cursor : pointer;
 }
-.greynavbar div{
+.greynavbar{
     background-color: #666666;
     color: white;
     height : 4vh;
