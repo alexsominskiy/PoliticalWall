@@ -64,8 +64,8 @@
 .calcont{
     overflow-y: scroll;
     white-space: nowrap;
-    padding-bottom: 1.5vh;
-    height: 32vh;
+    padding-bottom: 2vh;
+    height: 31.5vh;
 }
 .smallDay{
     border: 0.15vh solid #333333;
