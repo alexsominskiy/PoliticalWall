@@ -500,9 +500,10 @@ function drawLeadersTime(){
     data.addColumn('string','');
     var columnCounter = 0;
     for (var i in leadersArray){
-        if (keyWordLeaders == 'primeMinister' || !(leadersArray[i] == nobodyOfThem))
+        if (keyWordLeaders == 'primeMinister' || !(leadersArray[i] == nobodyOfThem)) {
             data.addColumn('number', leadersArray[i]);
             columnCounter++;
+        }
     }
     for (var i in recordsArray){
         var row = [];
