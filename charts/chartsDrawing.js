@@ -111,6 +111,44 @@ var optionsUpperTime = {
     }
 }
 
+function makeOptionsUpperTimeDetails(aspect){
+    
+    draft = {
+
+        'width': Math.min(rubberW(800), 600),
+        'height': rubberH(245),
+        reverseCategories: true,
+        backgroundColor: "#666666",
+        hAxis: {
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            }
+        },
+        vAxis: {
+            minValue: 0,
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            },
+        },
+        legend: {
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            }
+        },
+        titleTextStyle: {
+            color: "white",
+            fontName: "Alef",
+            fontSize: rubberH(20)
+        }
+    }
+    
+    if(aspect) draft.vAxis.format = 'percent';
+}
+
+
 function makeOptions(size,title, legend, numFormat, reverse){
 
     var draft = {
@@ -716,7 +754,7 @@ function drawSmallTimeLeadersDetails(group){
     optionsUpperTime.title = keyWordLeadersName+", "+detail+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime);
+    chart.draw(data, makeOptionsUpperTimeDetails(keyWordDetails == 'aspects'));
 
 }
 function drawSmallTimeGovernment(group){
@@ -741,7 +779,7 @@ function drawSmallTimeGovernment(group){
     optionsUpperTime.title = gSurvival+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime);
+    chart.draw(data, OptionsUpperTime);
 }
 function drawSmallTimeImportantThings(group){
     var selection = groupCharts[group].getSelection()[0];
