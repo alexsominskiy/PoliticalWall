@@ -517,6 +517,7 @@ function drawLeadersTime(){
     var formatter = new google.visualization.NumberFormat({pattern : "#%"});
     for (var i=1; i<=columnCounter; i++)formatter.format(data, i);
 
+    
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
