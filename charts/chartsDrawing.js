@@ -244,9 +244,7 @@ function drawLeaders(keyWord) {
     }
     data.addRows(chData);
 
-    var formatter = new google.visualization.NumberFormat({
-        pattern : "#%"
-    });
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
     formatter.format(data, 1);
 
     var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
@@ -275,6 +273,9 @@ function drawLeaders(keyWord) {
                 tData.push(tPair);
             }
             tbl.addRows(tData);
+
+            var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+            formatter.format(data, 1);
 
             keyWordLeadersName = leaderName;
 
