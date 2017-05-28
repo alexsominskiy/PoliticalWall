@@ -113,7 +113,7 @@ var optionsUpperTime = {
 
 function makeOptionsUpperTimeDetails(aspect){
     
-    draft = {
+    var draft = {
 
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(245),
@@ -130,7 +130,7 @@ function makeOptionsUpperTimeDetails(aspect){
             textStyle: {
                 fontName: "Alef",
                 color: "white"
-            },
+            }
         },
         legend: {
             textStyle: {
