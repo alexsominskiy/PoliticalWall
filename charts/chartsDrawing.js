@@ -579,6 +579,9 @@ function drawGovernmentTime(){
         data.addRow(row);
     }
 
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
@@ -670,6 +673,9 @@ function drawSmallTimeLeaders(group){
         data.addRow(row);
     }
 
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
@@ -697,6 +703,9 @@ function drawSmallTimeLeadersDetails(group){
         data.addRow(row);
     }
 
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = keyWordLeadersName+", "+detail+", "+groups[group];
@@ -718,6 +727,9 @@ function drawSmallTimeGovernment(group){
         }
         data.addRow(row);
     }
+
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
 
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
@@ -744,6 +756,9 @@ function drawSmallTimeImportantThings(group){
         }
         data.addRow(row);
     }
+
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
 
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
