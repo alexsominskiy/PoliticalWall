@@ -115,6 +115,7 @@ function makeOptionsUpperTimeDetails(title,aspect){
     
     var draft = {
 
+        title : title,
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(245),
         reverseCategories: true,
