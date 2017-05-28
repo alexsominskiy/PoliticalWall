@@ -545,8 +545,10 @@ function drawLeadersDetailsTime(){
         data.addRow(row);
     }
 
+    console.log("before");
     var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-    for(var i=1; i< data.getNumberOfColumns(); i++)formatter.format(data,i);
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+    console.log("after");
 
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
