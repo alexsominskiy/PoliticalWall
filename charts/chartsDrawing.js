@@ -347,9 +347,10 @@ function drawLeadersDetails(keyWord) {
                 }
                 tbl.addRow(tData);
             }
-
-            var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-            for(var i=0; i< tbl.getNumberOfColumns(); i++)formatter.format(tbl,i);
+            if(keyWord == 'aspects') {
+                var formatter = new google.visualization.NumberFormat({pattern: "#%"});
+                for (var i = 0; i < tbl.getNumberOfColumns(); i++)formatter.format(tbl, i);
+            }
             
             groupCharts[group] = gr;
 
