@@ -324,6 +324,7 @@ function drawLeaders(keyWord) {
         }
     });
 
+    clearSmallTime();
     document.getElementById("smalls").style.display = "none";
     bigTFree();
     titleRight(chart,"chart");

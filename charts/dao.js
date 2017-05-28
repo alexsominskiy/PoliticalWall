@@ -22,7 +22,7 @@ var groups = {
     gender : "מִין",
     age : "גיל",
     region : "אזור מגורים",
-    religion : "דת",
+    religion : "דתיות",
     income : "הכנסה",
     education : "השכלה"
 }
