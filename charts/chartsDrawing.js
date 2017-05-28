@@ -111,7 +111,7 @@ var optionsUpperTime = {
     }
 }
 
-function makeOptionsUpperTimeDetails(aspect){
+function makeOptionsUpperTimeDetails(title,aspect){
     
     var draft = {
 
@@ -752,10 +752,9 @@ function drawSmallTimeLeadersDetails(group){
     
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
-    optionsUpperTime.title = keyWordLeadersName+", "+detail+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, makeOptionsUpperTimeDetails(keyWordDetails == 'aspects'));
+    chart.draw(data, makeOptionsUpperTimeDetails(keyWordLeadersName+", "+detail+", "+groups[group],keyWordDetails == 'aspects'));
 
 }
 function drawSmallTimeGovernment(group){
