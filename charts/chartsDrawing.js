@@ -809,7 +809,7 @@ function drawSmallTimeImportantThings(group){
 function clearSmallTime(){
     document.getElementById('upperTime').style.display = "none";
     document.getElementById('bT').style.display = "block";
-    clearSmallTime();
+    clearSmallT();
 }
 function bigTToggleMouseout(){
     var bt = document.getElementById("bT");
