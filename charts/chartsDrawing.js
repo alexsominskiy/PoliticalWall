@@ -710,7 +710,7 @@ function drawSmallTimeLeadersDetails(group){
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = keyWordLeadersName+", "+detail+", "+groups[group];
     titleRight(chart,"upperTime");
-    document.getElementById('bT').style.display = "block";
+    document.getElementById('bT').style.display = "none";
     chart.draw(data, optionsUpperTime);
 
 }
@@ -735,7 +735,7 @@ function drawSmallTimeGovernment(group){
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = gSurvival+", "+groups[group];
     titleRight(chart,"upperTime");
-    document.getElementById('bT').style.display = "block";
+    document.getElementById('bT').style.display = "none";
     chart.draw(data, optionsUpperTime);
 }
 function drawSmallTimeImportantThings(group){
@@ -764,7 +764,7 @@ function drawSmallTimeImportantThings(group){
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = importantThings+", "+thing+", "+groups[group];
     titleRight(chart,"upperTime");
-    document.getElementById('bT').style.display = "block";
+    document.getElementById('bT').style.display = "none";
     chart.draw(data, optionsUpperTime);
 }
 
