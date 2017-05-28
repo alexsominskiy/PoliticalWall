@@ -680,7 +680,7 @@ function drawSmallTimeLeaders(group){
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
     titleRight(chart,"upperTime");
-    document.getElementById('bT').style.display = "block";
+    document.getElementById('bT').style.display = "none";
     chart.draw(data, optionsUpperTime);
 }
 function drawSmallTimeLeadersDetails(group){
