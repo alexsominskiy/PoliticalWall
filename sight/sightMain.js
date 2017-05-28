@@ -66,6 +66,9 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         }
         data.addRows(chData);
 
+        var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+        for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+
         var chart = new google.visualization.ColumnChart(document.getElementById('upper'));
         titleRight(chart,"upper");
         chart.draw(data, makeOptions("front",leaderTitles['total']));
