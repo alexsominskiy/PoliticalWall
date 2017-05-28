@@ -245,7 +245,7 @@ function drawLeaders(keyWord) {
     data.addRows(chData);
 
     var formatter = new google.visualization.NumberFormat({
-        pattern : "#,###.00'%'"
+        pattern : "#%"
     });
     formatter.format(data, 1);
 
