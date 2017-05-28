@@ -309,7 +309,7 @@ function drawLeadersDetails(keyWord) {
     }
     data.addRows(chData);
 
-    if(keyWord != 'aspects') {
+    if(keyWord == 'aspects') {
         var formatter = new google.visualization.NumberFormat({pattern: "#%"});
         for (var i = 1; i < data.getNumberOfColumns(); i++) formatter.format(data, i);
     }
