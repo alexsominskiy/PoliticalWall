@@ -706,10 +706,11 @@ function drawSmallTimeLeadersDetails(group){
         }
         data.addRow(row);
     }
-
-    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
-
+    if(keyWordDetails == 'aspects') {
+        var formatter = new google.visualization.NumberFormat({pattern: "#%"});
+        for (var i = 1; i < data.getNumberOfColumns(); i++)formatter.format(data, i);
+    }
+    
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
     optionsUpperTime.title = keyWordLeadersName+", "+detail+", "+groups[group];
