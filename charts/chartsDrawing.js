@@ -448,6 +448,7 @@ function drawGovernment(){
 
     keyWordChart = 'government';
 
+    clearSmallTime();
     bigTFree();
     titleRight(chart,"chart");
     chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
@@ -493,7 +494,7 @@ function drawImportantThings(){
         gr.draw(tbl, makeOptions("small",groups[group]));
     }
 
-
+    clearSmallTime();
     bigTFree();
     keyWordChart = 'importantThings';
     titleRight(chart,"chart");
@@ -516,19 +517,11 @@ function drawKnesset(){
     }
     data.addRows(chData);
 
-/*
-    var rows = [];
-    rows.push(["",""]);
-    for (var key in record.knesset){
-        rows.push([key, parseFloat(record.knesset[key])]);
-    }
-    var data = new google.visualization.arrayToDataTable(rows);
-*/
-
     var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
 
     document.getElementById("smalls").style.display = "none";
 
+    clearSmallTime();
     titleRight(chart,"chart");
     bigTFree();
     keyWordChart = 'knesset';
@@ -816,6 +809,7 @@ function drawSmallTimeImportantThings(group){
 function clearSmallTime(){
     document.getElementById('upperTime').style.display = "none";
     document.getElementById('bT').style.display = "block";
+    clearSmallTime();
 }
 function bigTToggleMouseout(){
     var bt = document.getElementById("bT");
@@ -846,6 +840,17 @@ function titleRight(chart, id){
         txt.attr("x",parseInt(rect.attr("x"))+rect.width());
         txt.attr("text-anchor","end");
     });
+}
+
+function clearSmallT(){
+    var smalls = $("#smalls").children();
+    for (var i=0; i<smalls.length; i++){
+        var smt = smalls[i].lastElementChild;
+        smt.classList.remove("notSeen");
+        smt.classList.remove("redT");
+        smt.onmouseover = function(){smallTime(this.data)};
+        smt.onmouseout = function(){clearSmallTime()};
+    }
 }
 
 function setSmalls(){
