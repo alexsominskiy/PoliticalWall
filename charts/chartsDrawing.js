@@ -512,6 +512,12 @@ function drawLeadersTime(){
         }
         data.addRow(row);
     }
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for (var i in leadersArray){
+        if (keyWordLeaders == 'primeMinister' || !(leadersArray[i] == nobodyOfThem))
+            formatter.format(data, i+1);
+    }
+    
 
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
