@@ -402,7 +402,7 @@ function drawLeadersDetails(keyWord) {
         }
     });
 
-
+    clearSmallTime();
     document.getElementById("smalls").style.display = "none";
     bigTFree();
     keyWordChart = 'leadersDetails';
