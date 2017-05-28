@@ -235,7 +235,7 @@ function drawLeaders(keyWord) {
     data.addColumn({type:'string', role:'style'});
 
     var formatter = new google.visualization.NumberFormat({pattern:'#,###%'});
-    formatter.format(data, 1);
+    formatter.format(data, 2);
 
     var chData = [];
     var colorCounter = 0;
