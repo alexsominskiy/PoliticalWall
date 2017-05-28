@@ -275,7 +275,7 @@ function drawLeaders(keyWord) {
             tbl.addRows(tData);
 
             var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-            formatter.format(data, 1);
+            formatter.format(tbl, 1);
 
             keyWordLeadersName = leaderName;
 
