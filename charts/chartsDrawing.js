@@ -245,8 +245,8 @@ function drawLeaders(keyWord) {
     data.addRows(chData);
 
     var formatter = new google.visualization.NumberFormat({
-        fractionDigits: 1,
-        suffix: '%'
+        fractionDigits: 2,
+        pattern : "#,#'%'"
     });
     formatter.format(data, 1);
 
