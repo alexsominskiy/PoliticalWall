@@ -345,6 +345,10 @@ function drawLeadersDetails(keyWord) {
                 }
                 tbl.addRow(tData);
             }
+
+            var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+            for(var i=0; i< tbl.getNumberOfColumns(); i++)formatter.format(tbl,i);
+            
             groupCharts[group] = gr;
 
             keyWordLeadersName = leaderName;
@@ -499,11 +503,9 @@ function drawLeadersTime(){
     }
 
     data.addColumn('string','');
-    var columnCounter = 0;
     for (var i in leadersArray){
         if (keyWordLeaders == 'primeMinister' || !(leadersArray[i] == nobodyOfThem)) {
             data.addColumn('number', leadersArray[i]);
-            columnCounter++;
         }
     }
     for (var i in recordsArray){
@@ -517,7 +519,7 @@ function drawLeadersTime(){
         data.addRow(row);
     }
     var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-    for (var i=1; i<=columnCounter; i++)formatter.format(data, i);
+    for (var i=1; i<=data.getNumberOfColumns; i++)formatter.format(data, i);
 
     
     document.getElementById('time').style.display = "block";
