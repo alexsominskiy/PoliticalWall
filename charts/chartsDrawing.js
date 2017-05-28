@@ -309,8 +309,10 @@ function drawLeadersDetails(keyWord) {
     }
     data.addRows(chData);
 
-    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-    for(var i=1; i<data.getNumberOfColumns(); i++) formatter.format(data,i);
+    if(keyWord != 'aspects') {
+        var formatter = new google.visualization.NumberFormat({pattern: "#%"});
+        for (var i = 1; i < data.getNumberOfColumns(); i++) formatter.format(data, i);
+    }
 
     var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
 
