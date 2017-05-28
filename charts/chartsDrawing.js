@@ -546,7 +546,7 @@ function drawLeadersDetailsTime(){
     }
 
     var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-    for(var i=0; i< tbl.getNumberOfColumns(); i++)formatter.format(data,i);
+    for(var i=0; i< data.getNumberOfColumns(); i++)formatter.format(data,i);
 
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
