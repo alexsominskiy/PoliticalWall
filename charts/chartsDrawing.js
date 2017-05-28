@@ -178,8 +178,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
             textStyle: {
                 fontName: "Alef",
                 color: "white"
-            },
-            format: 'percent'
+            }
         },
         legend: {
             textStyle: {
