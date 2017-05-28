@@ -146,6 +146,7 @@ function makeOptionsUpperTimeDetails(aspect){
     }
     
     if(aspect) draft.vAxis.format = 'percent';
+    return draft;
 }
 
 
