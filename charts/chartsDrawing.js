@@ -377,6 +377,9 @@ function drawGovernment(){
 
     ]);
 
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+
     var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
     // subCharts
@@ -392,6 +395,9 @@ function drawGovernment(){
         for (var key in record.governmentSurvival[group]) {
             tbl.addRow([categories[group][key], parseFloat(record.governmentSurvival[group][key])/100]);
         }
+
+        var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+        for(var i=1; i<tbl.getNumberOfColumns(); i++)formatter.format(tbl,i);
 
         titleRight(gr,group);
         gr.draw(tbl, makeOptions("small", groups[group]));
@@ -411,6 +417,9 @@ function drawImportantThings(){
         rows.push([key, parseFloat(record.importantThings[key].all)]);
     }
     var data = new google.visualization.arrayToDataTable(rows);
+
+    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
 
     var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
@@ -432,6 +441,9 @@ function drawImportantThings(){
                 row.push(parseFloat(record.importantThings[categories.importantThings[i]][group][key]));
             tbl.addRow(row);
         }
+
+        var formatter = new google.visualization.NumberFormat({pattern : "#%"});
+        for(var i=1; i<tbl.getNumberOfColumns(); i++)formatter.format(tbl,i);
 
         titleRight(gr,group);
         groupCharts[group] = gr;
@@ -545,10 +557,8 @@ function drawLeadersDetailsTime(){
         data.addRow(row);
     }
 
-    console.log("before");
     var formatter = new google.visualization.NumberFormat({pattern : "#%"});
     for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
-    console.log("after");
 
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
