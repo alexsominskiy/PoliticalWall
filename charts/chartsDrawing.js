@@ -244,6 +244,12 @@ function drawLeaders(keyWord) {
     }
     data.addRows(chData);
 
+    var formatter = new google.visualization.NumberFormat({
+        fractionDigits: 1,
+        suffix: '%'
+    });
+    formatter.format(data, 1);
+
     var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
 
     // small charts
