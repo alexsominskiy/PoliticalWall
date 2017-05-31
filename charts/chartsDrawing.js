@@ -187,7 +187,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(245);}
     
 
-    if (legend){draft.legend = {textStyle : {color: "white"}}}
+    if (legend){draft.legend = {textStyle : {color: "black"}}}
     else draft.legend = "none";
 
     if(!numFormat)draft.vAxis.format = 'percent';
