@@ -1,41 +1,43 @@
 
-var optionsKnesset = {
+function optionsKnesset() {
 
-    'width': Math.min(rubberW(800),600),
-    'height': rubberH(270),
-    reverseCategories: true,
-    /*annotations: {
-        alwaysOutside : true,
-        textStyle :  {
-            color : "red"
-        }
-    },*/
-    backgroundColor: "#666666",
-    hAxis : {
-        textStyle : {
-            fontName: "Alef",
-            color : "white"
-        }
+    return {
 
-    },
-    vAxis : {
-        gridlines: {
-            color: 'transparent'
+        'width': Math.min(rubberW(800), 600),
+        'height': rubberH(270),
+        reverseCategories: true,
+        /*annotations: {
+         alwaysOutside : true,
+         textStyle :  {
+         color : "red"
+         }
+         },*/
+        backgroundColor: "#666666",
+        hAxis: {
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            }
+
         },
-        textStyle : {
+        vAxis: {
+            gridlines: {
+                color: 'transparent'
+            },
+            textStyle: {
+                fontName: "Alef",
+                color: "#666666"
+            }
+        },
+        legend: "none",
+        pieSliceText: 'value',
+        title: 'מנדטים',
+        titleTextStyle: {
+            color: "white",
             fontName: "Alef",
-            color : "#666666"
+            fontSize: rubberH(20)
         }
-    },
-    legend : "none",
-    pieSliceText: 'value',
-    title : 'מנדטים',
-    titleTextStyle:{
-        color : "white",
-        fontName: "Alef",
-        fontSize : rubberH(20)
     }
-
 }
 var optionsKnessetTime = {
 
@@ -534,9 +536,9 @@ function drawKnesset(){
     titleRight(chart,"chart");
     bigTFree();
     keyWordChart = 'knesset';
-    chart.draw(data, optionsKnesset);
+    chart.draw(data, optionsKnesset());
 
-    window.addEventListener("resize",function(){chart.draw(data, optionsKnesset);});
+    window.addEventListener("resize",function(){chart.draw(data, optionsKnesset());});
 
 }
 
