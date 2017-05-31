@@ -126,10 +126,10 @@
     top: 0vh;
     left: 77%;
     display: inline-block;
-    width: 24%;
+    width: 23%;
     height: 40vh;
     font-size: 2.5vh;
-    padding: 1vh 2vw 4vh 1vw;
+    padding: 1vh 0 4vh 1vw;
     overflow-y: auto;
 
 }
