@@ -73,7 +73,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         titleRight(chart,"upper");
         chart.draw(data, makeOptions("front",leaderTitles['total']));
         
-        window.onresize = function(){console.log("resized");}
+        window.addEventListener("resize", function(){chart.draw(data, makeOptions("front",leaderTitles['total']));});
         
     }
 
