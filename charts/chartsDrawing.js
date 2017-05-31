@@ -507,7 +507,8 @@ function drawImportantThings(){
     keyWordChart = 'importantThings';
     titleRight(chart,"chart");
     chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
-    
+
+    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));});
 }
 function drawKnesset(){
 
@@ -534,6 +535,9 @@ function drawKnesset(){
     bigTFree();
     keyWordChart = 'knesset';
     chart.draw(data, optionsKnesset);
+
+    window.addEventListener("resize",function(){chart.draw(data, optionsKnesset);});
+
 }
 
 var drawTime = {
