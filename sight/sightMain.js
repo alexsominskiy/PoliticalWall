@@ -91,6 +91,8 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         titleRight(chart,"lower");
         chart.draw(data, makeOptions("front",importantThings,true,false,true));
 
+        window.addEventListener("resize", function(){chart.draw(data, makeOptions("front",importantThings,true,false,true));});
+
     }
 
     moment.locale();
