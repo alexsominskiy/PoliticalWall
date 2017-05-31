@@ -332,7 +332,7 @@ function drawLeaders(keyWord) {
     keyWordLeaders = keyWord;
     chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),false));
     
-    window.addEventListener("resize",chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),false)));
+    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),false))});
 
 }
 function drawLeadersDetails(keyWord) {
