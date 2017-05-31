@@ -7,7 +7,7 @@
     height: 38vh;
     width: 100%;
     /*border: hidden;*/
-    border: 0.15vhpx solid #cccccc;
+    border: 0.15vh solid #cccccc;
     /*border-radius: 1vh;*/
     /*box-shadow: 0 0 0.5vh 0.5vh rgba(0,0,0,0.3);*/
 }
@@ -37,7 +37,7 @@
     margin-top: 1vh;
     height: 38vh;
     width: 49.5%;
-    border: hidden;
+    /*border: hidden;*/
     border: 0.15vh solid #cccccc;
     /*border-radius: 1vh;
     box-shadow: 0 0 0.2vw 0.2vw rgba(0,0,0,0.3);*/
