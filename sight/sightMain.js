@@ -72,7 +72,9 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         var chart = new google.visualization.ColumnChart(document.getElementById('upper'));
         titleRight(chart,"upper");
         chart.draw(data, makeOptions("front",leaderTitles['total']));
-        document.body.onresize = function(){chart.draw(data, makeOptions("front",leaderTitles['total']));}
+        
+        window.onresize = function(){console.log("resized");}
+        
     }
 
     function drawImportantThingsFront(){
