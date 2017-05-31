@@ -4,17 +4,16 @@
 var style = 
     "<style>" +
     "*{"+
-    "font-family: Arial;"+
     "text-align: right;"+
     "}" +
 
     ".author{" +
-    "font-size: 20px;"+
+    "font-size: 3.3vh;"+
     "color: black;"+
     "}"+
 
     ".header{" +
-    "font-size: 30px;"+
+    "font-size: 5vh;"+
     "color: blue;"+
     "}"+
 
