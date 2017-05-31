@@ -71,12 +71,12 @@
 }
 .smallDay{
     border: 0.15vh solid #333333;
-    box-shadow: 0 0 1vh 0 rgba(0,0,0,0.5);
-    margin : 0.45vh 0.2vw;
+    /*box-shadow: 0 0 1vh 0 rgba(0,0,0,0.5);
+    margin : 0.45vh 0.2vw;*/
     padding-right: 1vw;
     text-align: right;
     height: 4vh;
-    border-radius: 1vh;
+    border-radius: 0.5vh;
     box-sizing: border-box;
     color: darkblue;
     font-family: Alef;
