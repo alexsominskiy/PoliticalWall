@@ -412,6 +412,9 @@ function drawLeadersDetails(keyWord) {
     keyWordLeadersName = undefined;
     titleRight(chart, "chart");
     chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true, keyWord != 'aspects'))
+
+    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true, keyWord != 'aspects'))});
+
 }
 function drawGovernment(){
 
@@ -446,6 +449,9 @@ function drawGovernment(){
 
         titleRight(gr,group);
         gr.draw(tbl, makeOptions("small", groups[group]));
+
+        window.addEventListener("resize",function(){gr.draw(tbl, makeOptions("small", groups[group]))});
+
     }
 
     keyWordChart = 'government';
