@@ -161,24 +161,24 @@ function makeOptions(size,title, legend, numFormat, reverse){
         chartArea: {'width': '75%', 'height': '65%'},
 
         reverseCategories: true,
-        backgroundColor: "#666666",
+        backgroundColor: "white",
         hAxis : {
             textStyle : {
                 fontName: "Alef",
-                color : "white"
+                color : "black"
             }
         },
         vAxis : {
             minValue:0,
             textStyle : {
                 fontName: "Alef",
-                color : "white"
+                color : "black"
             },
         },
         titleTextStyle:{
             fontSize : rubberH(20),
             fontName: "Alef",
-            color : "white"
+            color : "black"
         }
     }
 
