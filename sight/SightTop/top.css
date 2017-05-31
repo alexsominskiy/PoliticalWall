@@ -16,7 +16,7 @@
 .div_but{
     box-sizing: border-box;
     float: left;
-    padding: 0.8vh 1vw;
+    /*padding: 0.8vh 1vw;*/
     font-size: 3vh;
     width:33.3%;
     text-align: center;

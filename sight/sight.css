@@ -67,7 +67,9 @@
     overflow-y: scroll;
     white-space: nowrap;
     padding-bottom: 2vh;
-    height: 31.5vh;
+    height: 30.5vh;
+    padding-right: 1vw;
+    padding-left: 1vw;
 }
 .smallDay{
     border: 0.15vh solid #333333;
