@@ -500,6 +500,7 @@ function drawGovernment(){
             sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
         }
 }
+
 function drawImportantThings(){
 
     var rows = [];
@@ -515,7 +516,7 @@ function drawImportantThings(){
     var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
     // subCharts
-
+    var smallCharts = [];
     document.getElementById("smalls").style.display = "block";
     groupCharts = {};
     for (var group in groups) {
@@ -539,6 +540,12 @@ function drawImportantThings(){
         titleRight(gr,group);
         groupCharts[group] = gr;
         gr.draw(tbl, makeOptions("small",groups[group]));
+
+        smallCharts.push({
+            gr : gr,
+            tbl: tbl,
+            title : groups[group]
+        })
     }
 
     clearSmallTime();
@@ -547,7 +554,13 @@ function drawImportantThings(){
     titleRight(chart,"chart");
     chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
 
-    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));});
+    window.addEventListener("resize",function(){
+        chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
+        for (var i in smallCharts){
+            var sc = smallCharts[i];
+            sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
+        }
+    });
 }
 function drawKnesset(){
 
