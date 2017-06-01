@@ -73,45 +73,48 @@ function optionsKnessetTime() {
         }
     }
 }
-var optionsUpperTime = {
+function optionsUpperTime() {
+    
+    return {
 
-    'width': Math.min(rubberW(800),600),
-    'height': rubberH(245),
-    reverseCategories: true,
-    backgroundColor: "#666666",
-    hAxis : {
-        textStyle : {
-            fontName: "Alef",
-            color : "white"
-        }
-    },
-    vAxis : {
-        minValue:0,
-        textStyle: {
-            fontName: "Alef",
-            color: "white"
+        'width': Math.min(rubberW(800), 600),
+        'height': rubberH(245),
+        reverseCategories: true,
+        backgroundColor: "#666666",
+        hAxis: {
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            }
         },
-        format: 'percent'
-    },
-    legend : {
-        textStyle : {
+        vAxis: {
+            minValue: 0,
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            },
+            format: 'percent'
+        },
+        legend: {
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            }
+        },
+        series: {
+            0: {color: '#ff8888'},
+            1: {color: '#88ff88'},
+            2: {color: '#8888ff'},
+            3: {color: '#ffff88'},
+            4: {color: '#ff88ff'},
+            5: {color: '#88ffff'},
+            6: {color: '#ff0000'}
+        },
+        titleTextStyle: {
+            color: "white",
             fontName: "Alef",
-            color: "white"
+            fontSize: rubberH(20)
         }
-    },
-    series: {
-        0: { color: '#ff8888' },
-        1: { color: '#88ff88' },
-        2: { color: '#8888ff' },
-        3: { color: '#ffff88' },
-        4: { color: '#ff88ff' },
-        5: { color: '#88ffff' },
-        6: { color: '#ff0000' }
-    },
-    titleTextStyle:{
-        color : "white",
-        fontName: "Alef",
-        fontSize : rubberH(20)
     }
 }
 
@@ -792,10 +795,16 @@ function drawSmallTimeLeaders(group){
 
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
-    optionsUpperTime.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
+    var ouT = optionsUpperTime();
+    ouT.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime);
+    chart.draw(data, ouT);
+    window.addEventListener("resize", function(){
+        var o = optionsUpperTime();
+        o.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
+        chart.draw(data, o);
+    })
 }
 function drawSmallTimeLeadersDetails(group){
     var selection = groupCharts[group].getSelection()[0];
