@@ -39,36 +39,38 @@ function optionsKnesset() {
         }
     }
 }
-var optionsKnessetTime = {
+function optionsKnessetTime() {
 
-    'width': Math.min(rubberW(1200),900),
-    'height': rubberH(300),
-    chartArea :{
-        bottom : rubberH(75)
-    },
-    reverseCategories: true,
-    backgroundColor: "#666666",
-    hAxis : {
-        textStyle : {
-            fontName: "Alef",
-            color : "white"
-        }
-
-    },
-    vAxis : {
-        minValue:0,
-        textStyle : {
-            fontName: "Alef",
-            color : "white"
+    return {
+        'width': Math.min(rubberW(1200), 900),
+        'height': rubberH(300),
+        chartArea: {
+            bottom: rubberH(75)
         },
-        format : "##"
-    },
-    legend : "none",
-    title: "מנדטים",
-    titleTextStyle:{
-        fontName: "Alef",
-        color : "white",
-        fontSize : rubberH(20)
+        reverseCategories: true,
+        backgroundColor: "#666666",
+        hAxis: {
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            }
+
+        },
+        vAxis: {
+            minValue: 0,
+            textStyle: {
+                fontName: "Alef",
+                color: "white"
+            },
+            format: "##"
+        },
+        legend: "none",
+        title: "מנדטים",
+        titleTextStyle: {
+            fontName: "Alef",
+            color: "white",
+            fontSize: rubberH(20)
+        }
     }
 }
 var optionsUpperTime = {
@@ -638,6 +640,7 @@ function drawLeadersTime(){
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
     chart.draw(data, makeOptionsLowerTime(leaderTitles[keyWordLeaders],true));
+    window.addEventListener("resize", function(){chart.draw(data, makeOptionsLowerTime(leaderTitles[keyWordLeaders],true));});
 
 }
 function drawLeadersDetailsTime(){
@@ -666,6 +669,7 @@ function drawLeadersDetailsTime(){
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
     chart.draw(data, makeOptionsLowerTime(keyWordLeadersName+", "+leaderTitles[keyWordDetails],true, keyWordDetails != 'aspects'));
+    window.addEventListener("resize", function(){chart.draw(data, makeOptionsLowerTime(keyWordLeadersName+", "+leaderTitles[keyWordDetails],true, keyWordDetails != 'aspects'));});
 }
 function drawGovernmentTime(){
 
@@ -688,6 +692,7 @@ function drawGovernmentTime(){
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
     chart.draw(data, makeOptionsLowerTime(gSurvival));
+    window.addEventListener("resize", function(){chart.draw(data, makeOptionsLowerTime(gSurvival));});
 
 }
 function drawImportantThingsTime(){
@@ -717,6 +722,7 @@ function drawImportantThingsTime(){
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
     chart.draw(data, makeOptionsLowerTime(importantThings));
+    window.addEventListener("resize", function(){chart.draw(data, makeOptionsLowerTime(importantThings));});
 
 }
 function drawKnessetTime(){
@@ -744,9 +750,16 @@ function drawKnessetTime(){
     document.getElementById('time').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('time'));
     titleRight(chart,"time");
-    optionsKnessetTime.series = {}
-    for (var i in knessetColor)optionsKnessetTime.series[i] = {color : knessetColor[i]};
-    chart.draw(data, optionsKnessetTime);
+    var okT = optionsKnessetTime();
+    okT.series = {}
+    for (var i in knessetColor)okT.series[i] = {color : knessetColor[i]};
+    chart.draw(data, okT);
+    window.addEventListener("resize", function(){
+        var o = optionsKnessetTime();
+        o.series = {}
+        for (var i in knessetColor)o.series[i] = {color : knessetColor[i]};
+        chart.draw(data, o);});
+    
 }
 
 var drawSmallTime = {
