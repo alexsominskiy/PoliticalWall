@@ -373,7 +373,7 @@ function drawLeadersDetails(keyWord) {
     var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
 
     // subCharts
-
+    var smallCharts = [];
     keyWordDetails = keyWord;
     google.visualization.events.addListener(chart, 'select', function(){
 
@@ -414,6 +414,12 @@ function drawLeadersDetails(keyWord) {
 
             titleRight(gr,group);
             gr.draw(tbl, makeOptions("small",leaderName + ", " + groups[group],false, keyWord != 'aspects'))
+            smallCharts.push({
+                gr : gr,
+                tbl : tbl,
+                title : leaderName + ", " + groups[group],
+                nf : keyWord != 'aspects'
+            })
 
         }
     });
@@ -427,7 +433,13 @@ function drawLeadersDetails(keyWord) {
     titleRight(chart, "chart");
     chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true, keyWord != 'aspects'))
 
-    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true, keyWord != 'aspects'))});
+    window.addEventListener("resize",function(){
+        chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true, keyWord != 'aspects'));
+        for (var i in smallCharts){
+            var sc = smallCharts[i];
+            sc.gr.draw(sc.tbl, makeOptions("small",sc.title,false,sc.nf));
+        }
+    });
 
 }
 function drawGovernment(){
@@ -445,6 +457,8 @@ function drawGovernment(){
     var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
     // subCharts
+
+    var smallCharts = [];
 
     document.getElementById("smalls").style.display = "block";
     for (var group in groups) {
@@ -464,6 +478,12 @@ function drawGovernment(){
         titleRight(gr,group);
         gr.draw(tbl, makeOptions("small", groups[group]));
 
+        smallCharts.push({
+            gr : gr,
+            tbl: tbl,
+            title : groups[group]
+        })
+
     }
 
     keyWordChart = 'government';
@@ -473,7 +493,12 @@ function drawGovernment(){
     titleRight(chart,"chart");
     chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
     
-    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
+    window.addEventListener("resize",function(){
+        chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
+        for (var i in smallCharts){
+            var sc = smallCharts[i];
+            sc.ch.draw(sc.tbl, makeOptions("small",sc.title));
+        }
 }
 function drawImportantThings(){
 
