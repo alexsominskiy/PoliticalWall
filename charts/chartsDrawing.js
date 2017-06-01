@@ -836,6 +836,9 @@ function drawSmallTimeLeadersDetails(group){
     document.getElementById('bT').style.display = "none";
     chart.draw(data, makeOptionsUpperTimeDetails(keyWordLeadersName+", "+detail+", "+groups[group],keyWordDetails == 'aspects'));
 
+    window.addEventListener("resize", function(){
+        chart.draw(data, makeOptionsUpperTimeDetails(keyWordLeadersName+", "+detail+", "+groups[group],keyWordDetails == 'aspects'));
+    })
 }
 function drawSmallTimeGovernment(group){
     var data = new google.visualization.DataTable();
@@ -859,7 +862,10 @@ function drawSmallTimeGovernment(group){
     optionsUpperTime.title = gSurvival+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime);
+    chart.draw(data, optionsUpperTime());
+    window.addEventListener("resize", function(){
+        chart.draw(data, optionsUpperTime());
+    })
 }
 function drawSmallTimeImportantThings(group){
     var selection = groupCharts[group].getSelection()[0];
@@ -888,7 +894,10 @@ function drawSmallTimeImportantThings(group){
     optionsUpperTime.title = importantThings+", "+thing+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime);
+    chart.draw(data, optionsUpperTime());
+    window.addEventListener("resize", function(){
+        chart.draw(data, optionsUpperTime());
+    })
 }
 
 function clearSmallTime(){
