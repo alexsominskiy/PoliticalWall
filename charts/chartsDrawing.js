@@ -291,6 +291,7 @@ function drawLeaders(keyWord) {
     var chart = new google.visualization.ColumnChart(document.getElementById('chart'));
 
     // small charts
+    var smallCharts = [];
     google.visualization.events.addListener(chart, 'select', function(){
 
         if(chart.getSelection()[0] == undefined)return;
@@ -322,6 +323,11 @@ function drawLeaders(keyWord) {
 
             titleRight(gr,group);
             gr.draw(tbl, makeOptions("small",leaderName + ", " + groups[group],false));
+            smallCharts.push({
+                ch : gr,
+                tbl : tbl,
+                title : leaderName + ", " + groups[group]
+            })
 
         }
     });
@@ -334,7 +340,13 @@ function drawLeaders(keyWord) {
     keyWordLeaders = keyWord;
     chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),false));
     
-    window.addEventListener("resize",function(){chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),false))});
+    window.addEventListener("resize",function(){
+        chart.draw(data, makeOptions("big",leaderTitles[keyWord]+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),false));
+        for (var i in smallCharts){
+            var sc = smallCharts[i];
+            sc.ch.draw(sc.tbl, makeOptions("small",sc.title,false));
+        }
+    });
 
 }
 function drawLeadersDetails(keyWord) {
