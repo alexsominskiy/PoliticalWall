@@ -746,7 +746,6 @@ function drawKnessetTime(){
     titleRight(chart,"time");
     optionsKnessetTime.series = {}
     for (var i in knessetColor)optionsKnessetTime.series[i] = {color : knessetColor[i]};
-    console.log(optionsKnessetTime);
     chart.draw(data, optionsKnessetTime);
 }
 
@@ -838,7 +837,7 @@ function drawSmallTimeGovernment(group){
     optionsUpperTime.title = gSurvival+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, OptionsUpperTime);
+    chart.draw(data, optionsUpperTime);
 }
 function drawSmallTimeImportantThings(group){
     var selection = groupCharts[group].getSelection()[0];
