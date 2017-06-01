@@ -497,7 +497,7 @@ function drawGovernment(){
         chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
         for (var i in smallCharts){
             var sc = smallCharts[i];
-            sc.ch.draw(sc.tbl, makeOptions("small",sc.title));
+            sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
         }
 }
 function drawImportantThings(){
