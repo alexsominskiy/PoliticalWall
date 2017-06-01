@@ -38,7 +38,7 @@
     height: 38vh;
     width: 49.8%;
     /*border: hidden;*/
-    border: 0.15vh solid #cccccc;
+    border: 0.15vh inset #cccccc;
     border-radius: 0.5vh;
     /*box-shadow: 0 0 0.2vw 0.2vw rgba(0,0,0,0.3);*/
 }
