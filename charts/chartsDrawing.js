@@ -71,10 +71,11 @@ function optionsKnessetTime() {
     return draft;
 }
 
-function optionsUpperTime() {
+function optionsUpperTime(title) {
     
     var draft = {
 
+        title : title,
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(245),
         reverseCategories: true,
@@ -719,15 +720,11 @@ function drawSmallTimeLeaders(group){
 
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
-    var ouT = optionsUpperTime();
-    ouT.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, ouT);
+    chart.draw(data, optionsUpperTime(keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group]));
     window.addEventListener("resize", function(){
-        var o = optionsUpperTime();
-        o.title = keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group];
-        chart.draw(data, o);
+        chart.draw(data, optionsUpperTime(keyWordLeadersName+", "+leaderTitles[keyWordLeaders]+", "+groups[group]));
     })
 }
 function drawSmallTimeLeadersDetails(group){
@@ -783,12 +780,12 @@ function drawSmallTimeGovernment(group){
 
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
-    optionsUpperTime.title = gSurvival+", "+groups[group];
+    
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime());
+    chart.draw(data, optionsUpperTime(gSurvival+", "+groups[group]));
     window.addEventListener("resize", function(){
-        chart.draw(data, optionsUpperTime());
+        chart.draw(data, optionsUpperTime(gSurvival+", "+groups[group]));
     })
 }
 function drawSmallTimeImportantThings(group){
@@ -815,12 +812,11 @@ function drawSmallTimeImportantThings(group){
 
     document.getElementById('upperTime').style.display = "block";
     var chart = new google.visualization.LineChart(document.getElementById('upperTime'));
-    optionsUpperTime.title = importantThings+", "+thing+", "+groups[group];
     titleRight(chart,"upperTime");
     document.getElementById('bT').style.display = "none";
-    chart.draw(data, optionsUpperTime());
+    chart.draw(data, optionsUpperTime(importantThings+", "+thing+", "+groups[group]));
     window.addEventListener("resize", function(){
-        chart.draw(data, optionsUpperTime());
+        chart.draw(data, optionsUpperTime(importantThings+", "+thing+", "+groups[group]));
     })
 }
 
