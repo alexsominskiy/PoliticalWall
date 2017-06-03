@@ -372,17 +372,17 @@ function drawLeadersDetails(keyWord) {
     });
 
 }
-function drawGovernment(){
+function drawGovernment() {
 
     var data = new google.visualization.arrayToDataTable([
-        ["",""],
-        ["כן", parseFloat(record.governmentSurvival.all)/100],
-        ["לא", 1-parseFloat(record.governmentSurvival.all)/100],
+        ["", ""],
+        ["כן", parseFloat(record.governmentSurvival.all) / 100],
+        ["לא", 1 - parseFloat(record.governmentSurvival.all) / 100],
 
     ]);
 
-    var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-    for(var i=1; i<data.getNumberOfColumns(); i++)formatter.format(data,i);
+    var formatter = new google.visualization.NumberFormat({pattern: "#%"});
+    for (var i = 1; i < data.getNumberOfColumns(); i++)formatter.format(data, i);
 
     var chart = new google.visualization.PieChart(document.getElementById('chart'));
 
@@ -399,19 +399,19 @@ function drawGovernment(){
         tbl.addColumn('number', '');
 
         for (var key in record.governmentSurvival[group]) {
-            tbl.addRow([categories[group][key], parseFloat(record.governmentSurvival[group][key])/100]);
+            tbl.addRow([categories[group][key], parseFloat(record.governmentSurvival[group][key]) / 100]);
         }
 
-        var formatter = new google.visualization.NumberFormat({pattern : "#%"});
-        for(var i=1; i<tbl.getNumberOfColumns(); i++)formatter.format(tbl,i);
+        var formatter = new google.visualization.NumberFormat({pattern: "#%"});
+        for (var i = 1; i < tbl.getNumberOfColumns(); i++)formatter.format(tbl, i);
 
-        titleRight(gr,group);
+        titleRight(gr, group);
         gr.draw(tbl, makeOptions("small", groups[group]));
 
         smallCharts.push({
-            gr : gr,
+            gr: gr,
             tbl: tbl,
-            title : groups[group]
+            title: groups[group]
         })
 
     }
@@ -420,16 +420,16 @@ function drawGovernment(){
 
     clearSmallTime();
     bigTFree();
-    titleRight(chart,"chart");
-    chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
-    
-    window.addEventListener("resize",function(){
-        chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
-        for (var i in smallCharts){
+    titleRight(chart, "chart");
+    chart.draw(data, makeOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
+
+    window.addEventListener("resize", function () {
+        chart.draw(data, makeOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
+        for (var i in smallCharts) {
             var sc = smallCharts[i];
-            console.log(sc);
-            sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
+            sc.gr.draw(sc.tbl, makeOptions("small", sc.title));
         }
+    })
 }
 
 function drawImportantThings(){
