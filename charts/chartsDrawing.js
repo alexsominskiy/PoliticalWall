@@ -129,7 +129,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250);
                              draft.chartArea={'width':'95%', 'height':'70%'}; draft.hAxis.textStyle.fontSize = rubberH(12);}
 
-    if (legend)draft.legend = haxis();
+    if (legend){draft.legend = haxis(); draft.legend.textStyle.fontSize = rubberH(12);}
     else draft.legend = "none";
 
     if(!numFormat)draft.vAxis.format = 'percent';
