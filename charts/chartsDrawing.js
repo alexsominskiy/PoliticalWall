@@ -1,108 +1,80 @@
+function haxis(){
+    return {
+        textStyle: {
+            fontSize: rubberH(15),
+            fontName: "Alef",
+            color: "black"
+        }
+    }
+}
+function vaxis(){
+    return {
+        minValue : 0,
+        textStyle: {
+            fontSize: rubberH(15),
+            fontName: "Alef",
+            color: "black"
+        }
+    }
+}
+
+function titleTS(){
+    return {
+            color: "black",
+            fontName: "Alef",
+            fontSize: rubberH(20)
+    }
+}
+
+var chartBack = "white";
 
 function optionsKnesset() {
 
-    return {
+    var draft = {
 
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(270),
         reverseCategories: true,
         
-        backgroundColor: "white",
-        hAxis: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-
-        },
-        vAxis: {
-            gridlines: {
-                color: 'transparent'
-            },
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "black"
-            }
-        },
+        backgroundColor: chartBack,
+        hAxis: haxis(),
+        vAxis: vaxis(),
         legend: "none",
-        pieSliceText: 'value',
         title: 'מנדטים',
-        titleTextStyle: {
-            color: "black",
-            fontName: "Alef",
-            fontSize: rubberH(20)
-        }
+        titleTextStyle: titleTS()
     }
+    draft.vAxis.gridlines = {color:'transparent'};
+    return draft;
 }
 function optionsKnessetTime() {
 
-    return {
+     var draft = {
         'width': Math.min(rubberW(1200), 900),
         'height': rubberH(300),
-        chartArea: {
-            bottom: rubberH(75)
-        },
+        chartArea: {bottom: rubberH(75)},
         reverseCategories: true,
-        backgroundColor: "#666666",
-        hAxis: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-
-        },
-        vAxis: {
-            minValue: 0,
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            },
-            format: "##"
-        },
+        backgroundColor: chartBack,
+        hAxis: haxis(),
+        vAxis: vaxis(),
         legend: "none",
         title: "מנדטים",
-        titleTextStyle: {
-            fontName: "Alef",
-            color: "white",
-            fontSize: rubberH(20)
-        }
+        titleTextStyle: titleTS()
     }
+    draft.vAxis.format = "##";
+    return draft;
 }
+
 function optionsUpperTime() {
     
-    return {
+    var draft = {
 
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(245),
         reverseCategories: true,
-        backgroundColor: "#666666",
-        hAxis: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
-        vAxis: {
-            minValue: 0,
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            },
-            format: 'percent'
-        },
-        legend: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
+        backgroundColor: chartBack,
+        hAxis: haxis(),
+        vAxis: vaxis(),
+        legend: haxis(),
         series: {
             0: {color: '#ff8888'},
             1: {color: '#88ff88'},
@@ -112,12 +84,10 @@ function optionsUpperTime() {
             5: {color: '#88ffff'},
             6: {color: '#ff0000'}
         },
-        titleTextStyle: {
-            color: "white",
-            fontName: "Alef",
-            fontSize: rubberH(20)
-        }
+        titleTextStyle: titleTS()
     }
+    draft.vAxis.format = 'percent';
+    return draft;
 }
 
 function makeOptionsUpperTimeDetails(title,aspect){
@@ -128,34 +98,11 @@ function makeOptionsUpperTimeDetails(title,aspect){
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(245),
         reverseCategories: true,
-        backgroundColor: "#666666",
-        hAxis: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
-        vAxis: {
-            minValue: 0,
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
-        legend: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
-        titleTextStyle: {
-            color: "white",
-            fontName: "Alef",
-            fontSize: rubberH(20)
-        }
+        backgroundColor: chartBack,
+        hAxis: haxis(),
+        vAxis: vaxis(),
+        legend: haxis(),
+        titleTextStyle: titleTS()
     }
     
     if(aspect) draft.vAxis.format = 'percent';
@@ -171,27 +118,10 @@ function makeOptions(size,title, legend, numFormat, reverse){
         chartArea: {'width': '75%', 'height': '65%'},
 
         reverseCategories: true,
-        backgroundColor: "white",
-        hAxis : {
-            textStyle : {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color : "black"
-            }
-        },
-        vAxis : {
-            minValue:0,
-            textStyle : {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color : "black"
-            },
-        },
-        titleTextStyle:{
-            fontSize : rubberH(20),
-            fontName: "Alef",
-            color : "black"
-        }
+        backgroundColor: chartBack,
+        hAxis : haxis(),
+        vAxis : vaxis(),
+        titleTextStyle: titleTS()
     }
 
     if(size == 'big'){draft.width = Math.min(rubberW(800),600); draft.height = rubberH(245); draft.chartArea = {'width': '70%', 'height': '65%'}}
@@ -199,11 +129,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250);
                              draft.chartArea={'width':'95%', 'height':'70%'}; draft.hAxis.textStyle.fontSize = rubberH(12);}
 
-    if (legend){draft.legend = {
-        textStyle : {
-            fontSize: rubberH(15),
-            color: "black"}
-    }}
+    if (legend)draft.legend = haxis();
     else draft.legend = "none";
 
     if(!numFormat)draft.vAxis.format = 'percent';
@@ -223,35 +149,11 @@ function makeOptionsLowerTime(title, colors, numFormat) {
             bottom: rubberH(75)
         },
         reverseCategories: true,
-        backgroundColor: "#666666",
-        hAxis: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-
-        },
-        vAxis: {
-            minValue:0,
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
-        legend: {
-            textStyle: {
-                fontSize : rubberH(15),
-                fontName: "Alef",
-                color: "white"
-            }
-        },
-        titleTextStyle: {
-            color: "white",
-            fontName: "Alef",
-            fontSize: rubberH(20)
-        }
+        backgroundColor: chartBack,
+        hAxis: haxis(),
+        vAxis: vaxis(),
+        legend: haxis(),
+        titleTextStyle: titleTS()
     }
 
     if (colors){
