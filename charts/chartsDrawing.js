@@ -424,10 +424,10 @@ function drawGovernment(){
     chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
     
     window.addEventListener("resize",function(){
-        console.log(smallCharts);
         chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
         for (var i in smallCharts){
             var sc = smallCharts[i];
+            console.log(sc);
             sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
         }
 }
