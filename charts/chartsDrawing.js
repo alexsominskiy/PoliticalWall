@@ -604,7 +604,7 @@ function drawGovernmentTime(){
     var data = new google.visualization.DataTable();
 
     data.addColumn('string','');
-    data.addColumn('number','');
+    data.addColumn('number','כן');
 
     for (var i in recordsArray){
         var row = [];

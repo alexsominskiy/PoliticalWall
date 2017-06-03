@@ -19,7 +19,7 @@ var gSurvival = 'סיכויי הממשלה לשרוד מלוא הקדנציה';
 var importantThings = 'הנושאים החשובים לטיפול';
 
 var groups = {
-    gender : "מִין",
+    gender : "מין",
     age : "גיל",
     region : "אזור מגורים",
     religion : "דתיות",
