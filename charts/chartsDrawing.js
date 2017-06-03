@@ -146,7 +146,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
 
     return draft;
 }
-function makePieOptions(size,title, legend, numFormat, reverse){
+function makePieOptions(size,title, legend, reverse){
 
     var draft = {
 
@@ -163,7 +163,6 @@ function makePieOptions(size,title, legend, numFormat, reverse){
     }
 
     if(size == 'big'){draft.width = Math.min(rubberW(800),600); draft.height = rubberH(245); draft.chartArea = {'width': '70%', 'height': '65%'}}
-    else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(157); draft.titleTextStyle.fontSize = rubberH(15);}
     else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250); draft.chartArea={'width':'95%', 'height':'70%'}}
 
     if (legend){draft.legend = leg();}
@@ -448,10 +447,10 @@ function drawGovernment() {
     clearSmallTime();
     bigTFree();
     titleRight(chart, "chart");
-    chart.draw(data, makePieOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
+    chart.draw(data, makePieOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true,true));
 
     window.addEventListener("resize", function () {
-        chart.draw(data, makePieOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
+        chart.draw(data, makePieOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true,true));
         for (var i in smallCharts) {
             var sc = smallCharts[i];
             sc.gr.draw(sc.tbl, makeOptions("small", sc.title));
