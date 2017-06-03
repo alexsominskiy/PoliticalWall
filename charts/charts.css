@@ -52,7 +52,6 @@
     background-color: white;
     color: black;
     font-size: 2vh;
-    border-top: 0.15vh solid #666666;
     border-bottom: 0.15vh solid #666666;
     cursor: pointer;
     text-align: right;
@@ -61,11 +60,10 @@
 .chartsMenuItem2 {
     padding: 0.5vh 1vw 0.5vh 2vw;
     margin-right: 1vw;
-    background-color: #ccccff;
+    background-color: white;
     color: darkblue;
     font-size: 2vh;
-    border-top: 0.15vh solid #cccccc;
-    border-bottom: 0.15vh solid #cccccc;
+    border-bottom: 0.15vh solid #666666;
     cursor: pointer;
     text-align: right;
 }
@@ -131,6 +129,7 @@
     font-size: 2.5vh;
     padding: 1vh 0 4vh 1vw;
     overflow-y: auto;
+    border-top: 0.15vh solid #666666;
 
 }
 .chartsCont{
@@ -152,7 +151,7 @@
     text-align: right;
     font-size: 2vh;
     padding: 1vh 1vw;
-    background-color: #ccccff;
+    background-color: white;
     border-bottom: 0.15vh solid #333333;
     cursor : pointer;
 }
