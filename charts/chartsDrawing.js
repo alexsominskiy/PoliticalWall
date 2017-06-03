@@ -218,7 +218,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
 
         title : title,
 
-        'width': Math.min($(window).width()/1366*1366,1024),
+        'width': Math.min(rubberW(1366),1024),
         'height': rubberH(315),
         chartArea: {
             bottom: rubberH(75)
