@@ -51,7 +51,7 @@
     padding: 0.5vh 1vw;
     background-color: white;
     color: black;
-    font-size: 2vh;
+    font-size: 3vh;
     border-bottom: 0.15vh solid #666666;
     cursor: pointer;
     text-align: right;
@@ -59,9 +59,9 @@
 
 .chartsMenuItem2 {
     padding: 0.5vh 1vw 0.5vh 2vw;
-    margin-right: 1vw;
+    margin-right: 2vw;
     background-color: white;
-    color: darkblue;
+    color: blue;
     font-size: 2vh;
     border-bottom: 0.15vh solid #666666;
     cursor: pointer;
