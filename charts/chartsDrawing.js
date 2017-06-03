@@ -169,6 +169,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
         backgroundColor: "white",
         hAxis : {
             textStyle : {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color : "black"
             }
@@ -176,6 +177,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
         vAxis : {
             minValue:0,
             textStyle : {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color : "black"
             },
