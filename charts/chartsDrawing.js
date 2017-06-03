@@ -10,7 +10,7 @@ function haxis(){
 function leg(){
     return {
         textStyle: {
-            fontSize: rubberH(12),
+            fontSize: rubberH(10),
             fontName: "Alef",
             color: "black"
         }
@@ -26,7 +26,6 @@ function vaxis(){
         }
     }
 }
-
 function titleTS(){
     return {
             color: "black",
@@ -44,7 +43,6 @@ function optionsKnesset() {
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(270),
         reverseCategories: true,
-        
         backgroundColor: chartBack,
         hAxis: haxis(),
         vAxis: vaxis(),
@@ -113,7 +111,6 @@ function makeOptionsUpperTimeDetails(title,aspect){
         legend: leg(),
         titleTextStyle: titleTS()
     }
-
     
     if(aspect) draft.vAxis.format = 'percent';
     return draft;
