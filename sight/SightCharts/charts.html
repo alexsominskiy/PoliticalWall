@@ -2,7 +2,6 @@
 <div class="chartsCont" ng-controller="chartsCntr">
 
     <div class="chartsMenu">
-        <div>
             <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawLeaders('total'))">מנהיגים</div>
             <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeaders('total'))">מדד המנהיגים שביעות רצון</div>
             <div class="chartsMenuItem2" onclick="google.charts.setOnLoadCallback(drawLeadersDetails('aspects'))">הסכמה עם התנהלות בנושאים</div>
@@ -11,7 +10,6 @@
             <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawGovernment())">סיכויי הממשלה לשרוד מלוא הקדנציה</div>
             <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawImportantThings())">הנושאים החשובים לטיפול</div>
             <div class="chartsMenuItem1" onclick="google.charts.setOnLoadCallback(drawKnesset())">מנדטים להיום</div>
-        </div>
     </div>
     <div class="recordList" ng-show = "model.sight != undefined">
         <div class="oneRecord" ng-repeat="rec in model.recordsSight.records"
