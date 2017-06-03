@@ -163,7 +163,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     var draft = {
 
         title : title,
-        chartArea: {'width': '75%', 'height': '65%'},
+        chartArea: {'width': '95%', 'height': '65%'},
 
         reverseCategories: true,
         backgroundColor: "white",
