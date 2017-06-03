@@ -7,6 +7,15 @@ function haxis(){
         }
     }
 }
+function leg(){
+    return {
+        textStyle: {
+            fontSize: rubberH(12),
+            fontName: "Alef",
+            color: "black"
+        }
+    }
+}
 function vaxis(){
     return {
         minValue : 0,
@@ -74,7 +83,7 @@ function optionsUpperTime() {
         backgroundColor: chartBack,
         hAxis: haxis(),
         vAxis: vaxis(),
-        legend: haxis(),
+        legend: leg(),
         series: {
             0: {color: '#ff8888'},
             1: {color: '#88ff88'},
@@ -101,9 +110,10 @@ function makeOptionsUpperTimeDetails(title,aspect){
         backgroundColor: chartBack,
         hAxis: haxis(),
         vAxis: vaxis(),
-        legend: haxis(),
+        legend: leg(),
         titleTextStyle: titleTS()
     }
+
     
     if(aspect) draft.vAxis.format = 'percent';
     return draft;
@@ -129,7 +139,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250);
                              draft.chartArea={'width':'95%', 'height':'70%'}; draft.hAxis.textStyle.fontSize = rubberH(12);}
 
-    if (legend){draft.legend = haxis(); draft.legend.textStyle.fontSize = rubberH(12);}
+    if (legend){draft.legend = leg();}
     else draft.legend = "none";
 
     if(!numFormat)draft.vAxis.format = 'percent';
@@ -152,7 +162,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
         backgroundColor: chartBack,
         hAxis: haxis(),
         vAxis: vaxis(),
-        legend: haxis(),
+        legend: leg(),
         titleTextStyle: titleTS()
     }
 
