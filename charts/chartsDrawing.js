@@ -146,6 +146,36 @@ function makeOptions(size,title, legend, numFormat, reverse){
 
     return draft;
 }
+function makePieOptions(size,title, legend, numFormat, reverse){
+
+    var draft = {
+
+        title : title,
+        chartArea: {'width': '75%', 'height': '75%'},
+
+        reverseCategories: true,
+        backgroundColor: chartBack,
+        pieSliceTextStyle : {
+            fontName : "Alef",
+            fontSize: rubberH(15)
+        },
+        titleTextStyle: titleTS()
+    }
+
+    if(size == 'big'){draft.width = Math.min(rubberW(800),600); draft.height = rubberH(245); draft.chartArea = {'width': '70%', 'height': '65%'}}
+    else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(157);
+        draft.titleTextStyle.fontSize = rubberH(15);draft.hAxis.textStyle.fontSize = rubberH(10);}
+    else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250);
+        draft.chartArea={'width':'95%', 'height':'70%'}; draft.hAxis.textStyle.fontSize = rubberH(12);}
+
+    if (legend){draft.legend = leg();}
+    else draft.legend = "none";
+
+    if(!numFormat)draft.vAxis.format = 'percent';
+    if (reverse) draft.reverseCategories = false;
+
+    return draft;
+}
 function makeOptionsLowerTime(title, colors, numFormat) {
 
     draft = {
@@ -421,10 +451,10 @@ function drawGovernment() {
     clearSmallTime();
     bigTFree();
     titleRight(chart, "chart");
-    chart.draw(data, makeOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
+    chart.draw(data, makePieOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
 
     window.addEventListener("resize", function () {
-        chart.draw(data, makeOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
+        chart.draw(data, makePieOptions("big", gSurvival + " " + moment(record.date, "DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
         for (var i in smallCharts) {
             var sc = smallCharts[i];
             sc.gr.draw(sc.tbl, makeOptions("small", sc.title));
@@ -483,10 +513,10 @@ function drawImportantThings(){
     bigTFree();
     keyWordChart = 'importantThings';
     titleRight(chart,"chart");
-    chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
+    chart.draw(data, makePieOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
 
     window.addEventListener("resize",function(){
-        chart.draw(data, makeOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
+        chart.draw(data, makePieOptions("big",importantThings+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"),true));
         for (var i in smallCharts){
             var sc = smallCharts[i];
             sc.gr.draw(sc.tbl, makeOptions("small",sc.title));

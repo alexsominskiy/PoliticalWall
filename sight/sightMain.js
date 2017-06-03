@@ -89,7 +89,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         var chart = new google.visualization.PieChart(document.getElementById('lower'));
 
         titleRight(chart,"lower");
-        chart.draw(data, makeOptions("front",importantThings,true,false,true));
+        chart.draw(data, makePieOptions("front",importantThings,true,false,true));
 
         window.addEventListener("resize", function(){chart.draw(data, makeOptions("front",importantThings,true,false,true));});
 
