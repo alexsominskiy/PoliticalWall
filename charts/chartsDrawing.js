@@ -424,9 +424,9 @@ function drawGovernment(){
     chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true));
     
     window.addEventListener("resize",function(){
+        console.log("here");
         chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
         for (var i in smallCharts){
-            console.log("here");
             var sc = smallCharts[i];
             sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
         }
