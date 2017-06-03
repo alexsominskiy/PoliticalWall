@@ -163,10 +163,8 @@ function makePieOptions(size,title, legend, numFormat, reverse){
     }
 
     if(size == 'big'){draft.width = Math.min(rubberW(800),600); draft.height = rubberH(245); draft.chartArea = {'width': '70%', 'height': '65%'}}
-    else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(157);
-        draft.titleTextStyle.fontSize = rubberH(15);draft.hAxis.textStyle.fontSize = rubberH(10);}
-    else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250);
-        draft.chartArea={'width':'95%', 'height':'70%'}; draft.hAxis.textStyle.fontSize = rubberH(12);}
+    else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(157); draft.titleTextStyle.fontSize = rubberH(15);}
+    else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(250); draft.chartArea={'width':'95%', 'height':'70%'}}
 
     if (legend){draft.legend = leg();}
     else draft.legend = "none";
