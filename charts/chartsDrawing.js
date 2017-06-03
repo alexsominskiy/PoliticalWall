@@ -426,8 +426,9 @@ function drawGovernment(){
     window.addEventListener("resize",function(){
         chart.draw(data, makeOptions("big",gSurvival+" "+ moment(record.date,"DD-MM-YYYY").format("DD MMM YYYY"), true, false, true))});
         for (var i in smallCharts){
+            console.log("here");
             var sc = smallCharts[i];
-            sc.gr.draw(sc.tbl, makeOptions("small",sc.title,true,false,true));
+            sc.gr.draw(sc.tbl, makeOptions("small",sc.title));
         }
 }
 
