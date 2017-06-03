@@ -49,17 +49,18 @@
 
 .chartsMenuItem1 {
     padding: 0.5vh 1vw;
-    background-color: #666666;
-    color: white;
+    background-color: white;
+    color: black;
     font-size: 2vh;
-    border-top: 0.15vh solid #cccccc;
-    border-bottom: 0.15vh solid #cccccc;
+    border-top: 0.15vh solid #666666;
+    border-bottom: 0.15vh solid #666666;
     cursor: pointer;
     text-align: right;
 }
 
 .chartsMenuItem2 {
     padding: 0.5vh 1vw 0.5vh 2vw;
+    margin-right: 1vw;
     background-color: #ccccff;
     color: darkblue;
     font-size: 2vh;
