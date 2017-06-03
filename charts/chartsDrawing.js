@@ -83,6 +83,7 @@ function optionsUpperTime() {
         backgroundColor: "#666666",
         hAxis: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -90,6 +91,7 @@ function optionsUpperTime() {
         vAxis: {
             minValue: 0,
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             },
@@ -97,6 +99,7 @@ function optionsUpperTime() {
         },
         legend: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -129,6 +132,7 @@ function makeOptionsUpperTimeDetails(title,aspect){
         backgroundColor: "#666666",
         hAxis: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -136,12 +140,14 @@ function makeOptionsUpperTimeDetails(title,aspect){
         vAxis: {
             minValue: 0,
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
         },
         legend: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -221,6 +227,7 @@ function makeOptionsLowerTime(title, colors, numFormat) {
         backgroundColor: "#666666",
         hAxis: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -229,12 +236,14 @@ function makeOptionsLowerTime(title, colors, numFormat) {
         vAxis: {
             minValue:0,
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
         },
         legend: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
