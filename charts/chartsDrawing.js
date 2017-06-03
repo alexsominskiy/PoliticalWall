@@ -168,8 +168,7 @@ function makePieOptions(size,title, legend, numFormat, reverse){
 
     if (legend){draft.legend = leg();}
     else draft.legend = "none";
-
-    if(!numFormat)draft.vAxis.format = 'percent';
+    
     if (reverse) draft.reverseCategories = false;
 
     return draft;
