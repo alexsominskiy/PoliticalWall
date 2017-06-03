@@ -163,7 +163,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
     var draft = {
 
         title : title,
-        chartArea: {'width': '90%', 'height': '65%'},
+        chartArea: {'width': '75%', 'height': '65%'},
 
         reverseCategories: true,
         backgroundColor: "white",
@@ -191,7 +191,7 @@ function makeOptions(size,title, legend, numFormat, reverse){
 
     if(size == 'big'){draft.width = Math.min(rubberW(800),600); draft.height = rubberH(245); draft.chartArea = {'width': '70%', 'height': '65%'}}
     else if(size == 'small'){draft.width = Math.min(rubberW(440),330); draft.height = rubberH(157); draft.titleTextStyle.fontSize = rubberH(15);}
-    else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(245);}
+    else if(size == 'front'){draft.width = Math.min(rubberW(450),340); draft.height = rubberH(160); draft.chartArea.width="95%;"}
     
 
     if (legend){draft.legend = {
