@@ -6,15 +6,11 @@ function optionsKnesset() {
         'width': Math.min(rubberW(800), 600),
         'height': rubberH(270),
         reverseCategories: true,
-        /*annotations: {
-         alwaysOutside : true,
-         textStyle :  {
-         color : "red"
-         }
-         },*/
-        backgroundColor: "#666666",
+        
+        backgroundColor: "white",
         hAxis: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -25,15 +21,16 @@ function optionsKnesset() {
                 color: 'transparent'
             },
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
-                color: "#666666"
+                color: "black"
             }
         },
         legend: "none",
         pieSliceText: 'value',
         title: 'מנדטים',
         titleTextStyle: {
-            color: "white",
+            color: "black",
             fontName: "Alef",
             fontSize: rubberH(20)
         }
@@ -51,6 +48,7 @@ function optionsKnessetTime() {
         backgroundColor: "#666666",
         hAxis: {
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             }
@@ -59,6 +57,7 @@ function optionsKnessetTime() {
         vAxis: {
             minValue: 0,
             textStyle: {
+                fontSize : rubberH(15),
                 fontName: "Alef",
                 color: "white"
             },
