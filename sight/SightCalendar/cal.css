@@ -23,7 +23,6 @@
 .calButton{
     outline: none;
     border: 0.15vh solid black;
-    border-radius: 1vh;
     background-color: white;
 }
 .calButton:hover{

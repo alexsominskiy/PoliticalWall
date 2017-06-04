@@ -126,7 +126,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         for (var i = 0; i <= differ; i++) {
             var d = {};
             d.day = begin.clone();
-            d.event = 'שום דבר';
+            d.event = "";
             $scope.days.push(d);
             begin.add(1, 'day');
         }
