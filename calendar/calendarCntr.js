@@ -111,13 +111,12 @@ app.controller("calendarCntr",function($scope, $http){
     $scope.viewCode = 0;
     $scope.changeView = function(code){
         $scope.viewCode = code;
-        if(code != 0)$scope.scrollContainer(code);
     }
     
     var hcode = [0, 10, 72.5];
+    var cont = document.getElementById("daysContainer");
     $scope.scrollContainer = function(code){
-        var cont = document.getElementById("daysContainer");
-        console.log($(window).height()*hcode[code]/100  * (currMoment.date() - 1));
+        if (code==0) return;
         cont.scrollTop = $(window).height()*hcode[code]/100  * (currMoment.date() - 1);
     }
     
