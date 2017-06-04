@@ -1,3 +1,8 @@
+function drawChart(chart,data,optionsFunction,config){
+    chart.draw(data,optionsFunction(config));
+    window.addEventListener("resize",chart.draw(data,optionsFunction(config)));
+}
+
 function haxis(){
     return {
         textStyle: {
