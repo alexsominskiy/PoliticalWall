@@ -52,9 +52,9 @@
     direction: rtl;
     width:13.5%;
     display: inline-block;
-    border: 1px solid #333333;
-    box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
-    margin: 3px;
+    border: 0.15vh solid #333333;
+    box-shadow: 0 0 1vh 0 rgba(0,0,0,0.5);
+    margin: 0.45vh;
     padding: 0.7vh;
     text-align: right;
     height: 10vh;
@@ -67,9 +67,9 @@
 }
 .weekday{
     direction: rtl;
-    border: 1px solid #333333;
-    box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
-    margin: 3px;
+    border: 0.15vh solid #333333;
+    box-shadow: 0 0 1vh 0 rgba(0,0,0,0.5);
+    margin: 0.45vh;
     padding: 0.7vh;
     text-align: right;
     height: 10vh;
