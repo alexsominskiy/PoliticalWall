@@ -58,7 +58,7 @@ app.controller("calendarCntr",function($scope, $http){
                         d.fill = false;
                     }
                     begin.add(1, 'day');
-                    week.unshift(d);
+                    week.push(d);
                 }
                 $scope.weeks.push(week);
             }
@@ -106,6 +106,12 @@ app.controller("calendarCntr",function($scope, $http){
     };
     $scope.isShabat = function(mom){
         return mom.weekday() == 6;
+    }
+    
+    $scope.viewPages = ['sight/SightCalendar/month.html','sight/SightCalendar/week.html','sight/SightCalendar/day.html'];
+    $scope.viewCode = 0;
+    $scope.changeView = function(code){
+        $scope.viewCode = code;
     }
     
     
