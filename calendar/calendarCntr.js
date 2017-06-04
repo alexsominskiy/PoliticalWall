@@ -115,6 +115,7 @@ app.controller("calendarCntr",function($scope, $http){
     }
     $scope.scrollContainer = function(){
         var cont = document.getElementById("daysContainer");
+        console.log(cont.firstElementChild.firstElementChild.offsetHeight+";"+currMoment.date());
         cont.scrollTop = (cont.firstElementChild.firstElementChild.offsetHeight) * (currMoment.date() - 1)+2;
     }
     
