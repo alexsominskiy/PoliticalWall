@@ -1,5 +1,6 @@
-
+<div id="daysContainer" class="daysContainer">
 <div class="dayday" ng-repeat="d in days" ng-class="{today : isToday(d.day), shabbat : isShabat(d.day)}">
     <div class="date">{{dayFormat(d.day)}}</div>
     <div class="event" ng-class="{fill : d.fill}">{{d.event}}</div>
+</div>
 </div>
