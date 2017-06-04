@@ -117,7 +117,7 @@ app.controller("calendarCntr",function($scope, $http){
     $scope.scrollContainer = function(code){
         var cont = angular.element("#daysContainer");
         cont.scrollTop($(window).height()*hcode[code]/100  * (currMoment.date() - 1));
-        console.log(code+";"+cont[0].scrollHeight);
+        console.log(code+";"+cont[0].scrollHeight+" 1111");
     }
     
     
