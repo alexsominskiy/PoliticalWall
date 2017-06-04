@@ -7,6 +7,7 @@
 .yearmonth{
     font-size: 2.8vh;
     text-align: right;
+    padding-bottom: 1vh;
 }
 .chevron{
     color: gray;
