@@ -13,7 +13,6 @@ app.controller("calendarCntr",function($scope, $http){
     }
 
     moment.locale();
-
     
     var currMoment = moment();
     setCalendar(currMoment);
@@ -21,7 +20,7 @@ app.controller("calendarCntr",function($scope, $http){
     $scope.month = moment().format("MMM");
     $scope.year = moment().format("YYYY");
 
-    function setCalendar(mom) {
+    /*function setCalendar(mom) {
 
         $scope.month = mom.format("MMM");
         $scope.year = mom.format("YYYY");
@@ -64,7 +63,7 @@ app.controller("calendarCntr",function($scope, $http){
                 $scope.weeks.push(week);
             }
         })
-    }
+    }*/
 
     function contains(events, mom){
         for (var i=0; i<events.length; i++){
