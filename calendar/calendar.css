@@ -65,6 +65,21 @@
     overflow: hidden;
     cursor: pointer;
 }
+.weekday{
+    direction: rtl;
+    border: 1px solid #333333;
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.5);
+    margin: 3px;
+    padding: 0.7vh;
+    text-align: right;
+    height: 10vh;
+    border-radius: 1vh;
+    box-sizing: border-box;
+    color: darkblue;
+    font-family: Alef;
+    overflow: hidden;
+    cursor: pointer;
+}
 .fill{
     display: inline-block;
     font-size: 3vh;
