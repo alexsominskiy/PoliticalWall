@@ -97,7 +97,6 @@ app.controller("calendarCntr",function($scope, $http){
         setCalendar(currMoment);
     }
 
-
     $scope.dayFormat = function (date) {
         return date.format("dd DD MMM");
     }
@@ -112,6 +111,11 @@ app.controller("calendarCntr",function($scope, $http){
     $scope.viewCode = 0;
     $scope.changeView = function(code){
         $scope.viewCode = code;
+        if(code != 0)$scope.scrollContainer();
+    }
+    $scope.scrollContainer = function(){
+        var cont = document.getElementById("daysContaner");
+        cont.scrollTop = (cont.firstElementChild.firstElementChild.offsetHeight) * (currMoment.date() - 1)+2;
     }
     
     
