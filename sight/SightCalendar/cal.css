@@ -29,6 +29,6 @@
     background-color: azure;
 }
 .daysContainer{
-    height : 73.5vh;
+    max-height : 73.5vh;
     overflow-y: auto;
 }
