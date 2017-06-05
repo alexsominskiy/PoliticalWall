@@ -32,3 +32,8 @@
     max-height : 73.3vh;
     overflow-y: auto;
 }
+.dayClick{
+    margin-right: 2vw;
+    font-size: 1.5vh;
+    color: darkblue;
+}
