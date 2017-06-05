@@ -14,11 +14,11 @@
         <span>{{month}}</span>
         <span class="chevron glyphicon glyphicon-menu-right" ng-Click="monthPlus()"></span>
 
-        <span class="dayClick" ng-Hide="viewCode == 2">כדי להציג את תצוגת היום, לחץ על תא יום</span>
+        <div class="dayClick" ng-Hide="viewCode == 2">כדי להציג את תצוגת היום, לחץ על תא יום</div>
+
     </div>
 
-
-        <ng-include src="viewPages[viewCode]" onload="scrollContainer(viewCode)"></ng-include>
+    <ng-include src="viewPages[viewCode]" onload="scrollContainer(viewCode)"></ng-include>
 
 </div>
 
