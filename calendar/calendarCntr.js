@@ -19,6 +19,8 @@ app.controller("calendarCntr",function($scope, $http){
 
     $scope.month = moment().format("MMM");
     $scope.year = moment().format("YYYY");
+    
+    var headDays; 
 
     function setCalendar(mom) {
 
@@ -26,7 +28,8 @@ app.controller("calendarCntr",function($scope, $http){
         $scope.year = mom.format("YYYY");
 
         var begin = mom.clone().startOf('month');
-        begin.subtract(begin.weekday(),"day");
+        headDays = begin.weekday();
+        begin.subtract(headDays,"day");
         var end = mom.clone().endOf('month');
         end.add((6 - end.weekday()), "day");
         var differ = end.diff(begin, 'days');
@@ -117,7 +120,7 @@ app.controller("calendarCntr",function($scope, $http){
     $scope.scrollContainer = function(code){
         setTimeout(function() {
             var cont = document.getElementById("daysContainer");
-            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() - 1);
+            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays);
         },100);
     }
     
