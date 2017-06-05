@@ -117,14 +117,22 @@ app.controller("calendarCntr",function($scope, $http){
     }
     
     var hcode = [0, 10.5, 73];
+    var listener = [true,true,true];
     $scope.scrollContainer = function(code){
         setTimeout(function() {
             var cont = document.getElementById("daysContainer");
             if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
             if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
             window.addEventListener("resize", function(){
-                if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
-                if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
+                if(code == 0 && listener[0]) listener[0] = false;
+                if(code == 1 && listener[1]){
+                    cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
+                    listener[1] = false;
+                }
+                if(code == 2 && listener[2]){
+                    cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
+                    listener[2] = false;
+                }
             })
         },100);
     }
