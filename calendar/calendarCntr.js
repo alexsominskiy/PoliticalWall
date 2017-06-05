@@ -117,10 +117,10 @@ app.controller("calendarCntr",function($scope, $http){
     }
     
     var hcode = [0, 10.5, 73];
-    var cont = document.getElementById("daysContainer");
     $scope.scrollContainer = function(code){
         setTimeout(function() {
-            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 2);
+            var cont = document.getElementById("daysContainer");
+            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 3);
         },100);
     }
     
