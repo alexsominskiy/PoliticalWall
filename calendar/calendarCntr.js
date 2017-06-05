@@ -120,7 +120,8 @@ app.controller("calendarCntr",function($scope, $http){
     $scope.scrollContainer = function(code){
         setTimeout(function() {
             var cont = document.getElementById("daysContainer");
-            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
+            if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
+            if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
         },100);
     }
     
