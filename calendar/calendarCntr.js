@@ -116,11 +116,11 @@ app.controller("calendarCntr",function($scope, $http){
         $scope.viewCode = code;
     }
     
-    var hcode = [0, 10, 72.5];
+    var hcode = [0, 10.5, 73];
     $scope.scrollContainer = function(code){
         setTimeout(function() {
             var cont = document.getElementById("daysContainer");
-            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays);
+            cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
         },100);
     }
     
