@@ -122,6 +122,10 @@ app.controller("calendarCntr",function($scope, $http){
             var cont = document.getElementById("daysContainer");
             if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
             if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
+            window.addEventListener("resize", function(){
+                if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
+                if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
+            })
         },100);
     }
     
