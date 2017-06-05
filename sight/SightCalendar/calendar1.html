@@ -2,7 +2,7 @@
 <div ng-controller="calendarCntr">
 
     <div class="yearmonth">
-        <span class="dayClick" ng-Hide="viewCode == 2">כדי להציג את תצוגת היום, לחץ על תא יום</span>
+
         <button class="calButton" ng-click = "changeView(1)">שכוע</button>
         <button class="calButton" ng-click = "changeView(0)">חודש</button>
 
@@ -10,20 +10,15 @@
         <span>{{year}}</span>
         <span class="chevron glyphicon glyphicon-menu-right" ng-Click="yearPlus()"></span>
 
-        <!--<span>&nbsp&nbsp&nbsp&nbsp</span>-->
-
         <span class="chevron glyphicon glyphicon-menu-left"ng-Click="monthMinus()"></span>
         <span>{{month}}</span>
         <span class="chevron glyphicon glyphicon-menu-right" ng-Click="monthPlus()"></span>
+
+        <span class="dayClick" ng-Hide="viewCode == 2">כדי להציג את תצוגת היום, לחץ על תא יום</span>
     </div>
 
-    <!--<div id="daysContainer" class="daysContainer">-->
+
         <ng-include src="viewPages[viewCode]" onload="scrollContainer(viewCode)"></ng-include>
-    <!--</div>-->
-    <!--<div class="week"ng-repeat="w in weeks">
-        <div class="day" ng-repeat="d in w" ng-class="{today : isToday(d.day), shabbat : isShabat(d.day)}" ng-Click="currDate(d)"><div class="date">{{dayFormat(d.day)}}</div>
-            <div class="event" ng-class="{fill : d.fill}">{{d.event}}</div>
-        </div>
-    </div>-->
+
 </div>
 
