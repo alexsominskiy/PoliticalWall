@@ -124,7 +124,7 @@ app.controller("calendarCntr",function($scope, $http){
         setTimeout(function() {
             var cont = document.getElementById("daysContainer");
             if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
-            if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (clickDay + headDays - 1);
+            if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * clickDay;
             window.addEventListener("resize", function(){
                 if(code == 0 && listener[0]) listener[0] = false;
                 if(code == 1 && listener[1]){
@@ -132,7 +132,7 @@ app.controller("calendarCntr",function($scope, $http){
                     listener[1] = false;
                 }
                 if(code == 2 && listener[2]){
-                    cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
+                    cont.scrollTop = $(window).height() * hcode[code] / 100 * clickDay;
                     listener[2] = false;
                 }
             })
