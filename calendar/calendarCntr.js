@@ -112,7 +112,8 @@ app.controller("calendarCntr",function($scope, $http){
     
     $scope.viewPages = ['sight/SightCalendar/month.html','sight/SightCalendar/week.html','sight/SightCalendar/day.html'];
     $scope.viewCode = 0;
-    $scope.changeView = function(code){
+    $scope.changeView = function(code,pIndex, index){
+        console.log(pIndex+";"+index);
         $scope.viewCode = code;
     }
     
