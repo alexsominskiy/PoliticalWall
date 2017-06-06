@@ -112,8 +112,9 @@ app.controller("calendarCntr",function($scope, $http){
     
     $scope.viewPages = ['sight/SightCalendar/month.html','sight/SightCalendar/week.html','sight/SightCalendar/day.html'];
     $scope.viewCode = 0;
+    var clickDay;
     $scope.changeView = function(code,pIndex, index){
-        console.log(pIndex+";"+index);
+        clickDay = pIndex*7+index;
         $scope.viewCode = code;
     }
     
@@ -123,7 +124,7 @@ app.controller("calendarCntr",function($scope, $http){
         setTimeout(function() {
             var cont = document.getElementById("daysContainer");
             if(code == 1)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 4);
-            if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (currMoment.date() + headDays - 1);
+            if(code == 2)cont.scrollTop = $(window).height() * hcode[code] / 100 * (clickDay + headDays - 1);
             window.addEventListener("resize", function(){
                 if(code == 0 && listener[0]) listener[0] = false;
                 if(code == 1 && listener[1]){
