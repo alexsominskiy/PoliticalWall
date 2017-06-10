@@ -28,7 +28,7 @@ var uploadedCharts = {};
 var uploadedNews = {};
 
 var app = angular.module("politicalWall",[])
-    .controller("politicalWallCntr",function($scope,$filter, between){
+    .controller("politicalWallCntr",function($scope,$filter){
 
         $scope.model = {};
         $scope.model.showUpload = true;
@@ -74,10 +74,7 @@ var app = angular.module("politicalWall",[])
             }
         };
     })
-    .filter("between",function($scope){return function(arr){
-    console.log(moment($scope.dateBefore,"DD/MM/YYYY"));
-    return arr;
-}})
+   
     
 
 
