@@ -64,7 +64,7 @@
 .search input:focus{
     background-color: lightyellow;
 }
-.newsDate{
+.newsDates{
     display: inline-block;
     width: 15vw;
 }
