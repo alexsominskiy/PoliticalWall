@@ -22,28 +22,12 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
         return $scope.model.newspage;}
     $scope.newsList = [];
     
-    var hotIndex = -1;
     $http.get(url+"/getNews").then(function(res){
         $scope.newsList = res.data.reverse();
         if ($scope.newsList.length != 0)$scope.previewFile=$scope.newsList[0].url;
-
     })
-    
-    
-    
-    // $scope.removeFile = function(){
-    //     $http.get(url+"/removeNews?id="+$scope.newsList[fileToRemove].date_time).then(function(res){
-    //         $scope.newsList.splice(fileToRemove,1);
-    //         if($scope.newsList.length != 0){
-    //             $scope.previewFile=$scope.newsList[0].url.substring(3);
-    //         }
-    //         else $scope.previewFile="../UploadedNews/empty.html";
-    //         $scope.model.removeShield();
-    //     })
-    // }
 
-
-    $scope.setShowIndex = function(ind){
+   $scope.setShowIndex = function(ind){
         $scope.previewFile=$scope.newsList[ind].url;
         $scope.model.newspage=$scope.newsList[ind].url;
     }
@@ -65,7 +49,4 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.dateBefore = "";
     $scope.dateAfter = "";
     
-    $scope.newsArray = function(){
-        return $scope.newsList;
-    }
 })
