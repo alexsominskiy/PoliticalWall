@@ -64,4 +64,8 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     
     $scope.dateBefore = "";
     $scope.dateAfter = "";
+    
+    $scope.newsArray = function(){
+        return newsList;
+    }
 })
