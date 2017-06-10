@@ -51,7 +51,7 @@
 }
 .search{
     border-bottom: 0.15vh solid darkblue;
-    font-size: 3vh;
+    font-size: 0.3%;
     text-align: right;
     padding: 1vh 1vw;
 }
@@ -64,7 +64,7 @@
 .dateInput{
     direction: ltr;
     font-size: 2.5vh;
-    width: 30%;
+    width: 40%;
 }
 .search input:focus{
     background-color: lightyellow;
