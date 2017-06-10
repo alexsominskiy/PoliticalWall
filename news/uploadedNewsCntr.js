@@ -52,9 +52,11 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
 })
 app.filter('dateRange', function() {
         return function(items, startDate, endDate) {
-            //an undefined startDate is converted to the beginning of time
+            
             var sDate = moment(startDate).format("DD/MM/YYYY") || moment("01/01/1900").format("DD/MM/YYYY");
             var eDate = moment(endDate).format("DD/MM/YYYY") || moment("01/01/2100").format("DD/MM/YYYY");
+            
+            console.log(sDate);
 
             //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
             return items.filter(function(item){return moment(item).isBetween(sDate, eDate)});
