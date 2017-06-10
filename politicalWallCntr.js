@@ -28,7 +28,7 @@ var uploadedCharts = {};
 var uploadedNews = {};
 
 var app = angular.module("politicalWall",[])
-    .controller("politicalWallCntr",function($scope,$filter, betweenFilter){
+    .controller("politicalWallCntr",function($scope,$filter, between){
 
         $scope.model = {};
         $scope.model.showUpload = true;
