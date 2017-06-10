@@ -1,7 +1,7 @@
 /**
  * Created by User on 23.03.2017.
  */
-app.controller("uploadedNewsCntr", function($scope,$http) {
+app.controller("uploadedNewsCntr", function($scope,$http, datebetweenFilter) {
     $scope.back = function () {
         $scope.model.page = "news/news.html";
         $scope.model.headers = headers.news;
