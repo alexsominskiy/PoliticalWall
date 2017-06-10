@@ -51,11 +51,11 @@
 }
 .search{
     border-bottom: 0.15vh solid darkblue;
-    font-size: 0.3%;
+    font-size: 3vh;
     text-align: right;
     padding: 1vh 1vw;
 }
-.search input {
+.subjInput {
     outline : none;
     padding-right: 0.5vw;
     height: 4vh;
@@ -64,7 +64,7 @@
 .dateInput{
     direction: ltr;
     font-size: 2.5vh;
-    width: 40%;
+    width: 30%;
 }
 .search input:focus{
     background-color: lightyellow;
