@@ -62,6 +62,7 @@ app.filter('dateRange', function() {
             //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
             return items.filter(function(item){
                 var itMom = moment(item.date_time,"YYYY-MM-DD HH-mm-ss");
+                console.log(itMom);
                 return moment(itMom.isBetween(sDate, eDate));
             });
         }
