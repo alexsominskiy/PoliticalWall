@@ -62,6 +62,7 @@
     width: 10vw;
 }
 .dateInput{
+    outline : none;
     direction: ltr;
     font-size: 2vh;
     width: 10vw;

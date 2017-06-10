@@ -1,7 +1,11 @@
 /**
  * Created by User on 23.03.2017.
  */
+
 app.controller("uploadedNewsCntr", function($scope,$http) {
+    
+    $scope.datef = "DD-YY-YYYY";
+    
     $scope.back = function () {
         $scope.model.page = "news/news.html";
         $scope.model.headers = headers.news;
@@ -53,16 +57,12 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
 app.filter('dateRange', function() {
         return function(items, startDate, endDate) {
             
-            var sDate = (startDate.length == 10 && moment(startDate,"DD-MM-YYYY")) || moment("01-01-1900","DD-MM-YYYY");
-            var eDate = (endDate.length == 10 && moment(endDate,"DD-MM-YYYY")) || moment("01-01-2100","DD-MM-YYYY");
+            var sDate = (startDate.length == $scope.datef.length && moment(startDate,$scope.datef)) || moment("01-01-1900","DD-MM-YYYY");
+            var eDate = (endDate.length == $scope.datef.length && moment(endDate,$scope.datef)) || moment("01-01-2100","DD-MM-YYYY");
             
-            //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
             var res = items.filter(function(item){
-                var itMom = moment(item.date_time,"YYYY-MM-DD HH-mm-ss");
-                return itMom.isBetween(sDate, eDate);
+                return moment(item.date_time,"YYYY-MM-DD HH-mm-ss").isBetween(sDate, eDate);
             });
-            console.log(items);
-            console.log(res);
             return res;
         }
     })
