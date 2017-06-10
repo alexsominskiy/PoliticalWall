@@ -183,9 +183,6 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
         $scope.main = false;
         $scope.page = "sight/SightCharts/charts.html";
     }
-
-
-
 })
     .directive("skewlabelright", function(){
         return {
@@ -201,3 +198,7 @@ app.controller("politicsMainCntr",function($scope,$window,$http){
             }
         }
     })
+    .filter("between",function($scope){return function(arr){
+        console.log(moment($scope.dateBefore,"DD/MM/YYYY"));
+        return arr;
+    }})

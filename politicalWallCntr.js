@@ -28,7 +28,7 @@ var uploadedCharts = {};
 var uploadedNews = {};
 
 var app = angular.module("politicalWall",[])
-    .controller("politicalWallCntr",['betweenFilter',function($scope,$filter){
+    .controller("politicalWallCntr",function($scope,$filter){
 
         $scope.model = {};
         $scope.model.showUpload = true;
@@ -64,7 +64,7 @@ var app = angular.module("politicalWall",[])
         $scope.model.chartBlob = null;
         $scope.model.fileBlob = null;
         
-    }])
+    })
     .directive('customOnChange', function() {
         return {
             restrict: 'A',
