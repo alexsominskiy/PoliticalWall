@@ -61,4 +61,11 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
             header : $scope.newsSubject
         }
     }
+    
+    $scope.dateBefore = "";
+    $scope.dateAfter = "";
 })
+.directive("dateFilter",function($scope){return function(arr){
+    console.log(moment($scope.dateBefore,"DD/MM/YYYY"));
+    return arr;
+}})
