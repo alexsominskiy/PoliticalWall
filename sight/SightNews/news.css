@@ -64,6 +64,13 @@
 .search input:focus{
     background-color: lightyellow;
 }
+.newsDate{
+    display: inline-block;
+    width: 15vw;
+}
+.dateinput{
+    height: 2vh;
+}
 .hapes{
     border-radius: 0.7vh;
     border: 0.15vh solid gray;
