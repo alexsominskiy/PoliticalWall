@@ -56,9 +56,9 @@ app.filter('dateRange', function() {
             var sDate = moment(startDate,"DD/MM/YYYY") || moment("01/01/1900","DD/MM/YYYY");
             var eDate = moment(endDate,"DD/MM/YYYY") || moment("01/01/2100","DD/MM/YYYY");
             
-            console.log(startDate);
+            console.log(sDate+";"+eDate);
 
             //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
-            return items.filter(function(item){return moment(item.date_time).isBetween(sDate, eDate)});
+            return items.filter(function(item){return moment($scope.shortDate(item.date_time)).isBetween(sDate, eDate)});
         }
     })
