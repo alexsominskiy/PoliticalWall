@@ -50,3 +50,14 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.dateAfter = "";
     
 })
+app.filter('dateRange', function() {
+        return function(items, startDate, endDate) {
+            //an undefined startDate is converted to the beginning of time
+            startDate = startDate || 0;
+
+            const granularity = null // can be 'days', ... see momentJS doc
+
+            //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
+            return items.filter(function(item){return moment(item).isBetween(startDate, endDate, granularity, '[]')});
+        }
+    }
