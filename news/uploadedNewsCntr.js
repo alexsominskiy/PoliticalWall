@@ -65,7 +65,3 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.dateBefore = "";
     $scope.dateAfter = "";
 })
-app.filter("between",function($scope){return function(arr){
-    console.log(moment($scope.dateBefore,"DD/MM/YYYY"));
-    return arr;
-}})
