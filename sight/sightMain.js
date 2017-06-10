@@ -3,7 +3,7 @@
 var url ="https://politicalwallproject.herokuapp.com";
 
 var app = angular.module("politicsMain",[]);
-app.controller("politicsMainCntr",['betweenFilter',function($scope,$window,$http){
+app.controller("politicsMainCntr",function($scope,$window,$http){
     
     $scope.hebVocab = vocab;
 
@@ -183,7 +183,7 @@ app.controller("politicsMainCntr",['betweenFilter',function($scope,$window,$http
         $scope.main = false;
         $scope.page = "sight/SightCharts/charts.html";
     }
-}])
+})
     .directive("skewlabelright", function(){
         return {
             template: '<div class="wrap pointer">'+
