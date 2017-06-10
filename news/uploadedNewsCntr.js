@@ -1,7 +1,7 @@
 /**
  * Created by User on 23.03.2017.
  */
-app.controller("uploadedNewsCntr", ['betweenFilter',function($scope,$http) {
+app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.back = function () {
         $scope.model.page = "news/news.html";
         $scope.model.headers = headers.news;
@@ -64,7 +64,7 @@ app.controller("uploadedNewsCntr", ['betweenFilter',function($scope,$http) {
     
     $scope.dateBefore = "";
     $scope.dateAfter = "";
-}])
+})
 .filter("between",function($scope){return function(arr){
     console.log(moment($scope.dateBefore,"DD/MM/YYYY"));
     return arr;
