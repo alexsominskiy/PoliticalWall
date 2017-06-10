@@ -55,6 +55,8 @@
 .search input {
     outline : none;
     padding-right: 0.5vw;
+    height: 4vh;
+    width: 10vw;
 }
 .search input:focus{
     background-color: lightyellow;
