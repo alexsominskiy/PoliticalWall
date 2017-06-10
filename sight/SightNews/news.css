@@ -62,6 +62,7 @@
     width: 10vw;
 }
 .dateInput{
+    direction: ltr;
     font-size: 2.5vh;
 }
 .search input:focus{
