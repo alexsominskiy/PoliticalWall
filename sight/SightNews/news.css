@@ -71,7 +71,8 @@
 .newsDates{
     display: inline-block;
     width: 30vw;
-    text-align: left;
+    text-align: right;
+    padding-right: 0.5vw;
 }
 .hapes{
     border-radius: 0.7vh;
