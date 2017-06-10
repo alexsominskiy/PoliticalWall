@@ -50,7 +50,7 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.dateAfter = "";
     
 })
-app.filter('dateRange', function() {
+app.filter('dateRange', function($scope) {
         return function(items, startDate, endDate) {
             
             var sDate = moment(startDate,"DD/MM/YYYY") || moment("01/01/1900","DD/MM/YYYY");
