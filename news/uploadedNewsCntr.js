@@ -60,4 +60,4 @@ app.filter('dateRange', function() {
             //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
             return items.filter(function(item){return moment(item).isBetween(startDate, endDate, granularity, '[]')});
         }
-    }
+    })
