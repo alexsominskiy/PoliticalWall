@@ -50,7 +50,7 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.dateAfter = "";
     
 })
-app.filter('dateRange', function($scope) {
+app.filter('dateRange', function() {
         return function(items, startDate, endDate) {
             
             var sDate = moment(startDate,"DD/MM/YYYY") || moment("01/01/1900","DD/MM/YYYY");
@@ -59,6 +59,6 @@ app.filter('dateRange', function($scope) {
             console.log(sDate+";"+eDate);
 
             //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
-            return items.filter(function(item){return moment($scope.shortDate(item.date_time)).isBetween(sDate, eDate)});
+            return items.filter(function(item){return moment(moment(item.date_time,"YYYY-MM_DD HH-mm-ss")).isBetween(sDate, eDate)});
         }
     })
