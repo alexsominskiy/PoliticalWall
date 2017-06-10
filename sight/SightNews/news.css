@@ -59,19 +59,19 @@
     outline : none;
     padding-right: 0.5vw;
     height: 4vh;
-    width: 10%;
+    width: 10vw;
 }
 .dateInput{
     direction: ltr;
-    font-size: 2.5vh;
-    width: 30%;
+    font-size: 2vh;
+    width: 10vw;
 }
 .search input:focus{
     background-color: lightyellow;
 }
 .newsDates{
     display: inline-block;
-    width: 30%;
+    width: 30vw;
     text-align: right;
     padding-right: 0.5vw;
 }
