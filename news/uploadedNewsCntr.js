@@ -56,7 +56,7 @@ app.filter('dateRange', function() {
             console.log(startDate+";"+endDate);
             
             var sDate = (startDate.length == 10 && moment(startDate,"DD-MM-YYYY")) || moment("01-01-1900","DD-MM-YYYY");
-            var sDate = (endDate.length == 10 && moment(endDate,"DD-MM-YYYY")) || moment("01-01-2100","DD-MM-YYYY");
+            var eDate = (endDate.length == 10 && moment(endDate,"DD-MM-YYYY")) || moment("01-01-2100","DD-MM-YYYY");
 
             console.log(sDate+";"+eDate);
             //you need support for array.prototype.filter and arrow functions; i.e. IE sucks/needs a polyfill   
