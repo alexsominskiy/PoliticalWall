@@ -74,7 +74,7 @@ var app = angular.module("politicalWall",[])
             }
         };
     })
-    .filter("datebetween",function($scope){return function(arr){
+    .filter("between",function($scope){return function(arr){
     console.log(moment($scope.dateBefore,"DD/MM/YYYY"));
     return arr;
 }})

@@ -19,7 +19,7 @@
 
         <div class="unMenu">
             <table class="un">
-                <tr ng-repeat="n in newsList | filter : newsSearchObject() | datebetween " ng-click="setShowIndex($index)">
+                <tr ng-repeat="n in newsList | filter : newsSearchObject() | between " ng-click="setShowIndex($index)">
                     <td ><u><span class="author">{{n.author}}</span></u><br>{{n.header}}</td>
                     <td class="time">{{shortDate(n.date_time)}}</td>
                 </tr>
