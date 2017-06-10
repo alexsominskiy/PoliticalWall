@@ -3,7 +3,7 @@
 var url ="https://politicalwallproject.herokuapp.com";
 
 var app = angular.module("politicsMain",[]);
-app.controller("politicsMainCntr",['$scope','$window','$http','betweenFilter',function($scope,$window,$http){
+app.controller("politicsMainCntr",['$scope','$window','$http',function($scope,$window,$http){
     
     $scope.hebVocab = vocab;
 
