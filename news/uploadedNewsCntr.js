@@ -55,7 +55,7 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
 app.filter('dateRange', function() {
         return function(items, startDate, endDate) {
 
-            console.log(startDate, endDate);
+            console.log(startDate +";"+endDate);
             
             var sDate = (startDate.length == 10 && moment(startDate,"YYYY-MM-DD")) || moment("01-01-1900","DD-MM-YYYY");
             var eDate = (endDate.length == 10 && moment(endDate,"YYYY-MM-DD")) || moment("01-01-2100","DD-MM-YYYY");
