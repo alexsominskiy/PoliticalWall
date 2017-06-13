@@ -51,12 +51,15 @@ app.controller("uploadedNewsCntr", function($scope,$http) {
     $scope.dateBefore = "";
     $scope.dateAfter = "";
     
+    $("#datebefore").datepicker( $.datepicker.regional["he"]);
+    $("#dateafter").datepicker( $.datepicker.regional["he"]);
+    
 })
 app.filter('dateRange', function() {
         return function(items, startDate, endDate) {
             
-            var sDate = (startDate != null && startDate.length == 10 && moment(startDate)) || moment("01-01-1900","DD-MM-YYYY");
-            var eDate = (startDate != null && endDate.length == 10 && moment(endDate)) || moment("01-01-2100","DD-MM-YYYY");
+            var sDate = (startDate != null && startDate.length == 10 && moment(startDate,"DD/MM/YYYY")) || moment("01-01-1900","DD-MM-YYYY");
+            var eDate = (startDate != null && endDate.length == 10 && moment(endDate,"DD/MM/YYYY")) || moment("01-01-2100","DD-MM-YYYY");
 
             console.log(sDate +";"+eDate);
             
