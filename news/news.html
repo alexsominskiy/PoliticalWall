@@ -1,5 +1,6 @@
 <div class="header">{{model.header}}
     <div class="back" style="top : 2vh"><span class="glyphicon glyphicon-arrow-left" ng-Click="model.back()" style="top : -0.5vh" ></span></div>
+    <button class="upload atRight" ng-show="model.currentNewsFile != 'empty.docx'" ng-click="showShield()">{{model.uploadButton}}</button
 </div>
 <div class="cont" ng-controller="newsCntr">
 
@@ -10,13 +11,13 @@
         <!--<div class="menuHeader" ng-Click="uploaded()">Uploaded news</div>-->
 
     </div>
-    <div class="newsContainer">
+    <div class="newsContainer" ng-show="model.currentNewsFile != 'empty.docx'">
         <input>{{vocab.author}}<br>
         <input>{{vocab.header}}<br>
         <input>{{vocab.date}}<br>
         <input>{{vocab.tags}}<br>
-        <iframe class="newsHtml" ng-src="{{model.currentPreviewFile}}" ng-show="model.currentNewsFile != 'empty.docx'"></iframe>
-        <button class="upload atRight" ng-show="model.currentNewsFile != 'empty.docx'" ng-click="showShield()">{{model.uploadButton}}</button>
+        <iframe class="newsHtml" ng-src="{{model.currentPreviewFile}}"></iframe>
+
     </div>
     <div class="shield" ng-show="model.shield">
         <div class="centered shieldPlate">

@@ -5,5 +5,5 @@ var newsVocab = {
     author : "מחבר",
     header : "כותרת",
     date : "תאריך",
-    tags : "תגיס"
+    tags : "תגים"
 }
