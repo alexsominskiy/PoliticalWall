@@ -85,6 +85,7 @@ app.get("/events/upload", function(req,res){
 })
 
 app.post("/seeWord", function(req,res){
+    console.log(req.query.fname);
     var post = [];
     req.on("data", function (chunk) {
         post.push(chunk);
@@ -101,7 +102,7 @@ app.post("/seeWord", function(req,res){
                         author : pHTML.author,
                         header : pHTML.header
                     }
-                    console.log(destName);
+                    
                     fs.writeFile(destName, pHTML.file, function (err) {
                         res.end(JSON.stringify(fileInfo));
                     });
