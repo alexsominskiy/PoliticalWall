@@ -101,6 +101,7 @@ app.post("/seeWord", function(req,res){
                         author : pHTML.author,
                         header : pHTML.header
                     }
+                    console.log(destName);
                     fs.writeFile(destName, pHTML.file, function (err) {
                         res.end(JSON.stringify(fileInfo));
                     });
