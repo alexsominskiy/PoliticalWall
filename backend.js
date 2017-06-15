@@ -92,11 +92,11 @@ app.post("/seeWord", function(req,res){
     });
     req.on("end", function () {
         var data = Buffer.concat(post);
-        fs.writeFile("../news/Tmp/"+req.query.fname, data, function () {
-            mam.convertToHtml({path: "../news/Tmp/"+req.query.fname})
+        fs.writeFile("news/Tmp/"+req.query.fname, data, function () {
+            mam.convertToHtml({path: "news/Tmp/"+req.query.fname})
                 .then(function (result) {
                     var pHTML = parseHTML(result.value);
-                    var destName =  "../news/Tmp/"+df(new Date(),"yyyy-mm-dd_HH-MM-ss")+".html";
+                    var destName =  "news/Tmp/"+df(new Date(),"yyyy-mm-dd_HH-MM-ss")+".html";
                     var fileInfo = {
                         destName : destName.substring(3),
                         author : pHTML.author,
@@ -129,22 +129,6 @@ app.post("/uploadNews", function(req,res) {
         })
     })
 })
-
-
-
-
-
-    /*var str = req.query.fname.substring(9);
-    var header = str.substring(0,str.length-24);
-    console.log(header);
-    /*var fdate = df(new Date(),"yyyy-mm-dd_HH-MM-ss");
-    var url = "../UploadedNews/"+fdate+"_"+header+".html";
-    var dbRec = "INSERT INTO news VALUES('"+fdate+"','"+url+"','"+url+"',false)";
-    fs.createReadStream("../"+req.query.fname).pipe(fs.createWriteStream(url));
-    connection.query(dbRec, function(err){
-        res.end(header);
-    })
-})*/
 
 app.get("/getNews", function(req,res){
     var dbRec = "SELECT * FROM news";
