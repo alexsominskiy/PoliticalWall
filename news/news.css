@@ -3,8 +3,8 @@
     left: 25vw;
     display: inline-block;
     width: 75vw;
-    text-align: right;
     padding: 2vh 2vw;
+    font-size: 3vh;
 }
 .newsHtml{
     width: 50vw;
@@ -14,4 +14,14 @@
     border-radius: 5vh;
     box-shadow: 0 0 1vh 0 rgba(0,0,0,0.3);
     padding: 2vh 2vw;
+}
+.newsContainer input{
+    font-size: 2.5vh;
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+    width: 70vh;
+    outline: none;
+}
+.newsContainer input:focus{
+    background-color: lightyellow;
 }

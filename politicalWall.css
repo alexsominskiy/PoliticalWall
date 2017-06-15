@@ -32,7 +32,7 @@ body{
     font-size: 3vh;
     border: 0.15vh solid black;
     border-radius: 0.5vh;
-    padding: 0vh 1vw 0 1vw;
+    padding: 0vh 1vw 1vh 1vw;
     background-color: #660000;
     cursor: pointer;
     color: white;
