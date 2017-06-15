@@ -3,7 +3,7 @@
     left: 25vw;
     display: inline-block;
     width: 75vw;
-
+    text-align: right;
     padding: 2vh 2vw;
 }
 .newsHtml{
