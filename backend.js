@@ -98,7 +98,7 @@ app.post("/seeWord", function(req,res){
                     var pHTML = parseHTML(result.value);
                     var destName =  "news/Tmp/"+df(new Date(),"yyyy-mm-dd_HH-MM-ss")+".html";
                     var fileInfo = {
-                        destName : destName.substring(3),
+                        destName : destName,
                         author : pHTML.author,
                         header : pHTML.header
                     }
