@@ -2,7 +2,9 @@
  * Created by User on 22.03.2017.
  */
 app.controller("newsCntr",function($scope,$http){
-
+    
+    $scope.vocab = newsVocab;
+    
     $scope.shieldMessage1 = "news";
     $scope.showShield = function(){
         if($scope.model.currentPreviewFile == "news/Tmp/empty.html") return;
