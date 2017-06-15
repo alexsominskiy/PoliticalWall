@@ -7,10 +7,14 @@
 
         <label class="menuHeader" for="fileInput" style="margin : 0">Article to upload:<br><span class="menuValue">{{model.currentNewsFile}}</span></label>
         <input id="fileInput" type="file" custom-on-change="readNews" style="display: none">
-        <div class="menuHeader" ng-Click="uploaded()">Uploaded news</div>
+        <!--<div class="menuHeader" ng-Click="uploaded()">Uploaded news</div>-->
 
     </div>
     <div class="newsContainer">
+        <input>Author<br>
+        <input>Header<br>
+        <input>Date<br>
+        <input>Tags
         <iframe class="newsHtml" ng-src="{{model.currentPreviewFile}}" ng-show="model.currentNewsFile != 'empty.docx'"></iframe>
         <button class="upload atRight" ng-show="model.currentNewsFile != 'empty.docx'" ng-click="showShield()">{{model.uploadButton}}</button>
     </div>
