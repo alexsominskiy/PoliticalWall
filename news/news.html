@@ -16,7 +16,7 @@
         <input>{{vocab.header}}<br>
         <input>{{vocab.date}}<br>
         <input>{{vocab.tags}}<br>
-        <iframe class="newsHtml" docsrc="<html>{{model.currentPreviewFile}}</html>"></iframe>
+        <iframe class="newsHtml" src="data:text/html,{{model.currentPreviewFile}}"></iframe>
 
     </div>
     <div class="shield" ng-show="model.shield">

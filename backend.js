@@ -117,7 +117,7 @@ app.post("/seeWord", function(req,res){
                 })
         });*/
         mam.convertToHtml({buffer : data}).then(function(result){
-            res.end(docStyle+"<body>"+result.value+"</body>");
+            res.end(docStyle+result.value);
         })
     })
 })
