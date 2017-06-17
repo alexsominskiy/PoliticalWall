@@ -6,24 +6,17 @@ var express = require('express');
 var app = express();
 var headers = require('./headers');
 /*var connection = require('./connectionDB');*/
+var connection = require('./connectionHerokuapp');
 var mysql = require('mysql');
 var fs = require('fs');
 var mam = require('mammoth');
 var df = require('dateformat');
 var parseHTML = require('./parseHtml');
 
-var connection = mysql.createConnection({
-    host: 'us-cdbr-iron-east-03.cleardb.net',
-    user: 'b1deaaa3aa770b',
-    password: '29c63657',
-    database: 'heroku_0bb447de5526496'
-});
 
 setInterval(function () {
     connection.query('SELECT 1');
 }, 5000);
-
-module.exports = connection;
 
 app.use(function(req,res,next){
     headers.setHeaders(res);
