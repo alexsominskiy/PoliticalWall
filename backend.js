@@ -84,14 +84,6 @@ app.get("/events/upload", function(req,res){
     })
 })
 
-var docStyle =
-    "<style> {"+
-    ".img{"+
-    "float: left;"+
-    "}"+
-    "</style>";
-
-
 app.post("/seeWord", function(req,res){
     console.log(req.query.fname);
     var post = [];
@@ -117,7 +109,7 @@ app.post("/seeWord", function(req,res){
                 })
         });*/
         mam.convertToHtml({buffer : data}).then(function(result){
-            res.end(docStyle+result.value);
+            res.end(result.value);
         })
     })
 })
