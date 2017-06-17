@@ -5,7 +5,6 @@ app.controller("newsCntr",function($scope,$http,$sce){
     
     $scope.vocab = newsVocab;
     
-    $scope.articleDate = moment();
     $("#articleDate").datepicker($.datepicker.regional["he"]);
     $scope.articleDate = new Date();
     
