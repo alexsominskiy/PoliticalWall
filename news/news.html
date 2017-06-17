@@ -4,6 +4,8 @@
 </div>
 <div class="cont" ng-controller="newsCntr">
 
+    <button class="upload atRight" ng-show="model.currentNewsFile != 'empty.docx'" ng-click="uploadNews()">{{model.uploadButton}}</button>
+
     <div class="menu">
 
         <label class="menuHeader" for="fileInput" style="margin : 0">Article to upload:<br><span class="menuValue">{{model.currentNewsFile}}</span></label>

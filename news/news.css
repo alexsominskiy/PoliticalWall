@@ -2,13 +2,13 @@
     position: absolute;
     left: 25vw;
     display: inline-block;
-    width: 75vw;
+    width: 65vw;
     padding: 2vh 2vw;
     font-size: 3vh;
     text-align: left;
 }
 .newsHtml{
-    width: 70vw;
+    width: 60vw;
     height: 50vh;
     overflow: auto;
     border: 1px solid darkblue;
