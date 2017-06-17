@@ -26,7 +26,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
         $scope.articleDate = moment.now();
         $scope,articleTags;
 
-        $("#datebefore").datepicker( $.datepicker.regional["he"]);
+        $("articleDate").datepicker( $.datepicker.regional["he"]);
     }
 
     $scope.readNews = function(){
