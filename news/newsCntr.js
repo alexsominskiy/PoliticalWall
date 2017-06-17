@@ -90,6 +90,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
        var res = "";
        while(true) {
            var imgIndex = s.indexOf("<img>", beg) - 3;
+           console.log(imgIndex);
            if (imgIndex < 0){
                res = res + s.substr(beg);
                break;
