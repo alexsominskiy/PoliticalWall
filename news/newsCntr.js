@@ -32,8 +32,9 @@ app.controller("newsCntr",function($scope,$http){
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(){
             if (xhr.readyState != 4) return;
-            $scope.model.wordFileInfo = JSON.parse(xhr.response);
-            $scope.model.currentPreviewFile = $scope.model.wordFileInfo.destName;
+            /*$scope.model.wordFileInfo = JSON.parse(xhr.response);
+            $scope.model.currentPreviewFile = $scope.model.wordFileInfo.destName;*/
+            $scope.model.currentPreviewFile = xhr.response;
             $scope.$apply();
             document.getElementById("fileInput").value = null;
         }

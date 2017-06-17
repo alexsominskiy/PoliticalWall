@@ -84,6 +84,14 @@ app.get("/events/upload", function(req,res){
     })
 })
 
+var docStyle =
+    "<style> {"+
+    ".img{"+
+    "float: left;"+
+    "}"+
+    "</style>";
+
+
 app.post("/seeWord", function(req,res){
     console.log(req.query.fname);
     var post = [];
@@ -92,7 +100,7 @@ app.post("/seeWord", function(req,res){
     });
     req.on("end", function () {
         var data = Buffer.concat(post);
-        fs.writeFile("news/Tmp/"+req.query.fname, data, function () {
+        /*fs.writeFile("news/Tmp/"+req.query.fname, data, function () {
             mam.convertToHtml({path: "news/Tmp/"+req.query.fname})
                 .then(function (result) {
                     var pHTML = parseHTML(result.value);
@@ -102,12 +110,15 @@ app.post("/seeWord", function(req,res){
                         author : pHTML.author,
                         header : pHTML.header
                     }
-                    
+
                     fs.writeFile(destName, pHTML.file, function (err) {
                         res.end(JSON.stringify(fileInfo));
                     });
                 })
-        });
+        });*/
+        mam.convertToHtml({buffer : data}).then(function(result){
+            res.end(docStyle+result);
+        })
     })
 })
 
