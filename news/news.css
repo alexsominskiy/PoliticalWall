@@ -22,6 +22,7 @@
     padding: 0.5vh 1vw;
     width: 65vw;
     outline: none;
+    text-align: right;
 }
 .newsContainer input:focus{
     background-color: lightyellow;

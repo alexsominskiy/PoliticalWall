@@ -23,7 +23,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
         
         $scope.articleAuthor;
         $scope.article.Header;
-        $scope.articleDate = moment.now();
+        $scope.articleDate = moment().now();
         $scope,articleTags;
 
         $("articleDate").datepicker( $.datepicker.regional["he"]);
