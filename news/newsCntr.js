@@ -31,7 +31,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
         "text-align: right;"+
         "}" +
 
-        ".img{"+
+        "img{"+
         "float: left;"+
         "}"+
         "</style>";
