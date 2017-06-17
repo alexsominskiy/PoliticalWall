@@ -100,6 +100,11 @@ app.controller("newsCntr",function($scope,$http,$sce){
            console.log("RES:"+res);
            console.log("*****"+beg);
        }
+       res.replace("<p>","");
+       res.replace("</p>","");
+       res.replace("<br>","");
+       res.replace("<br />","");
+       
        console.log("!!!"+res);
        console.log($scope.articleTags);
     }
