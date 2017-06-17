@@ -7,10 +7,10 @@ app.controller("newsCntr",function($scope,$http,$sce){
     
     $("#articleDate").datepicker($.datepicker.regional["he"]);
     $scope.articleDate = moment().format("DD/MM/YYYY");
-    $scope.articleAuthor;
-    $scope.articleTitle;
-    $scope.articleTags;
-    $scope.articleSubject;
+    $scope.articleAuthor="";
+    $scope.articleTitle ="";
+    $scope.articleTags+"";
+    $scope.articleSubject="";
     
     /*$scope.shieldMessage1 = "news";
     $scope.showShield = function(){
