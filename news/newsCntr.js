@@ -4,12 +4,8 @@
 app.controller("newsCntr",function($scope,$http,$sce){
     
     $scope.vocab = newsVocab;
-
-    $scope.articleAuthor;
-    $scope.article.Header;
+    
     $scope.articleDate = moment().now();
-    $scope.articleTags;
-
     $("#articleDate").datepicker($.datepicker.regional["he"]);
     
     $scope.shieldMessage1 = "news";
