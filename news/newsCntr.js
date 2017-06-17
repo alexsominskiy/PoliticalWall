@@ -90,21 +90,18 @@ app.controller("newsCntr",function($scope,$http,$sce){
        var res = "";
        while(true) {
            var imgIndex = s.indexOf("<img", beg);
-           console.log("???"+imgIndex);
            if (imgIndex < 0){
                res = res + s.substr(beg);
                break;
            }
            res = res + s.substr(beg, imgIndex);
            beg = s.indexOf("/>", imgIndex)+2;
-           console.log("RES:"+res);
-           console.log("*****"+beg);
        }
        
        res.replace("<p>","");
-       res.replace("</p>","");
-       res.replace("<br>","");
-       res.replace("<br />","");
+       //res.replace("</p>","");
+       //res.replace("<br>","");
+       //res.replace("<br />","");
        
        console.log("!!!"+res);
        console.log($scope.articleTags);
