@@ -21,7 +21,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
 
         $scope.model.showShield();
         
-        $scope.articleAuthor;
+        $scope.articleAuthor="Vasia";
         $scope.article.Header;
         $scope.articleDate = moment().now();
         $scope,articleTags;
