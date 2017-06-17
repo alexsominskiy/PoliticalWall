@@ -85,7 +85,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
        console.log($scope.articleTitle);
        console.log($scope.articleDate);
        console.log($scope.articleSubject);
-       Console.log($scope.articleTags);
+       console.log($scope.articleTags);
     }
 
     /*$scope.uploaded = function(){
