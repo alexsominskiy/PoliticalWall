@@ -106,30 +106,22 @@ app.post("/seeWord", function(req,res){
         });*/
         console.log("here");
         mam.convertToHtml({buffer : data}).then(function(result){
-            res.end(result.value);
             currentArticle.subject = result.value;
             currentArticle.subjectText = getSubjectText(result.value);
-           
+            res.end(currentArticle.subjectText);
         })
     })
 })
 
 function getSubjectText(s){
-    var beg = 0;
-    var res = "";
     while(true){
-        var imgIndex = s.indexOf("<img", beg);
-        if (imgIndex < 0){
-            res = res + s.substr(beg);
-            break;
-        }
-        res = res + s.substr(beg, imgIndex);
-        beg = s.indexOf("/>", imgIndex)+2;
+        var beg = s.indexOf("<img", 0);
+        if (beg < 0) break;
+        var end = s.indexOf("/>", beg)+2;
+        s = s.substring(0,beg)+s.substring(end);
     }
 
-    res = $(res).text();
-
-    console.log("!!!"+res);
+    return  $(s).text();
 }
 
 app.post("/uploadNews", function(req,res) {
