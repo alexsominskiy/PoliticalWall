@@ -84,7 +84,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
        console.log($scope.articleAuthor);
        console.log($scope.articleTitle);
        console.log($scope.articleDate);
-       console.log($scope.articleSubject);
+       //console.log($scope.articleSubject);
        var s = $scope.articleSubject;
        var beg = 0;
        var res = "";
