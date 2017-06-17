@@ -96,7 +96,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
                break;
            }
            res = res + s.substr(beg, imgIndex);
-           beg = s.indexOf("/>", imgIndex)+3;
+           beg = s.indexOf("/>", imgIndex)+2;
            console.log("RES:"+res);
            console.log("*****"+beg);
        }
