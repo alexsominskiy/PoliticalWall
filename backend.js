@@ -77,7 +77,10 @@ app.get("/events/upload", function(req,res){
     })
 })
 
+var currentArticle = {};
+
 app.post("/seeWord", function(req,res){
+    currentArticle={};
     console.log(req.query.fname);
     var post = [];
     req.on("data", function (chunk) {
@@ -102,10 +105,30 @@ app.post("/seeWord", function(req,res){
                 })
         });*/
         mam.convertToHtml({buffer : data}).then(function(result){
+            currentArticle.subject = result.value;
+            currentArticle.subjectText = getSubjectText(result.value);
             res.end(result.value);
         })
     })
 })
+
+function getSubjectText(s){
+    var beg = 0;
+    var res = "";
+    while(true){
+        var imgIndex = s.indexOf("<img", beg);
+        if (imgIndex < 0){
+            res = res + s.substr(beg);
+            break;
+        }
+        res = res + s.substr(beg, imgIndex);
+        beg = s.indexOf("/>", imgIndex)+2;
+    }
+
+    res = $(res).text();
+
+    console.log("!!!"+res);
+}
 
 app.post("/uploadNews", function(req,res) {
     var post = [];
