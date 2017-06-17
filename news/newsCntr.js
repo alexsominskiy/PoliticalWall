@@ -9,7 +9,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
     $scope.articleDate = moment().format("DD/MM/YYYY");
     $scope.articleAuthor="";
     $scope.articleTitle ="";
-    $scope.articleTags+"";
+    $scope.articleTags="";
     $scope.articleSubject="";
     
     /*$scope.shieldMessage1 = "news";
@@ -85,6 +85,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
        console.log($scope.articleTitle);
        console.log($scope.articleDate);
        console.log($scope.articleSubject);
+       Console.log($scope.articleTags);
     }
 
     /*$scope.uploaded = function(){
