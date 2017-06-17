@@ -124,6 +124,11 @@ function getSubjectText(s){
     
     s=s.replace("<p>","");
     s=s.replace("</p>","");
+    s=s.replace("<br>","");
+    s=s.replace("<br />","");
+    s=s.replace("<strong>","");
+    s=s.replace("</strong>","");
+
 
     return  s;
 }
