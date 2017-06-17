@@ -12,7 +12,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
     $scope.articleTags;
     $scope.articleSubject;
     
-    $scope.shieldMessage1 = "news";
+    /*$scope.shieldMessage1 = "news";
     $scope.showShield = function(){
         if($scope.model.currentPreviewFile == "news/Tmp/empty.html") return;
         $scope.shieldMessage2 = $scope.model.fileBlob.name;
@@ -27,7 +27,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
         }
 
         $scope.model.showShield();
-    }
+    }*/
 
     var docStyle =
         "<style>" +
@@ -86,10 +86,10 @@ app.controller("newsCntr",function($scope,$http,$sce){
        console.log($scope.articleSubject);
     }
 
-    $scope.uploaded = function(){
+    /*$scope.uploaded = function(){
 
         $scope.model.page = "news/uploadedNewsList.html";
         $scope.model.header = headers.uploadedNews;
-    }
+    }*/
     
 })
