@@ -7,6 +7,10 @@ app.controller("newsCntr",function($scope,$http,$sce){
     
     $("#articleDate").datepicker($.datepicker.regional["he"]);
     $scope.articleDate = moment().format("DD/MM/YYYY");
+    $scope.articleAuthor;
+    $scope.articleTitle;
+    $scope.articleTags;
+    $scope.articleSubject;
     
     $scope.shieldMessage1 = "news";
     $scope.showShield = function(){
@@ -49,7 +53,8 @@ app.controller("newsCntr",function($scope,$http,$sce){
             if (xhr.readyState != 4) return;
             /*$scope.model.wordFileInfo = JSON.parse(xhr.response);
             $scope.model.currentPreviewFile = $scope.model.wordFileInfo.destName;*/
-            $scope.model.currentPreviewFile =  $sce.trustAsHtml(docStyle+xhr.response);
+            $scope.articleSubject = xhr.response;
+            $scope.model.currentPreviewFile =  $sce.trustAsHtml(docStyle+$scope.articleSubject);
             $scope.$apply();
             document.getElementById("fileInput").value = null;
         }
@@ -65,7 +70,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
 
 
    $scope.uploadNews = function(){
-        $http.post(url+"/uploadNews", JSON.stringify($scope.model.wordFileInfo)).then(function(res){
+        /*$http.post(url+"/uploadNews", JSON.stringify($scope.model.wordFileInfo)).then(function(res){
             var rec = res.data;
             console.log(rec);
             if (uploadedNews[rec]){
@@ -74,7 +79,11 @@ app.controller("newsCntr",function($scope,$http,$sce){
                 uploadedNews[rec] = 1;
             }
             $scope.model.shield = false;
-        });
+        });*/
+       console.log($scope.articleAuthor);
+       console.log($scope.articleTitle);
+       console.log($scope.articleDate);
+       console.log($scope.articleSubject);
     }
 
     $scope.uploaded = function(){

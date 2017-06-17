@@ -28,7 +28,8 @@ body{
     margin-right: 0.5vw;
     margin-top: 1vh;
     outline: none;
-    height: 5vh;
+    line-height: 5vh;
+    height: 5.3vh;
     font-size: 3vh;
     border: 0.15vh solid black;
     border-radius: 0.5vh;
