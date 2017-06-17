@@ -24,9 +24,9 @@ app.controller("newsCntr",function($scope,$http,$sce){
         $scope.articleAuthor="Vasia";
         $scope.article.Header;
         $scope.articleDate = moment().now();
-        $scope,articleTags;
+        $scope.articleTags;
 
-        $("articleDate").datepicker( $.datepicker.regional["he"]);
+        $("#articleDate").datepicker( $.datepicker.regional["he"]);
     }
 
     $scope.readNews = function(){

@@ -12,10 +12,10 @@
 
     </div>
     <div class="newsContainer" ng-show="model.currentNewsFile != 'empty.docx'">
-        <input ng="articleAuthor" ng-model="articleAuthor" placeholder="נדרש"> {{vocab.author}}<br>
-        <input ng="articleHeader" ng-model="articleHeader" placeholder="נדרש"> {{vocab.header}}<br>
+        <input ng-model="articleAuthor" placeholder="נדרש"> {{vocab.author}}<br>
+        <input ng-model="articleHeader" placeholder="נדרש"> {{vocab.header}}<br>
         <input id="articleDate" ng-model="articleDate"> {{vocab.date}}<br>
-        <input ng="articleTags" ng-model="articleTags" placeholder="אופציונלי, מופרד עם פסיק"> {{vocab.tags}}<br>
+        <input ng-model="articleTags" placeholder="אופציונלי, מופרד עם פסיק"> {{vocab.tags}}<br>
         <iframe class="newsHtml" srcdoc="{{model.currentPreviewFile}}"></iframe>
 
     </div>
