@@ -85,6 +85,16 @@ app.controller("newsCntr",function($scope,$http,$sce){
        console.log($scope.articleTitle);
        console.log($scope.articleDate);
        console.log($scope.articleSubject);
+       var s = $scope.articleSubject;
+       var beg = 0;
+       var res = "";
+       while(true) {
+           var imgIndex = s.indexOf("<img>", beg) - 3;
+           if (imgIndex < 0)break;
+           res = res + s.substr(beg, imgIndex);
+           beg = s.indexOf("/>", imgIndex);
+       }
+       console.log(res)
        console.log($scope.articleTags);
     }
 
