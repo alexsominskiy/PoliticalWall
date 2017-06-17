@@ -90,11 +90,14 @@ app.controller("newsCntr",function($scope,$http,$sce){
        var res = "";
        while(true) {
            var imgIndex = s.indexOf("<img>", beg) - 3;
-           if (imgIndex < 0)break;
+           if (imgIndex < 0){
+               res = res + s.substr(beg);
+               break;
+           }
            res = res + s.substr(beg, imgIndex);
-           beg = s.indexOf("/>", imgIndex);
+           beg = s.indexOf("/>", imgIndex)+5;
        }
-       console.log(res)
+       console.log(res);
        console.log($scope.articleTags);
     }
 
