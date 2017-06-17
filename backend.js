@@ -106,9 +106,10 @@ app.post("/seeWord", function(req,res){
         });*/
         console.log("here");
         mam.convertToHtml({buffer : data}).then(function(result){
+            res.end(result.value);
             currentArticle.subject = result.value;
             currentArticle.subjectText = getSubjectText(result.value);
-            res.end(result.value);
+           
         })
     })
 })
