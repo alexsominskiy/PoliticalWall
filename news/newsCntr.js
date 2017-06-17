@@ -6,7 +6,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
     $scope.vocab = newsVocab;
     
     $("#articleDate").datepicker($.datepicker.regional["he"]);
-    $scope.articleDate = new Date();
+    $scope.articleDate = moment().format("DD/MM/YYYY");
     
     $scope.shieldMessage1 = "news";
     $scope.showShield = function(){
