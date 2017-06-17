@@ -57,7 +57,7 @@ var app = angular.module("politicalWall",[])
         
         
         $scope.model.currentNewsFile = "empty.docx";
-        $scope.model.currentPreviewFile = "news/Tmp/empty.html";
+        $scope.model.currentPreviewFile = $sce.trustAsHtml("");
 
         $scope.model.currentChartFile = "empty.txt";
         
