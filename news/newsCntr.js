@@ -98,10 +98,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
            beg = s.indexOf("/>", imgIndex)+2;
        }
        
-       res = res.replace("<p>","");
-       res = res.replace("</p>","");
-       res = res.replace("<br>","");
-       res = res.replace("<br />","");
+       res = $(res).text();
        
        console.log("!!!"+res);
        console.log($scope.articleTags);
