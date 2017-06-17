@@ -107,7 +107,7 @@ app.post("/seeWord", function(req,res){
         console.log("here");
         mam.convertToHtml({buffer : data}).then(function(result){
             currentArticle.subject = result.value;
-            currentArticle.subjectText = getSubjectText(result.value);
+            currentArticle.subjectText = "hello"/*getSubjectText(result.value)*/;
             res.end(currentArticle.subjectText);
         })
     })
@@ -115,7 +115,7 @@ app.post("/seeWord", function(req,res){
 
 function getSubjectText(s){
     while(true){
-        var beg = s.indexOf("<img", 0);
+        var beg = s.indexOf("<img");
         if (beg < 0) break;
         var end = s.indexOf("/>", beg)+2;
         s = s.substring(0,beg)+s.substring(end);
