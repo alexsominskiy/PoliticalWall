@@ -33,6 +33,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
         "<style>" +
         "*{"+
         "text-align: right;"+
+        "font-size: 6vh;"+
         "}" +
 
         "img{"+
