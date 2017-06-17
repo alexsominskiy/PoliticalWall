@@ -98,10 +98,10 @@ app.controller("newsCntr",function($scope,$http,$sce){
            beg = s.indexOf("/>", imgIndex)+2;
        }
        
-       res.replace("<p>","");
-       //res.replace("</p>","");
-       //res.replace("<br>","");
-       //res.replace("<br />","");
+       res = res.replace("<p>","");
+       res = res.replace("</p>","");
+       res = res.replace("<br>","");
+       res = res.replace("<br />","");
        
        console.log("!!!"+res);
        console.log($scope.articleTags);
