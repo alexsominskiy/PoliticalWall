@@ -109,7 +109,7 @@ app.post("/seeWord", function(req,res){
             var s = result.value;
             currentArticle.subject = s;
             currentArticle.subjectText = getSubjectText(s) ;
-            res.end(s);
+            res.end(getSubjectText(s));
         })
     })
 })
@@ -121,6 +121,9 @@ function getSubjectText(s){
         var end = s.indexOf("/>", beg)+2;
         s = s.substring(0,beg)+s.substring(end);
     }
+    
+    s=s.replace("<p>","");
+    s=s.replace("</p>","");
 
     return  s;
 }
