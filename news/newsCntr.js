@@ -1,7 +1,7 @@
 /**
  * Created by User on 22.03.2017.
  */
-app.controller("newsCntr",function($scope,$http){
+app.controller("newsCntr",function($scope,$http,$sce){
     
     $scope.vocab = newsVocab;
     
@@ -34,7 +34,7 @@ app.controller("newsCntr",function($scope,$http){
             if (xhr.readyState != 4) return;
             /*$scope.model.wordFileInfo = JSON.parse(xhr.response);
             $scope.model.currentPreviewFile = $scope.model.wordFileInfo.destName;*/
-            $scope.model.currentPreviewFile = xhr.response;
+            $scope.model.currentPreviewFile =  $sce.trustAsHtml(xhr.response);
             $scope.$apply();
             document.getElementById("fileInput").value = null;
         }
