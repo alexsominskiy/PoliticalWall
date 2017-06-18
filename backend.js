@@ -163,7 +163,7 @@ app.get("/uploadNews", function(req,res) {
         "'"+fauthor+"',"+
         "'"+ftitle+"',"+
         "'"+fdate+"',"+
-        "'"+ftags+
+        "'"+ftags+"'"+
     ")";
     //res.write(dbReq);
     connection.query(dbReq, function(err){
