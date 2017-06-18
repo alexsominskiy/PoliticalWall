@@ -8,10 +8,14 @@ var connection = mysql.createConnection({
     password: '29c63657',
     database: 'heroku_0bb447de5526496'
 });
+connection.query("DROP TABLE news",function(err){console.log(err)});
+connection.query("CREATE TABLE news (" +
 
-connection.query("CREATE TABLE cloudtags (" +
-    "id INT NOT NULL AUTO_INCREMENT," +
-    "tag VARCHAR(45) NOT NULL,"+
-    "rate INT NOT NULL," +
-    "PRIMARY KEY (id))",
-    function(err){console.log(err)});
+        "id VARCHAR(45) NOT NULL, "+
+        "url TINYTEXT NOT NULL, "+
+        "author TINYTEXT NOT NULL, "+
+        "title TINYTEXT NOT NULL, "+
+        "date VARCHAR(45) NOT NULL, "+
+        "subject TEXT NOT NULL, " +
+        "PRIMARY KEY (id))",
+        function(err){console.log(err);});

@@ -149,7 +149,27 @@ app.get("/uploadNews", function(req,res) {
             res.end(data.destName);
         })
     })*/
-    res.end(JSON.stringify(req.query));
+    var fdate = moment().format("YYYY-MM-DD_hh:mm:ss");
+    var fauthor = req.query.data.author;
+    var ftitle = req.query.data.title;
+    var fdate = req.query.data.date;
+    
+    var furl = "UploadedNews/"+fdate+"_"+ftitle+".html";
+    
+    var dbReq = "INSERT INTO news VALUES(" +
+        "'"+fdate+"'"+
+        "'"+furl+"'"+
+        "'"+fauthor+"'"+
+        "'"+ftitle+"'"+
+        "'"+fdate+"'"+
+        "'"+currentArticle.subjectText+"'"+
+    ")";
+    
+    connection.query(dbReq, function(err){
+        fs.writeFile(furl,currentArticle.subject, function(err){
+            res.end(JSON.stringify(req.query));
+        })
+    })
 })
 
 app.get("/getNews", function(req,res){
