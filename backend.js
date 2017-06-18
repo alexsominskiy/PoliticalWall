@@ -157,11 +157,11 @@ app.get("/uploadNews", function(req,res) {
     var furl = "UploadedNews/"+id+"_"+ftitle+".html";
     
     var dbReq = "INSERT INTO news VALUES(" +
-        "'"+id+"'"+
-        "'"+furl+"'"+
-        "'"+fauthor+"'"+
-        "'"+ftitle+"'"+
-        "'"+fdate+"'"+
+        "'"+id+"',"+
+        "'"+furl+"',"+
+        "'"+fauthor+"',"+
+        "'"+ftitle+"',"+
+        "'"+fdate+"',"+
         "'"+currentArticle.subjectText+"'"+
     ")";
     res.write(dbReq);
