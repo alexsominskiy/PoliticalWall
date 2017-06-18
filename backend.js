@@ -166,8 +166,9 @@ app.get("/uploadNews", function(req,res) {
     ")";
     
     connection.query(dbReq, function(err){
+        res.end(err);
         fs.writeFile(furl,currentArticle.subject, function(e){
-            res.end(err);
+            //res.end(e);
         })
     })
 })
