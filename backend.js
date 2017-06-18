@@ -164,7 +164,7 @@ app.get("/uploadNews", function(req,res) {
         "'"+fdate+"'"+
         "'"+currentArticle.subjectText+"'"+
     ")";
-    //res.end(dbReq);
+    res.write(dbReq);
     connection.query(dbReq, function(err){
         res.end(JSON.stringify(err));
         //fs.writeFile(furl,currentArticle.subject, function(e){
