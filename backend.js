@@ -217,7 +217,7 @@ app.post("/uploadChart", function(req,res){
     var post = [];
     req.on("data", function(chunk){post.push(chunk);})
     req.on("end", function(){
-        fs.writeFile("../UploadedCharts/"+fname+".txt", post.join().toString(), function(er){
+        fs.writeFile("UploadedCharts/"+fname+".txt", post.join().toString(), function(er){
             dbRec="INSERT INTO charts VALUES('"+id+"','"+fname+"')";
             connection.query(dbRec, function(err){
                 res.end("OK");
