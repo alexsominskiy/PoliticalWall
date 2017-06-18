@@ -149,15 +149,15 @@ app.get("/uploadNews", function(req,res) {
             res.end(data.destName);
         })
     })*/
-    var fdate = moment().format("YYYY-MM-DD_hh:mm:ss");
+    var id = moment().format("YYYY-MM-DD_hh:mm:ss");
     var fauthor = req.query.data.author;
     var ftitle = req.query.data.title;
     var fdate = req.query.data.date;
     
-    var furl = "UploadedNews/"+fdate+"_"+ftitle+".html";
+    var furl = "UploadedNews/"+id+"_"+ftitle+".html";
     
     var dbReq = "INSERT INTO news VALUES(" +
-        "'"+fdate+"'"+
+        "'"+id+"'"+
         "'"+furl+"'"+
         "'"+fauthor+"'"+
         "'"+ftitle+"'"+
