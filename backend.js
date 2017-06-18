@@ -153,6 +153,7 @@ app.get("/uploadNews", function(req,res) {
     var fauthor = req.query.author;
     var ftitle = req.query.title;
     var fdate = req.query.date;
+    var ftags = req.query.tags;
     
     var furl = "UploadedNews/"+id+"_"+ftitle+".html";
     
@@ -162,12 +163,13 @@ app.get("/uploadNews", function(req,res) {
         "'"+fauthor+"',"+
         "'"+ftitle+"',"+
         "'"+fdate+"',"+
+        "'"+ftags+
     ")";
     //res.write(dbReq);
     connection.query(dbReq, function(err){
         res.end(JSON.stringify(err));
         fs.writeFile(furl,currentArticle.subject, function(e){
-            res.end(JSON.stringify(e));
+            //res.end(JSON.stringify(e));
         })
     })
 })
