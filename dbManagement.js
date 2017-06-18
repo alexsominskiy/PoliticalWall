@@ -12,10 +12,10 @@ connection.query("DROP TABLE news",function(err){console.log(err)});
 connection.query("CREATE TABLE news (" +
 
         "id VARCHAR(45) NOT NULL, "+
-        "url TINYTEXT NOT NULL, "+
-        "author TINYTEXT NOT NULL, "+
-        "title TINYTEXT NOT NULL, "+
+        "url VARCHAR(255) NOT NULL, "+
+        "author VARCHAR(255) NOT NULL, "+
+        "title VARCHAR(255) NOT NULL, "+
         "date VARCHAR(45) NOT NULL, "+
-        "subject TEXT NOT NULL, " +
+        "subject VARCHAR(32726) NOT NULL, " +
         "PRIMARY KEY (id))",
         function(err){console.log(err);});

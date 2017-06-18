@@ -162,7 +162,7 @@ app.get("/uploadNews", function(req,res) {
         "'"+fauthor+"',"+
         "'"+ftitle+"',"+
         "'"+fdate+"',"+
-        "'"+currentArticle.subjectText+"'"+
+        "'"+"no"+"'"+
     ")";
     res.write(dbReq);
     connection.query(dbReq, function(err){
