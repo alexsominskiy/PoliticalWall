@@ -169,7 +169,7 @@ app.get("/uploadNews", function(req,res) {
     connection.query(dbReq, function(err){
         //res.end(JSON.stringify(err));
         fs.writeFile(furl,currentArticle.subject, function(e){
-            res.end("!!!!"+JSON.stringify(e));
+            res.end("!!!!"+furl+";"+currentArticle.subject);
         })
     })
 })
