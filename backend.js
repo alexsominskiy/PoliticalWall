@@ -162,13 +162,12 @@ app.get("/uploadNews", function(req,res) {
         "'"+fauthor+"',"+
         "'"+ftitle+"',"+
         "'"+fdate+"',"+
-        "'"+currentArticle.subjectText.substring(0,1000)+"'"+
     ")";
-    res.write(dbReq);
+    //res.write(dbReq);
     connection.query(dbReq, function(err){
         res.end(JSON.stringify(err));
         fs.writeFile(furl,currentArticle.subject, function(e){
-            //res.end(e);
+            res.end(JSON.stringify(e));
         })
     })
 })

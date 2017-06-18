@@ -16,6 +16,5 @@ connection.query("CREATE TABLE news (" +
         "author VARCHAR(255) NOT NULL, "+
         "title VARCHAR(255) NOT NULL, "+
         "date VARCHAR(45) NOT NULL, "+
-        "subject VARCHAR(32726) NOT NULL, " +
         "PRIMARY KEY (id))",
         function(err){console.log(err);});
