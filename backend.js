@@ -149,7 +149,7 @@ app.get("/uploadNews", function(req,res) {
             res.end(data.destName);
         })
     })*/
-    var id = moment().format("YYYY-MM-DD_hh:mm:ss");
+    var id = Date.now();
     var fauthor = req.query.data.author;
     var ftitle = req.query.data.title;
     var fdate = req.query.data.date;
