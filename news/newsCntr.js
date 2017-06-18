@@ -81,7 +81,7 @@ app.controller("newsCntr",function($scope,$http,$sce){
             }
             $scope.model.shield = false;
         });*/
-       $http.get(url+"?"+
+       $http.get(url+"/uploadNews"+"?"+
                 "author="+$scope.articleAuthor+"&"+
                 "title="+$scope.articleTitle+"&"+
                 "date="+$scope.articleDate+"&"+
