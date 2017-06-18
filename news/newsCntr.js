@@ -81,12 +81,14 @@ app.controller("newsCntr",function($scope,$http,$sce){
             }
             $scope.model.shield = false;
         });*/
-       console.log($scope.articleAuthor);
-       console.log($scope.articleTitle);
-       console.log($scope.articleDate);
-       //console.log($scope.articleSubject);
-       console.log($scope.articleTags);
+       $http.get(url+"?"+
+                "author="+$scope.articleAuthor+"&"+
+                "title="+$scope.articleTitle+"&"+
+                "date="+$scope.articleDate+"&"+
+                "tags="+$scope.articleTags
+       ).then(function(res){console.log(res)});
     }
+    
 
     /*$scope.uploaded = function(){
 

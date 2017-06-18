@@ -109,7 +109,7 @@ app.post("/seeWord", function(req,res){
             var s = result.value;
             currentArticle.subject = s;
             currentArticle.subjectText = getSubjectText(s) ;
-            res.end(getSubjectText(s));
+            res.end(s);
         })
     })
 })
@@ -132,8 +132,8 @@ function getSubjectText(s){
     return  s;
 }
 
-app.post("/uploadNews", function(req,res) {
-    var post = [];
+app.get("/uploadNews", function(req,res) {
+    /*var post = [];
     req.on("data", function (chunk) {
         post.push(chunk);
     });
@@ -148,7 +148,8 @@ app.post("/uploadNews", function(req,res) {
             console.log(err);
             res.end(data.destName);
         })
-    })
+    })*/
+    res.end(JSON.stringify(req.query));
 })
 
 app.get("/getNews", function(req,res){
