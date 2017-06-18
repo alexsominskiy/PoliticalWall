@@ -164,13 +164,13 @@ app.get("/uploadNews", function(req,res) {
         "'"+fdate+"'"+
         "'"+currentArticle.subjectText+"'"+
     ")";
-    
-    connection.query(dbReq, function(err){
-        res.end(err);
+    res.end(dbReq);
+    /*connection.query(dbReq, function(err){
+        //res.end(err);
         fs.writeFile(furl,currentArticle.subject, function(e){
             //res.end(e);
         })
-    })
+    })*/
 })
 
 app.get("/getNews", function(req,res){
